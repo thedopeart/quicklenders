@@ -51,13 +51,10 @@ export default function Home() {
 
   return (
     <main className="flex flex-grow flex-wrap w-full justify-center">
-      <section className="bg-gradient-to-r from-theme-gradient-1-from to-theme-gradient-1-to w-full py-10 xl:py-20">
-        <div className="container pt-[4.625rem]">
+      <section className="overflow-hidden bg-gradient-to-r from-theme-gradient-1-from to-theme-gradient-1-to w-full py-10 xl:py-20">
+        <div className="relative container pt-[4.625rem]">
           <div className="flex flex-wrap">
-            <div className="w-full box-border lg:w-1/2 lg:pr-2">
-              <CTABlock />
-            </div>
-            <div className="hidden box-border lg:block lg:w-1/2 lg:pl-2 lg:text-right">
+            <div className="hidden lg:absolute lg:left-1/2 lg:box-border xl:static xl:block xl:w-1/2 xl:pl-2 xl:text-right xl:order-2">
               <Image
                 src={ctaImageHero}
                 alt="Mockup of mobile device with application displayed"
@@ -65,10 +62,13 @@ export default function Home() {
                 priority
               />
             </div>
+            <div className="relative w-full box-border xl:w-1/2 xl:pr-2 xl:order-1">
+              <CTABlock />
+            </div>
           </div>
         </div>
       </section>
-      <section className="w-full py-16">
+      <section className="overflow-hidden w-full py-16">
         <div className="container">
           <hgroup className="text-center mb-20">
             <p className="text-theme-primary-light text-sm leading-10 uppercase tracking-widest font-bold">Quality Features</p>
@@ -91,7 +91,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-full py-10 overflow-x-hidden lg:py-20">
+      <section className="overflow-hidden w-full py-10 lg:py-20">
         <div className="container">
           <div className="flex flex-wrap items-center">
             <div className="w-full box-border lg:w-1/2 lg:pr-2">
@@ -141,7 +141,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-full py-10 lg:py-20">
+      <section className="overflow-hidden w-full py-10 lg:py-20">
         <div className="container">
           <hgroup className="mb-20 text-center">
             <p className="text-theme-primary-light text-sm leading-10 uppercase tracking-widest font-bold">Quality Features</p>
@@ -187,7 +187,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="w-full py-10 lg:py-20">
+      <section className="overflow-hidden w-full py-10 lg:py-20">
         <div className="container">
           <div className="flex flex-wrap items-center">
             <div className="w-full box-border lg:w-2/5 lg:pr-2">
@@ -274,7 +274,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="bg-gradient-to-r from-theme-gradient-1-from to-theme-gradient-1-to w-full py-10 lg:py-20">
+      <section className="overflow-hidden bg-gradient-to-r from-theme-gradient-1-from to-theme-gradient-1-to w-full py-10 lg:py-20">
         <div className="container">
           <hgroup className="mb-20 text-center">
             <p className="text-white text-sm leading-10 uppercase tracking-widest font-bold">Whats the Function</p>

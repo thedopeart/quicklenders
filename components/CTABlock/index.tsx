@@ -27,8 +27,8 @@ const CTABlock = () => {
     return (
         <div>
             <hgroup className="mb-10">
-                <h1 className="text-7xl leading-tight font-bold text-white mb-8">Experience your ultimate mobile application</h1>
-                <p className="text-white text-lg font-medium leading-loose">
+                <h1 className="leading-tight font-bold text-white mb-8 text-4xl md:text-5xl lg:text-6xl 2xl:text-7xl">Experience your ultimate mobile application</h1>
+                <p className="text-white text-lg font-medium leading-loose max-w-xl">
                     Get your blood tests delivered at let home collect sample from the victory of the managments that supplies best design system guidelines ever.
                 </p>
             </hgroup>

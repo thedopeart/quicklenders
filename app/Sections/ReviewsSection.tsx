@@ -88,7 +88,7 @@ const ReviewsSection = () => {
 
 
     return (
-        <section className="w-full py-10 lg:py-20">
+        <section className="overflow-hidden w-full py-10 lg:py-20">
             <div className="container">
                 <hgroup className="text-center mb-20">
                     <p className="text-sm font-bold leading-10 uppercase tracking-widest">Testimonial</p>

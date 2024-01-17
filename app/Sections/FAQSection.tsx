@@ -30,7 +30,7 @@ const faqs = [
 
 const FAQSection = () => {
     return (
-        <section className="w-full py-10 lg:py-20">
+        <section className="overflow-hidden w-full py-10 lg:py-20">
             <div className="container">
                 <hgroup className="mb-20 text-center">
                     <p className="text-theme-primary-light text-sm leading-10 uppercase tracking-widest font-bold">Frequently Asked Questions</p>

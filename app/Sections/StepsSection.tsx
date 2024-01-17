@@ -36,7 +36,7 @@ const steps = [
 
 const StepsSection = () => {
     return (
-        <section className="w-full py-10 bg-gradient-to-r from-theme-gradient-1-from to-theme-gradient-1-to text-white lg:py-20">
+        <section className="overflow-hidden w-full py-10 bg-gradient-to-r from-theme-gradient-1-from to-theme-gradient-1-to text-white lg:py-20">
             <div className="container">
                 <hgroup className="text-center mb-32">
                     <p className="text-sm font-bold leading-10 uppercase tracking-widest">What's the Function</p>
