@@ -1,113 +1,325 @@
-import Image from 'next/image'
+'use client'
 
+// ** Framer Motion Imports
+import { motion } from 'framer-motion'
+
+// ** Component Imports
+import CTABlock from "@/components/CTABlock"
+import CTAIconBlock from "@/components/CTAIconBlock"
+import CTAIconInline from "@/components/CTAIconInline"
+
+// ** NextJS Imports
+import Link from "next/link"
+import Image from "next/image"
+
+// ** Image Imports
+import ctaImageHero from '@/public/assets/images/mobile-device-mockup.png'
+import ctaImage1 from '@/public/assets/images/mobile-device-with-application-stats.png'
+import ctaImage2 from '@/public/assets/images/tech-stack-icon-group.png'
+import ctaImage3 from '@/public/assets/images/hand-holding-phone.png'
+
+// ** Icon Imports
+import { FaBriefcase, FaPaperPlane } from "react-icons/fa"
+import StepsSection from "./Sections/StepsSection"
+import ReviewsSection from "./Sections/ReviewsSection"
+import PriceCard from "@/components/PriceCard"
+import FAQSection from "./Sections/FAQSection"
+
+
+const features = [
+  {
+    name: 'Vector Editing',
+    icon: <FaPaperPlane aria-hidden="true" />,
+    paragraph: 'Get your blood tests delivered at home collect a sample from the your blood tests.',
+    iconClasses: 'bg-green-500/10',
+  },
+  {
+    name: 'Customize & Monitoring',
+    icon: <FaPaperPlane aria-hidden="true" />,
+    paragraph: 'Get your blood tests delivered at home collect a sample from the your blood tests.',
+    iconClasses: 'bg-red-500/10',
+  },
+  {
+    name: 'Quality & Speed',
+    icon: <FaPaperPlane aria-hidden="true" />,
+    paragraph: 'Get your blood tests delivered at home collect a sample from the your blood tests.',
+    iconClasses: 'bg-purple-500/10',
+  },
+
+]
 export default function Home() {
+
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <main className="flex flex-grow flex-wrap w-full justify-center">
+      <section className="bg-gradient-to-r from-theme-gradient-1-from to-theme-gradient-1-to w-full py-10 xl:py-20">
+        <div className="container pt-[4.625rem]">
+          <div className="flex flex-wrap">
+            <div className="w-full box-border lg:w-1/2 lg:pr-2">
+              <CTABlock />
+            </div>
+            <div className="hidden box-border lg:block lg:w-1/2 lg:pl-2 lg:text-right">
+              <Image
+                src={ctaImageHero}
+                alt="Mockup of mobile device with application displayed"
+                className=""
+                priority
+              />
+            </div>
+          </div>
         </div>
-      </div>
-
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
-
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{' '}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+      </section>
+      <section className="w-full py-16">
+        <div className="container">
+          <hgroup className="text-center mb-20">
+            <p className="text-theme-primary-light text-sm leading-10 uppercase tracking-widest font-bold">Quality Features</p>
+            <h2 className="text-theme-primary-dark text-4xl font-bold leading-normal">Meet exciting feature of app</h2>
+          </hgroup>
+          <div className="flex items-center justify-between max-w-5xl mx-auto">
+            {features.map(feature => (
+              <div
+                key={feature.name}
+                className="w-full max-w-64 px-4 text-center"
+              >
+                <CTAIconBlock
+                  icon={feature.icon}
+                  title={feature.name}
+                  paragraph={feature.paragraph}
+                  iconClasses={feature.iconClasses}
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section className="w-full py-10 overflow-x-hidden lg:py-20">
+        <div className="container">
+          <div className="flex flex-wrap items-center">
+            <div className="w-full box-border lg:w-1/2 lg:pr-2">
+              <motion.div
+                initial={{ opacity: 0, x: -300 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1 }}
+                viewport={{ once: true }}
+              >
+                <Image
+                  src={ctaImage1}
+                  alt="Mobile device with application stats"
+                />
+              </motion.div>
+            </div>
+            <div className="flex flex-col w-full items-center justify-center box-border lg:w-1/2 lg:pl-2">
+              <hgroup className="mb-5">
+                <p className="text-theme-primary-light text-sm leading-10 uppercase tracking-widest font-bold">Core Features</p>
+                <h2 className="text-theme-primary-dark text-5xl font-bold leading-tight">Smart Jackpots that you may love this anytime &amp; anywhere</h2>
+              </hgroup>
+              <motion.div
+                initial={{ opacity: 0, y: 45 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                viewport={{ once: true }}
+                className="mb-5"
+              >
+                <CTAIconInline
+                  icon={<FaBriefcase aria-hidden="true" />}
+                  title="Smart Features"
+                  text="Get your blood tests delivered at let home collect sample from the victory of the managments your blood tests."
+                />
+              </motion.div>
+              <motion.div
+                initial={{ opacity: 0, y: 45 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <CTAIconInline
+                  icon={<FaBriefcase aria-hidden="true" />}
+                  title="Smart Features"
+                  text="Get your blood tests delivered at let home collect sample from the victory of the managments your blood tests."
+                />
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="w-full py-10 lg:py-20">
+        <div className="container">
+          <hgroup className="mb-20 text-center">
+            <p className="text-theme-primary-light text-sm leading-10 uppercase tracking-widest font-bold">Quality Features</p>
+            <h2 className="text-theme-primary-dark text-4xl font-bold leading-normal">Meet exciting feature of app</h2>
+          </hgroup>
+          <div className="grid grid-cols-3 gap-4">
+            <CTAIconInline
+              icon={<FaBriefcase aria-hidden="true" />}
+              classes="bg-blue-500 text-blue-500"
+              title="Smart Features"
+              text="Get your blood tests delivered at let home collect sample from the victory of the managments your blood tests."
+            />
+            <CTAIconInline
+              icon={<FaBriefcase aria-hidden="true" />}
+              classes="bg-yellow-500 text-yellow-500"
+              title="Fast Performance"
+              text="Get your blood tests delivered at let home collect sample from the victory of the managments your blood tests."
+            />
+            <CTAIconInline
+              icon={<FaBriefcase aria-hidden="true" />}
+              classes="bg-green-500 text-green-500"
+              title="Unlimited Content"
+              text="Get your blood tests delivered at let home collect sample from the victory of the managments your blood tests."
+            />
+            <CTAIconInline
+              icon={<FaBriefcase aria-hidden="true" />}
+              classes="bg-purple-500 text-purple-500"
+              title="Ulitmate Customization"
+              text="Get your blood tests delivered at let home collect sample from the victory of the managments your blood tests."
+            />
+            <CTAIconInline
+              icon={<FaBriefcase aria-hidden="true" />}
+              classes="bg-purple-500 text-purple-500"
+              title="Boost Productivity"
+              text="Get your blood tests delivered at let home collect sample from the victory of the managments your blood tests."
+            />
+            <CTAIconInline
+              icon={<FaBriefcase aria-hidden="true" />}
+              classes="bg-orange-500 text-orange-500"
+              title="Customer Support"
+              text="Get your blood tests delivered at let home collect sample from the victory of the managments your blood tests."
+            />
+          </div>
+        </div>
+      </section>
+      <section className="w-full py-10 lg:py-20">
+        <div className="container">
+          <div className="flex flex-wrap items-center">
+            <div className="w-full box-border lg:w-2/5 lg:pr-2">
+              <hgroup className="mb-5">
+                <p className="text-theme-primary-light text-sm leading-10 uppercase tracking-widest font-bold">Core Features</p>
+                <h2 className="text-theme-primary-dark text-5xl font-bold leading-normal">Smart Jackpots that you may love this anytime &amp; anywhere</h2>
+              </hgroup>
+              <motion.div
+                initial={{ opacity: 0, y: 45 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: 0.5 }}
+                viewport={{ once: true }}
+              >
+                <p className="text-lg font-medium leading-loose mb-8">
+                  Get your tests delivered at let home collect sample from the victory of the managments that supplies best design system guidelines ever. Get your tests delivered at let home collect sample.
+                </p>
+                <Link
+                  href="/"
+                  className="inline-block transition duration-300 rounded-full py-3 px-8 font-medium bg-theme-button-primary text-white"
+                >
+                  Get Started
+                </Link>
+              </motion.div>
+            </div>
+            <div className="w-full box-border lg:w-3/5 lg:pl-2">
+              <motion.div
+                initial={{ opacity: 0, x: 300 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 1 }}
+                viewport={{ once: true }}
+              >
+                <Image
+                  src={ctaImage2}
+                  alt="Tech Stack Image Group"
+                />
+              </motion.div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <StepsSection />
+      <ReviewsSection />
+      <section className="w-full overflow-hidden">
+        <div className="container">
+          <div className="relative">
+            <div className="absolute inset-0 w-full h-full rounded-tl-[250px] bg-[linear-gradient(288deg,_rgba(255,_253,_230,_0.35)_-3.53%,_rgba(255,_253,_230,_0.07)_-3.52%,_rgba(224,_239,_250,_0.35)_92.55%)]"></div>
+            <div className="relative flex flex-wrap items-center justify-between">
+              <div className="w-[200%] box-border lg:w-3/5 lg:pr-2">
+                <motion.div
+                  initial={{ opacity: 0, y: 300 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 1 }}
+                  viewport={{ once: true }}
+                >
+                  <Image
+                    src={ctaImage3}
+                    alt="Hand holding phone"
+                  />
+                </motion.div>
+              </div>
+              <div className="w-full box-border lg:w-2/5 lg:pl-2">
+                <hgroup className="mb-5">
+                  <p className="text-theme-primary-light text-sm leading-10 uppercase tracking-widest font-bold">Core Features</p>
+                  <h2 className="text-theme-primary-dark text-5xl font-bold leading-normal">Smart Jackpots that you may love this anytime &amp; anywhere</h2>
+                </hgroup>
+                <motion.div
+                  initial={{ opacity: 0, y: 45 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: 0.5 }}
+                  viewport={{ once: true }}
+                >
+                  <p className="text-lg font-medium leading-loose mb-8">
+                    Get your tests delivered at let home collect sample from the victory of the managments that supplies best design system guidelines ever. Get your tests delivered at let home collect sample.
+                  </p>
+                  <Link
+                    href="/"
+                    className="inline-block transition duration-300 rounded-full py-3 px-8 font-medium bg-theme-button-primary text-white"
+                  >
+                    Learn More
+                  </Link>
+                </motion.div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="bg-gradient-to-r from-theme-gradient-1-from to-theme-gradient-1-to w-full py-10 lg:py-20">
+        <div className="container">
+          <hgroup className="mb-20 text-center">
+            <p className="text-white text-sm leading-10 uppercase tracking-widest font-bold">Whats the Function</p>
+            <h2 className="text-white text-4xl font-bold leading-normal">Let's See How It Works</h2>
+          </hgroup>
+          <div className="flex flex-wrap justify-center">
+            <div className="w-full max-w-md mr-5">
+              <PriceCard
+                variant="dark"
+                title="Free Plan"
+                subTitle="For small teams or office"
+                features={[
+                  { desc: 'Ultimate access to all course, exercises, and assessments', available: true },
+                  { desc: 'Free access for all kind of exercise corrections with downloads.', available: true },
+                  { desc: 'Total assessment corrections with free download access system', available: true },
+                  { desc: 'Unlimited download of courses on the mobile app contents', available: false },
+                  { desc: 'Download and print courses and exercises in PDF', available: false },
+                ]}
+                link="#"
+                linkText="Signup Now"
+              />
+            </div>
+            <div className="w-full max-w-md">
+              <PriceCard
+                recommended={true}
+                title="Premium"
+                subTitle="For startup enterprise"
+                priceLabel="Starting from"
+                price="$49.99"
+                priceUoM="mo"
+                features={[
+                  { desc: 'Ultimate access to all course, exercises, and assessments', available: true },
+                  { desc: 'Free access for all kind of exercise corrections with downloads.', available: true },
+                  { desc: 'Total assessment corrections with free download access system', available: true },
+                  { desc: 'Unlimited download of courses on the mobile app contents', available: true },
+                  { desc: 'Download and print courses and exercises in PDF', available: true },
+                ]}
+                link="#"
+                linkText="Signup Now"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <FAQSection />
     </main>
   )
 }
