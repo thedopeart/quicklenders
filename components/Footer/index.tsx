@@ -94,7 +94,7 @@ const Footer = () => {
     return (
         <footer className="w-full py-10 lg:pb-20">
             <div className="container">
-                <div className="grid grid-cols-4 max-w-4xl mx-auto border-t border-theme-dark-gray pt-10">
+                <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 max-w-4xl mx-auto border-t border-theme-dark-gray pt-10">
                     {
                         linkGroups.map(linkGroup => (
                             <div key={linkGroup.title}>

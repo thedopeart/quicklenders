@@ -7,6 +7,7 @@ import googleImg from '@/public/assets/images/logos/google-logo-gray-wide-xs.png
 import dropboxImg from '@/public/assets/images/logos/dropbox-logo-gray-wide-xs.png'
 import { GoSponsorTiers } from "react-icons/go";
 import Image from "next/image";
+import { buttonVariants } from "@/components/UI/Button";
 
 const sponsors = [
     {
@@ -33,7 +34,20 @@ const CTABlock = () => {
                 </p>
             </hgroup>
             <div className="flex items-center mb-10">
+
                 <Link
+                    href="#"
+                    className={buttonVariants({ variant: "secondary", size: 'lg', rounded: 'full' }) + ' mr-2'}
+                >
+                    Get Started
+                </Link>
+                <Link
+                    href="#"
+                    className={buttonVariants({ variant: "ghost-secondary", size: 'lg', rounded: 'full' })}
+                >
+                    <MdPlayCircle className="text-3xl mr-1.5" aria-hidden="true" /> Get Started
+                </Link>
+                {/* <Link
                     href="#"
                     className="inline-block transition duration-300 rounded-full py-3 px-8 mr-2 font-medium bg-white text-theme-gradient-1-from"
                 >
@@ -47,7 +61,7 @@ const CTABlock = () => {
                         <MdPlayCircle className="text-3xl mr-1.5" aria-hidden="true" />
                         <span>Get Started</span>
                     </span>
-                </Link>
+                </Link> */}
             </div>
             <div className="flex items-center">
                 <div className="mr-5 text-white/60">Sponsored by:</div>

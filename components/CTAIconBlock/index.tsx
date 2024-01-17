@@ -13,7 +13,7 @@ const CTAIconBlock: React.FC<Props> = ({ icon, title, paragraph, iconClasses }) 
                 {icon}
             </div>
             <h3 className="mb-5 text-lg font-bold text-theme-primary-dark">{title}</h3>
-            <p className="text-theme-dark-gray">{paragraph}</p>
+            <p className="text-theme-dark-gray max-w-xs">{paragraph}</p>
         </div>
     )
 }
