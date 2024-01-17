@@ -24,6 +24,7 @@ import StepsSection from "./Sections/StepsSection"
 import ReviewsSection from "./Sections/ReviewsSection"
 import PriceCard from "@/components/PriceCard"
 import FAQSection from "./Sections/FAQSection"
+import { buttonVariants } from '@/components/UI/Button'
 
 
 const features = [
@@ -220,7 +221,7 @@ export default function Home() {
                 </p>
                 <Link
                   href="/"
-                  className="inline-block transition duration-300 rounded-full py-3 px-8 font-medium bg-theme-button-primary text-white"
+                  className={buttonVariants({ variant: 'default', size: 'lg', rounded: 'full' })}
                 >
                   Get Started
                 </Link>
@@ -266,7 +267,7 @@ export default function Home() {
                   </p>
                   <Link
                     href="/"
-                    className="inline-block transition duration-300 rounded-full py-3 px-8 font-medium bg-theme-button-primary text-white"
+                    className={buttonVariants({ variant: 'default', size: 'lg', rounded: 'full' })}
                   >
                     Learn More
                   </Link>

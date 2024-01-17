@@ -7,6 +7,7 @@ import logoImg from '@/public/assets/images/logos/temp-logo-landscape-light-xs.p
 
 // ** Lib Imports
 import { companyName } from "@/lib/config"
+import { buttonVariants } from "../UI/Button"
 
 const Header = () => {
     return (
@@ -25,7 +26,7 @@ const Header = () => {
                             <div>
                                 <Link
                                     href="#"
-                                    className="inline-block transition duration-300 rounded-full py-2 px-5 font-medium text-white border-[1.5px] border-white"
+                                    className={buttonVariants({ variant: 'outline', size: 'lg', rounded: 'full' })}
                                 >
                                     Get Started
                                 </Link>

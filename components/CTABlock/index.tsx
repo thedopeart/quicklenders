@@ -43,7 +43,7 @@ const CTABlock = () => {
                 </Link>
                 <Link
                     href="#"
-                    className={buttonVariants({ variant: "ghost-secondary", size: 'lg', rounded: 'full' })}
+                    className={buttonVariants({ variant: "ghost", size: 'lg', rounded: 'full' })}
                 >
                     <MdPlayCircle className="text-3xl mr-1.5" aria-hidden="true" /> Get Started
                 </Link>

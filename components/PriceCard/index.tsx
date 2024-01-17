@@ -1,6 +1,7 @@
 import Link from "next/link"
 import { IoMdCloseCircle } from "react-icons/io"
 import { MdCheckCircle } from "react-icons/md"
+import { buttonVariants } from "../UI/Button"
 
 export interface IPriceCardFeature {
     desc: string
@@ -73,7 +74,7 @@ const PriceCard: React.FC<Props> = ({ title, features, variant = "light", subTit
                     <div className="text-center mt-10">
                         <Link
                             href={link}
-                            className={`inline-block transition duration-300 rounded-full py-3 px-8 font-medium ${variant === "light" ? 'bg-theme-button-primary text-white' : 'bg-white text-theme-button-primary'}`}
+                            className={buttonVariants({ variant: variant === "light" ? 'default' : 'secondary', size: 'lg', rounded: 'full' })}
                         >
                             {linkText}
                         </Link>
