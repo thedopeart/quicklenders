@@ -2,9 +2,9 @@ import { generatePageMetadata } from '@/lib/metadata'
 import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata = generatePageMetadata({
-  title: 'Terms of Service | Quick Lenders',
+  title: 'Terms of Service | Quick Lenders Agreement',
   description:
-    'Read the Terms of Service for Quick Lenders. Understand the terms and conditions that apply when using our website and services.',
+    'Review the Terms of Service for Quick Lenders. Understand the terms, conditions, and usage policies that apply when using our website and lending services.',
   path: '/terms-of-service',
 })
 

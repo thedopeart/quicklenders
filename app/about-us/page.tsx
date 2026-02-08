@@ -4,9 +4,9 @@ import { breadcrumbSchema } from '@/lib/schema'
 import { MdBolt, MdTune, MdVisibility, MdSupportAgent, MdTrendingUp, MdHandshake, MdVerified, MdGroups } from 'react-icons/md'
 
 export const metadata = generatePageMetadata({
-  title: 'About Us | Trusted Business Lending Since 2003',
+  title: 'About Quick Lenders | Trusted Business Lending Since 2003',
   description:
-    'Quick Lenders has over 20 years of experience connecting businesses with capital. From term loans to equipment financing, we\'ve funded $500M+ for 1,000+ businesses nationwide.',
+    'Over 20 years connecting businesses with capital. From term loans to equipment financing, Quick Lenders has funded $500M+ for 1,000+ businesses nationwide.',
   path: '/about-us',
 })
 

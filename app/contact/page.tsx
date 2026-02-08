@@ -6,9 +6,9 @@ import { MdPhone, MdAccessTime, MdLocationOn, MdEmail, MdQuestionAnswer } from '
 import { Accordion, AccordionItem, AccordionTrigger, AccordionContent } from '@/components/UI/Accordion'
 
 export const metadata = generatePageMetadata({
-  title: 'Contact Us | Speak with a Lending Specialist',
+  title: 'Contact Quick Lenders | Talk to a Lending Specialist',
   description:
-    'Get in touch with Quick Lenders. Call (303) 921-8529 or send us a message. Our lending specialists are available Monday-Friday, 9AM-5PM MST to discuss your financing needs.',
+    'Reach Quick Lenders at (303) 921-8529 or send a message. Our business lending specialists are available Mon-Fri, 9AM-5PM MST to discuss your financing needs.',
   path: '/contact',
 })
 

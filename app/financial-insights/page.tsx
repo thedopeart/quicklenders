@@ -6,8 +6,8 @@ import { loanProductData } from '@/lib/loan-data'
 import { MdTrendingUp, MdAccountBalance, MdLightbulb, MdSchool, MdAutoGraph, MdSavings } from 'react-icons/md'
 
 export const metadata = generatePageMetadata({
-  title: 'Financial Insights | Business Financing Guides & Resources',
-  description: 'Your comprehensive guide to business financing. Explore expert articles on loans, funding strategies, credit improvement, and financial planning for growing businesses.',
+  title: 'Financial Insights | Business Financing Guides & Tips',
+  description: 'Expert articles on business loans, funding strategies, credit improvement, and financial planning. Free guides to help your growing business secure capital.',
   path: '/financial-insights',
 })
 

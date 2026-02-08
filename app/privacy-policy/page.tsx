@@ -2,9 +2,9 @@ import { generatePageMetadata } from '@/lib/metadata'
 import { breadcrumbSchema } from '@/lib/schema'
 
 export const metadata = generatePageMetadata({
-  title: 'Privacy Policy | Quick Lenders',
+  title: 'Privacy Policy | Quick Lenders Data Practices',
   description:
-    'Learn how Quick Lenders collects, uses, and protects your personal information when you use our website and services.',
+    'Learn how Quick Lenders collects, uses, and protects your personal information. Our commitment to data privacy when you use our website and lending services.',
   path: '/privacy-policy',
 })
 

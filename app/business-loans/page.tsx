@@ -7,7 +7,7 @@ import { MdCheckCircle, MdSpeed, MdAccountBalance, MdTrendingUp } from 'react-ic
 export const metadata = generatePageMetadata({
   title: 'Business Loans & Financing Solutions | $50K to $100M',
   description:
-    'Explore business loan options from Quick Lenders: term loans, lines of credit, equipment financing, asset-based lending, ESOP financing, and investment banking. Fast approvals, competitive rates, flexible terms.',
+    'Explore business loans from Quick Lenders: term loans, lines of credit, equipment financing, asset-based lending, and more. Fast approvals, competitive rates.',
   path: '/business-loans',
 })
 

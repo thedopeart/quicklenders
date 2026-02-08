@@ -3,9 +3,9 @@ import { breadcrumbSchema } from '@/lib/schema'
 import Link from 'next/link'
 
 export const metadata = generatePageMetadata({
-  title: 'California Privacy Policy',
+  title: 'California Privacy Policy (CCPA) | Quick Lenders',
   description:
-    'California Consumer Privacy Act (CCPA) privacy notice for Quick Lenders. Learn about your rights as a California resident.',
+    'CCPA privacy notice for Quick Lenders. Learn about your data rights as a California resident, including the right to know, delete, and opt out of data sales.',
   path: '/california-privacy-policy',
 })
 
