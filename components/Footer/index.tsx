@@ -154,9 +154,23 @@ const Footer = () => {
                                     FAQs
                                 </Link>
                             </li>
+                        </ul>
+
+                        <h3 className="text-base font-semibold mb-4 mt-6">Tools</h3>
+                        <ul className="space-y-3">
                             <li>
-                                <Link href="/get-started" className="text-sm text-gray-400 hover:text-white transition-colors">
-                                    Loan Calculator
+                                <Link href="/tools" className="text-sm text-gray-400 hover:text-white transition-colors">
+                                    All Tools
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/tools/loan-payment-calculator" className="text-sm text-gray-400 hover:text-white transition-colors">
+                                    Loan Payment Calculator
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/tools/factor-rate-to-apr-calculator" className="text-sm text-gray-400 hover:text-white transition-colors">
+                                    Factor Rate to APR Converter
                                 </Link>
                             </li>
                         </ul>

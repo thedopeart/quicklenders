@@ -77,9 +77,36 @@ const Header = () => {
                                 </div>
                             </div>
 
-                            <Link href="/tools" className="text-gray-700 hover:text-quicklend-600 text-lg font-medium">
-                                Tools
-                            </Link>
+                            {/* Tools dropdown */}
+                            <div className="group relative">
+                                <Link href="/tools" className="flex items-center text-gray-700 hover:text-quicklend-600 text-lg font-medium">
+                                    Tools <ChevronDown className="ml-1 h-4 w-4" />
+                                </Link>
+                                <div className="absolute left-1/2 transform -translate-x-1/2 top-full z-50 mt-2 w-64 rounded-md bg-white p-2 shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                                    <Link
+                                        href="/tools/loan-payment-calculator"
+                                        className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-quicklend-50 rounded-md"
+                                    >
+                                        <Calculator className="h-4 w-4 mr-2 text-quicklend-600" />
+                                        Loan Payment Calculator
+                                    </Link>
+                                    <Link
+                                        href="/tools/factor-rate-to-apr-calculator"
+                                        className="flex items-center px-4 py-2 text-sm text-gray-700 hover:bg-quicklend-50 rounded-md"
+                                    >
+                                        <BarChart className="h-4 w-4 mr-2 text-quicklend-600" />
+                                        Factor Rate to APR Converter
+                                    </Link>
+                                    <div className="border-t border-gray-100 mt-1 pt-1">
+                                        <Link
+                                            href="/tools"
+                                            className="flex items-center px-4 py-2 text-sm text-quicklend-600 font-medium hover:bg-quicklend-50 rounded-md"
+                                        >
+                                            View All Tools →
+                                        </Link>
+                                    </div>
+                                </div>
+                            </div>
 
                             <Link href="/contact" className="text-gray-700 hover:text-quicklend-600 text-lg font-medium">
                                 Contact
@@ -158,14 +185,36 @@ const Header = () => {
                                 </div>
                             </div>
 
-                            <Link
-                                href="/tools"
-                                className="flex items-center text-gray-700 py-2 border-b border-gray-200"
-                                onClick={() => setMobileOpen(false)}
-                            >
-                                <Wrench className="h-4 w-4 mr-2 text-quicklend-600" />
-                                Tools
-                            </Link>
+                            <div className="border-b border-gray-200 pb-2">
+                                <div className="flex items-center justify-between w-full text-left text-gray-700 py-2">
+                                    Tools <ChevronDown className="h-4 w-4" />
+                                </div>
+                                <div className="mt-2 pl-4 flex flex-col space-y-2">
+                                    <Link
+                                        href="/tools/loan-payment-calculator"
+                                        className="flex items-center text-sm text-gray-600"
+                                        onClick={() => setMobileOpen(false)}
+                                    >
+                                        <Calculator className="h-4 w-4 mr-1 text-quicklend-600" />
+                                        Loan Payment Calculator
+                                    </Link>
+                                    <Link
+                                        href="/tools/factor-rate-to-apr-calculator"
+                                        className="flex items-center text-sm text-gray-600"
+                                        onClick={() => setMobileOpen(false)}
+                                    >
+                                        <BarChart className="h-4 w-4 mr-1 text-quicklend-600" />
+                                        Factor Rate to APR Converter
+                                    </Link>
+                                    <Link
+                                        href="/tools"
+                                        className="flex items-center text-sm text-quicklend-600 font-medium"
+                                        onClick={() => setMobileOpen(false)}
+                                    >
+                                        View All Tools →
+                                    </Link>
+                                </div>
+                            </div>
 
                             <Link
                                 href="/contact"
