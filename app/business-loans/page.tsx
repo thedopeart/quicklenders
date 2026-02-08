@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { generatePageMetadata } from '@/lib/metadata'
-import { breadcrumbSchema } from '@/lib/schema'
+import { breadcrumbSchema, faqSchema } from '@/lib/schema'
+import FAQSection from '@/components/FAQSection'
 import { loanProductData } from '@/lib/loan-data'
 import { MdCheckCircle, MdSpeed, MdAccountBalance, MdTrendingUp } from 'react-icons/md'
 
@@ -41,6 +42,34 @@ const comparisonFeatures = [
   { feature: 'Collateral', description: 'Security requirements' },
 ]
 
+const businessLoansFaqs = [
+  {
+    question: 'How do I know which type of business loan I need?',
+    answer: <>Consider your purpose, timeline, and repayment preferences. Need ongoing flexibility? A <Link href="/business-loans/lines-of-credit" className="text-quicklend-600 font-medium hover:underline">line of credit</Link> is ideal. Buying equipment? <Link href="/business-loans/equipment-financing" className="text-quicklend-600 font-medium hover:underline">Equipment financing</Link> lets the asset serve as collateral. Need a one-time lump sum with predictable payments? A <Link href="/business-loans/term-loans" className="text-quicklend-600 font-medium hover:underline">term loan</Link> fits best. Our lending specialists can help match you with the right product.</>,
+    schemaAnswer: 'Consider your purpose, timeline, and repayment preferences. Lines of credit offer ongoing flexibility. Equipment financing lets the asset serve as collateral. Term loans provide a lump sum with predictable payments. Our lending specialists can help match you with the right product for your needs.',
+  },
+  {
+    question: 'What credit score do I need to qualify for a business loan?',
+    answer: <>Requirements vary by product. Most traditional lenders look for 650 or higher, while some online lenders work with scores as low as 500. <Link href="/business-loans/equipment-financing" className="text-quicklend-600 font-medium hover:underline">Equipment financing</Link> and <Link href="/business-loans/asset-backed-loans" className="text-quicklend-600 font-medium hover:underline">asset-based lending</Link> may have more flexible credit requirements because the collateral reduces lender risk. Higher scores qualify for better rates and terms across all products.</>,
+    schemaAnswer: 'Requirements vary by product. Most traditional lenders look for 650 or higher, while some online lenders work with scores as low as 500. Equipment financing and asset-based lending may have more flexible credit requirements because collateral reduces lender risk. Higher scores qualify for better rates.',
+  },
+  {
+    question: 'Can I get a business loan with bad credit?',
+    answer: <>Yes, though your options are more limited and rates will be higher. Alternative lenders, equipment financing where the asset serves as collateral, and invoice factoring based on your customers' creditworthiness are the most accessible options. You may also qualify with a strong co-signer or significant collateral through <Link href="/business-loans/asset-backed-loans" className="text-quicklend-600 font-medium hover:underline">asset-based lending</Link>. Read our guide on <Link href="/financial-insights/online-loans-for-poor-credit-score" className="text-quicklend-600 font-medium hover:underline">loans for poor credit</Link> for more details.</>,
+    schemaAnswer: 'Yes, though options are more limited and rates will be higher. Alternative lenders, equipment financing, and invoice factoring are the most accessible options with poor credit. You may also qualify with a co-signer or collateral through asset-based lending.',
+  },
+  {
+    question: 'How much can I borrow for my business?',
+    answer: <>Loan amounts depend on your revenue, time in business, credit score, and loan type. Quick Lenders offers financing from $50,000 to $100 million. <Link href="/business-loans/term-loans" className="text-quicklend-600 font-medium hover:underline">Term loans</Link> and <Link href="/business-loans/lines-of-credit" className="text-quicklend-600 font-medium hover:underline">lines of credit</Link> go up to $10 million. <Link href="/business-loans/asset-backed-loans" className="text-quicklend-600 font-medium hover:underline">Asset-based lending</Link> can extend to $100 million for qualified businesses with sufficient collateral. <Link href="/get-started" className="text-quicklend-600 font-medium hover:underline">Check your eligibility</Link> to see what you qualify for.</>,
+    schemaAnswer: 'Loan amounts depend on your revenue, time in business, credit score, and loan type. Quick Lenders offers financing from $50,000 to $100 million. Term loans and lines of credit go up to $10 million, while asset-based lending can extend to $100 million for qualified businesses.',
+  },
+  {
+    question: 'Do I need collateral to get a business loan?',
+    answer: <>Not always. Unsecured loans like <Link href="/business-loans/term-loans" className="text-quicklend-600 font-medium hover:underline">term loans</Link> and <Link href="/business-loans/lines-of-credit" className="text-quicklend-600 font-medium hover:underline">lines of credit</Link> do not require specific collateral, though they may require a personal guarantee. Secured products like <Link href="/business-loans/equipment-financing" className="text-quicklend-600 font-medium hover:underline">equipment financing</Link> and <Link href="/business-loans/asset-backed-loans" className="text-quicklend-600 font-medium hover:underline">asset-based lending</Link> require collateral but typically offer lower rates and higher borrowing limits. Learn about <Link href="/financial-insights/no-collateral-business-loan" className="text-quicklend-600 font-medium hover:underline">no-collateral options</Link>.</>,
+    schemaAnswer: 'Not always. Unsecured term loans and lines of credit do not require specific collateral, though they may require a personal guarantee. Secured products like equipment financing and asset-based lending require collateral but offer lower rates and higher borrowing limits.',
+  },
+]
+
 export default function BusinessLoansPage() {
   const breadcrumbs = breadcrumbSchema([
     { name: 'Home', url: '/' },
@@ -49,11 +78,17 @@ export default function BusinessLoansPage() {
 
   const products = Object.values(loanProductData)
 
+  const faqData = faqSchema(businessLoansFaqs.map(f => ({ question: f.question, answer: f.schemaAnswer })))
+
   return (
     <main className="flex flex-grow flex-col w-full">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }}
       />
 
       {/* Hero */}
@@ -257,6 +292,8 @@ export default function BusinessLoansPage() {
           </div>
         </div>
       </section>
+
+      <FAQSection faqs={businessLoansFaqs} />
 
       {/* Related Resources */}
       <section className="py-16 lg:py-20 bg-gray-50">

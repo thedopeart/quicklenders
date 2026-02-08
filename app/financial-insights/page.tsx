@@ -1,9 +1,10 @@
 import Link from 'next/link'
 import { getAllArticles } from '@/lib/content'
 import { generatePageMetadata } from '@/lib/metadata'
-import { breadcrumbSchema } from '@/lib/schema'
+import { breadcrumbSchema, faqSchema } from '@/lib/schema'
 import { loanProductData } from '@/lib/loan-data'
 import { MdTrendingUp, MdAccountBalance, MdLightbulb, MdSchool, MdAutoGraph, MdSavings } from 'react-icons/md'
+import FAQSection from '@/components/FAQSection'
 
 export const metadata = generatePageMetadata({
   title: 'Financial Insights | Business Financing Guides & Tips',
@@ -55,18 +56,51 @@ const topics = [
   },
 ]
 
+const insightsFaqs = [
+  {
+    question: 'How do I get a business loan?',
+    answer: <>Start by determining how much you need and what you will use it for. Gather basic financial documents like bank statements and tax returns. Then apply through a lender or platform like <Link href="/get-started" className="text-quicklend-600 font-medium hover:underline">Quick Lenders</Link>. Most applications take 10 to 15 minutes. Read our <Link href="/financial-insights/first-time-business-loans" className="text-quicklend-600 font-medium hover:underline">first-time borrower guide</Link> for a complete walkthrough of the process.</>,
+    schemaAnswer: 'Start by determining how much you need and what you will use it for. Gather basic financial documents like bank statements and tax returns. Then apply through a lender or platform like Quick Lenders. Most applications take 10 to 15 minutes.',
+  },
+  {
+    question: 'What documents do I need to apply for a business loan?',
+    answer: <>Standard requirements include business and personal tax returns (2 to 3 years), bank statements (3 to 6 months), profit and loss statements, balance sheets, business licenses, and government-issued ID. Some lenders require less documentation for smaller loans. Having organized financial records speeds up the approval process. <Link href="/business-loans/equipment-financing" className="text-quicklend-600 font-medium hover:underline">Equipment financing</Link> may also require an equipment quote or invoice.</>,
+    schemaAnswer: 'Standard requirements include business and personal tax returns, bank statements for 3 to 6 months, profit and loss statements, balance sheets, business licenses, and government-issued ID. Some lenders require less documentation for smaller loans. Having organized financial records speeds up approval.',
+  },
+  {
+    question: 'Is a business loan different from a personal loan?',
+    answer: <>Yes. Business loans are designed for business purposes and based primarily on business financials, revenue, and credit. Personal loans are based on personal income and credit history. Using a personal loan for business is possible but may have tax implications and does not build business credit. For most business needs, dedicated <Link href="/business-loans" className="text-quicklend-600 font-medium hover:underline">business financing products</Link> offer better terms and more appropriate structures.</>,
+    schemaAnswer: 'Yes. Business loans are for business purposes and based on business financials, revenue, and credit. Personal loans are based on personal income and credit. Using a personal loan for business is possible but may have tax implications and does not build business credit.',
+  },
+  {
+    question: 'Can startups get business loans?',
+    answer: <>Yes, though options are more limited for businesses under 1 to 2 years old. SBA microloans, some online lenders, and <Link href="/business-loans/equipment-financing" className="text-quicklend-600 font-medium hover:underline">equipment financing</Link> work with newer businesses. Startups typically need stronger personal credit, a detailed business plan, or collateral to qualify. Read our guide on <Link href="/financial-insights/how-to-get-a-startup-business-loan-with-bad-credit" className="text-quicklend-600 font-medium hover:underline">startup loans with bad credit</Link> for more strategies.</>,
+    schemaAnswer: 'Yes, though options are more limited for businesses under 1 to 2 years old. SBA microloans, some online lenders, and equipment financing work with newer businesses. Startups typically need stronger personal credit, a detailed business plan, or collateral to qualify.',
+  },
+  {
+    question: 'What can I use a business loan for?',
+    answer: <>Common uses include equipment purchases, inventory, hiring, marketing, expansion, commercial real estate, refinancing existing debt, and working capital. Most <Link href="/business-loans/term-loans" className="text-quicklend-600 font-medium hover:underline">term loans</Link> and <Link href="/business-loans/lines-of-credit" className="text-quicklend-600 font-medium hover:underline">lines of credit</Link> do not restrict how you use the funds. Some products like <Link href="/business-loans/equipment-financing" className="text-quicklend-600 font-medium hover:underline">equipment financing</Link> and commercial real estate loans must be used for their specified purpose.</>,
+    schemaAnswer: 'Common uses include equipment purchases, inventory, hiring, marketing, expansion, real estate, refinancing debt, and working capital. Most term loans and lines of credit do not restrict usage. Some products like equipment financing must be used for their specified purpose.',
+  },
+]
+
 export default function FinancialInsightsPage() {
   const articles = getAllArticles()
   const breadcrumbs = breadcrumbSchema([
     { name: 'Home', url: '/' },
     { name: 'Financial Insights', url: '/financial-insights' },
   ])
+  const faqData = faqSchema(insightsFaqs.map(f => ({ question: f.question, answer: f.schemaAnswer })))
 
   return (
     <main className="flex flex-grow flex-col w-full">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }}
       />
 
       {/* Hero */}
@@ -253,6 +287,8 @@ export default function FinancialInsightsPage() {
           </div>
         </div>
       </section>
+
+      <FAQSection faqs={insightsFaqs} />
 
       {/* CTA */}
       <section className="py-16 lg:py-20 bg-gray-50">

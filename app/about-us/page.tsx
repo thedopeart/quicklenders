@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { generatePageMetadata } from '@/lib/metadata'
-import { breadcrumbSchema } from '@/lib/schema'
+import { breadcrumbSchema, faqSchema } from '@/lib/schema'
+import FAQSection from '@/components/FAQSection'
 import { MdBolt, MdTune, MdVisibility, MdSupportAgent, MdTrendingUp, MdHandshake, MdVerified, MdGroups } from 'react-icons/md'
 
 export const metadata = generatePageMetadata({
@@ -35,17 +36,51 @@ const industries = [
   'Transportation', 'Hospitality', 'Professional Services', 'Wholesale', 'Agriculture'
 ]
 
+const aboutFaqs = [
+  {
+    question: 'How does Quick Lenders work?',
+    answer: <>Tell us about your business and financing needs through our short online form. We review your information and match you with lending partners suited to your profile. You receive offers to compare with no obligation, and the lender you choose handles funding directly to your bank account. <Link href="/get-started" className="text-quicklend-600 font-medium hover:underline">Get started</Link> in just a few minutes.</>,
+    schemaAnswer: 'Tell us about your business and financing needs through our short online form. We review your information and match you with lending partners suited to your profile. You receive offers to compare with no obligation, and the chosen lender handles funding directly to your bank account.',
+  },
+  {
+    question: 'Does Quick Lenders make the loan directly?',
+    answer: <>No. Quick Lenders connects businesses with lending partners from our network. We help you find the right fit, but the actual loan comes from our partner lenders. This gives you access to multiple options rather than being limited to one lender's products. Our team guides you through the entire process from application to funding.</>,
+    schemaAnswer: 'No. Quick Lenders connects businesses with lending partners from our network. We help you find the right fit, but the actual loan comes from our partner lenders. This gives you access to multiple options rather than being limited to one lender\'s products.',
+  },
+  {
+    question: 'Is there a cost to use Quick Lenders?',
+    answer: <>No cost to you. Quick Lenders is compensated by lending partners when a loan is funded. Our service is free for businesses, and there is no obligation to accept any offer you receive. We earn our revenue by making successful matches between businesses and lenders.</>,
+    schemaAnswer: 'No cost to you. Quick Lenders is compensated by lending partners when a loan is funded. Our service is free for businesses, and there is no obligation to accept any offer you receive.',
+  },
+  {
+    question: 'Will Quick Lenders sell my information?',
+    answer: <>We share your information with potential lending partners to provide loan options. We do not sell your data to unrelated third parties for marketing purposes. See our <Link href="/privacy-policy" className="text-quicklend-600 font-medium hover:underline">privacy policy</Link> for full details on how we handle your information.</>,
+    schemaAnswer: 'We share your information with potential lending partners to provide loan options. We do not sell your data to unrelated third parties for marketing purposes. See our privacy policy for full details.',
+  },
+  {
+    question: 'How do I know which loan offer to accept?',
+    answer: <>Compare the APR (total cost of borrowing), monthly payments, term length, fees, and any prepayment penalties across your offers. Consider your cash flow and how quickly you can repay. Our lending specialists can help you understand your options if you are unsure. Visit our <Link href="/financial-insights" className="text-quicklend-600 font-medium hover:underline">Financial Insights</Link> for guides on evaluating loan offers.</>,
+    schemaAnswer: 'Compare the APR, monthly payments, term length, fees, and prepayment penalties across your offers. Consider your cash flow and repayment timeline. Our lending specialists can help you understand your options and choose the best fit for your business.',
+  },
+]
+
 export default function AboutPage() {
   const breadcrumbs = breadcrumbSchema([
     { name: 'Home', url: '/' },
     { name: 'About Us', url: '/about-us' },
   ])
 
+  const faqData = faqSchema(aboutFaqs.map(f => ({ question: f.question, answer: f.schemaAnswer })))
+
   return (
     <main className="flex flex-grow flex-col w-full">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }}
       />
 
       {/* Hero */}
@@ -262,6 +297,8 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
+
+      <FAQSection faqs={aboutFaqs} className="bg-gray-50" />
 
       {/* CTA */}
       <section className="py-16 lg:py-20">

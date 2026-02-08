@@ -70,7 +70,7 @@ export function breadcrumbSchema(items: { name: string; url: string }[]) {
   }
 }
 
-export function faqSchema(faqs: { question: string; answer: React.ReactNode }[]) {
+export function faqSchema(faqs: { question: string; answer: string }[]) {
   return {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -79,7 +79,7 @@ export function faqSchema(faqs: { question: string; answer: React.ReactNode }[])
       name: faq.question,
       acceptedAnswer: {
         '@type': 'Answer',
-        text: typeof faq.answer === 'string' ? faq.answer : faq.question,
+        text: faq.answer,
       },
     })),
   }

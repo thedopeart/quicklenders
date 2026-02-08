@@ -17,7 +17,7 @@ export interface ArticleData {
   // Content sections with different layouts
   sections: ArticleSection[]
   // FAQ accordion section
-  faqs: { question: string; answer: ReactNode }[]
+  faqs: { question: string; answer: ReactNode; schemaAnswer: string }[]
   // Related articles slugs
   relatedArticles: string[]
   // Related loan products
@@ -301,27 +301,33 @@ export const articleData: Record<string, ArticleData> = {
     faqs: [
       {
         question: 'What is equipment financing for small businesses?',
-        answer: <>Equipment financing allows businesses to acquire necessary equipment through loans or leases, spreading the cost over time rather than paying the full amount upfront. The equipment itself typically serves as collateral, making this type of financing more accessible than <Link href="/financial-insights/no-collateral-business-loan" className="text-quicklend-600 font-medium hover:underline">unsecured loans</Link>.</>
+        answer: <>Equipment financing allows businesses to acquire necessary equipment through loans or leases, spreading the cost over time rather than paying the full amount upfront. The equipment itself typically serves as collateral, making this type of financing more accessible than <Link href="/financial-insights/no-collateral-business-loan" className="text-quicklend-600 font-medium hover:underline">unsecured loans</Link>.</>,
+        schemaAnswer: 'Equipment financing allows businesses to acquire necessary equipment through loans or leases, spreading the cost over time rather than paying the full amount upfront. The equipment itself typically serves as collateral, making this type of financing more accessible than unsecured loans.'
       },
       {
         question: 'Why should startups consider equipment funding?',
-        answer: <>Startups should consider equipment funding because it preserves working capital for other essential business needs, provides access to better equipment than they could afford outright, offers potential tax benefits through depreciation or Section 179 deductions, and helps establish business credit through regular on-time payments.</>
+        answer: <>Startups should consider equipment funding because it preserves working capital for other essential business needs, provides access to better equipment than they could afford outright, offers potential tax benefits through depreciation or Section 179 deductions, and helps establish business credit through regular on-time payments.</>,
+        schemaAnswer: 'Startups should consider equipment funding because it preserves working capital, provides access to better equipment, offers potential tax benefits through depreciation or Section 179 deductions, and helps establish business credit through regular on-time payments.'
       },
       {
         question: 'What are the top options for funding equipment available to new businesses?',
-        answer: <>New businesses have several equipment financing options including traditional bank loans, SBA loans (particularly the 504 program for heavy equipment), online lenders who often have more flexible requirements, equipment dealers who offer in-house financing, and <Link href="/business-loans/equipment-financing" className="text-quicklend-600 font-medium hover:underline">equipment leasing companies</Link> for businesses that prefer not to own.</>
+        answer: <>New businesses have several equipment financing options including traditional bank loans, SBA loans (particularly the 504 program for heavy equipment), online lenders who often have more flexible requirements, equipment dealers who offer in-house financing, and <Link href="/business-loans/equipment-financing" className="text-quicklend-600 font-medium hover:underline">equipment leasing companies</Link> for businesses that prefer not to own.</>,
+        schemaAnswer: 'New businesses have several equipment financing options including traditional bank loans, SBA loans (particularly the 504 program for heavy equipment), online lenders with flexible requirements, equipment dealers offering in-house financing, and equipment leasing companies for businesses that prefer not to own.'
       },
       {
         question: 'How can a new business qualify for financing equipment?',
-        answer: <>To qualify, prepare a detailed business plan showing equipment ROI, maintain a personal credit score above 600 (650+ preferred), gather financial statements and tax returns, consider a larger down payment if your credit is limited, and be prepared to provide a personal guarantee. Some lenders specialize in working with <Link href="/financial-insights/how-to-get-a-startup-business-loan-with-bad-credit" className="text-quicklend-600 font-medium hover:underline">startups with limited credit history</Link>.</>
+        answer: <>To qualify, prepare a detailed business plan showing equipment ROI, maintain a personal credit score above 600 (650+ preferred), gather financial statements and tax returns, consider a larger down payment if your credit is limited, and be prepared to provide a personal guarantee. Some lenders specialize in working with <Link href="/financial-insights/how-to-get-a-startup-business-loan-with-bad-credit" className="text-quicklend-600 font-medium hover:underline">startups with limited credit history</Link>.</>,
+        schemaAnswer: 'To qualify, prepare a detailed business plan showing equipment ROI, maintain a personal credit score above 600 (650+ preferred), gather financial statements and tax returns, consider a larger down payment if your credit is limited, and be prepared to provide a personal guarantee. Some lenders specialize in working with startups with limited credit history.'
       },
       {
         question: 'What is the difference between equipment leasing and equipment loans?',
-        answer: <>With an equipment loan, you own the equipment after paying off the loan and build equity as you pay. With a lease, the lessor retains ownership, but you may have lower payments and the option to upgrade at lease end. Loans are better for equipment with long useful lives, while leases suit technology that becomes obsolete quickly.</>
+        answer: <>With an equipment loan, you own the equipment after paying off the loan and build equity as you pay. With a lease, the lessor retains ownership, but you may have lower payments and the option to upgrade at lease end. Loans are better for equipment with long useful lives, while leases suit technology that becomes obsolete quickly.</>,
+        schemaAnswer: 'With an equipment loan, you own the equipment after paying off the loan and build equity as you pay. With a lease, the lessor retains ownership, but you may have lower payments and the option to upgrade at lease end. Loans are better for equipment with long useful lives, while leases suit technology that becomes obsolete quickly.'
       },
       {
         question: 'How does equipment financing support business growth?',
-        answer: <>Equipment financing supports growth by enabling access to revenue-generating equipment without depleting cash reserves, allowing businesses to take on larger projects with proper equipment, freeing up capital for marketing, hiring, and expansion, and building business credit for future financing needs like <Link href="/business-loans/lines-of-credit" className="text-quicklend-600 font-medium hover:underline">lines of credit</Link> or <Link href="/business-loans/term-loans" className="text-quicklend-600 font-medium hover:underline">term loans</Link>.</>
+        answer: <>Equipment financing supports growth by enabling access to revenue-generating equipment without depleting cash reserves, allowing businesses to take on larger projects with proper equipment, freeing up capital for marketing, hiring, and expansion, and building business credit for future financing needs like <Link href="/business-loans/lines-of-credit" className="text-quicklend-600 font-medium hover:underline">lines of credit</Link> or <Link href="/business-loans/term-loans" className="text-quicklend-600 font-medium hover:underline">term loans</Link>.</>,
+        schemaAnswer: 'Equipment financing supports growth by enabling access to revenue-generating equipment without depleting cash reserves, allowing businesses to take on larger projects, freeing up capital for marketing, hiring, and expansion, and building business credit for future financing needs like lines of credit or term loans.'
       },
     ],
     relatedArticles: ['first-time-business-loans', 'secured-vs-unsecured-loans-which-is-better', 'long-term-business-loans'],
@@ -457,23 +463,28 @@ export const articleData: Record<string, ArticleData> = {
     faqs: [
       {
         question: 'What credit score do I need for a first-time business loan?',
-        answer: <>Most traditional lenders want to see a personal credit score above 680, while scores of 720+ typically qualify for the best rates. However, many alternative lenders work with scores as low as 500, though you will pay higher rates. <Link href="/financial-insights/how-to-improve-credit-fast" className="text-quicklend-600 font-medium hover:underline">Improving your credit</Link> before applying can save thousands in interest.</>
+        answer: <>Most traditional lenders want to see a personal credit score above 680, while scores of 720+ typically qualify for the best rates. However, many alternative lenders work with scores as low as 500, though you will pay higher rates. <Link href="/financial-insights/how-to-improve-credit-fast" className="text-quicklend-600 font-medium hover:underline">Improving your credit</Link> before applying can save thousands in interest.</>,
+        schemaAnswer: 'Most traditional lenders want a personal credit score above 680, while scores of 720+ qualify for the best rates. Many alternative lenders work with scores as low as 500, though at higher rates. Improving your credit before applying can save thousands in interest.'
       },
       {
         question: 'How long does my business need to be operating?',
-        answer: <>Traditional lenders generally prefer businesses with at least two years of operating history. Online lenders may accept businesses with as little as six months. If your business is newer, consider <Link href="/business-loans/equipment-financing" className="text-quicklend-600 font-medium hover:underline">equipment financing</Link> where the equipment itself serves as collateral.</>
+        answer: <>Traditional lenders generally prefer businesses with at least two years of operating history. Online lenders may accept businesses with as little as six months. If your business is newer, consider <Link href="/business-loans/equipment-financing" className="text-quicklend-600 font-medium hover:underline">equipment financing</Link> where the equipment itself serves as collateral.</>,
+        schemaAnswer: 'Traditional lenders generally prefer businesses with at least two years of operating history. Online lenders may accept businesses with as little as six months. If your business is newer, consider equipment financing where the equipment itself serves as collateral.'
       },
       {
         question: 'What documentation will I need?',
-        answer: <>Typically you will need personal and business tax returns (2-3 years if available), several months of bank statements, profit and loss statements, business licenses, and photo ID. Newer businesses should also prepare a detailed business plan and financial projections.</>
+        answer: <>Typically you will need personal and business tax returns (2-3 years if available), several months of bank statements, profit and loss statements, business licenses, and photo ID. Newer businesses should also prepare a detailed business plan and financial projections.</>,
+        schemaAnswer: 'Typically you will need personal and business tax returns (2-3 years if available), several months of bank statements, profit and loss statements, business licenses, and photo ID. Newer businesses should also prepare a detailed business plan and financial projections.'
       },
       {
         question: 'How much can I borrow as a first-time borrower?',
-        answer: <>Loan amounts vary widely based on your revenue, credit, and the type of financing. Term loans typically range from $50,000 to $500,000 for first-time borrowers, while <Link href="/business-loans/lines-of-credit" className="text-quicklend-600 font-medium hover:underline">lines of credit</Link> may start at $10,000. SBA microloans go up to $50,000 for newer businesses.</>
+        answer: <>Loan amounts vary widely based on your revenue, credit, and the type of financing. Term loans typically range from $50,000 to $500,000 for first-time borrowers, while <Link href="/business-loans/lines-of-credit" className="text-quicklend-600 font-medium hover:underline">lines of credit</Link> may start at $10,000. SBA microloans go up to $50,000 for newer businesses.</>,
+        schemaAnswer: 'Loan amounts vary widely based on your revenue, credit, and the type of financing. Term loans typically range from $50,000 to $500,000 for first-time borrowers, while lines of credit may start at $10,000. SBA microloans go up to $50,000 for newer businesses.'
       },
       {
         question: 'How long does the approval process take?',
-        answer: <>Timeline varies by lender type. Online lenders may approve within 24-48 hours with funding in days. Traditional banks typically take 2-4 weeks. SBA loans can take 2-3 months due to extensive documentation requirements.</>
+        answer: <>Timeline varies by lender type. Online lenders may approve within 24-48 hours with funding in days. Traditional banks typically take 2-4 weeks. SBA loans can take 2-3 months due to extensive documentation requirements.</>,
+        schemaAnswer: 'Timeline varies by lender type. Online lenders may approve within 24-48 hours with funding in days. Traditional banks typically take 2-4 weeks. SBA loans can take 2-3 months due to extensive documentation requirements.'
       },
     ],
     relatedArticles: ['how-to-improve-credit-fast', 'no-collateral-business-loan', 'short-term-business-financing'],
@@ -606,23 +617,28 @@ export const articleData: Record<string, ArticleData> = {
     faqs: [
       {
         question: 'How fast can I realistically improve my credit score?',
-        answer: <>The fastest improvements come from disputing errors and reducing credit utilization—both can show results within 30-45 days. Building positive payment history takes longer, typically 3-6 months for meaningful improvement. Recovery from major negative items like bankruptcy takes 2-4 years.</>
+        answer: <>The fastest improvements come from disputing errors and reducing credit utilization—both can show results within 30-45 days. Building positive payment history takes longer, typically 3-6 months for meaningful improvement. Recovery from major negative items like bankruptcy takes 2-4 years.</>,
+        schemaAnswer: 'The fastest improvements come from disputing errors and reducing credit utilization, both of which can show results within 30-45 days. Building positive payment history takes longer, typically 3-6 months for meaningful improvement. Recovery from major negative items like bankruptcy takes 2-4 years.'
       },
       {
         question: 'Does checking my own credit hurt my score?',
-        answer: <>No. Checking your own credit is a "soft inquiry" that does not affect your score. Only "hard inquiries" from lenders when you apply for credit can impact your score, and even then the effect is usually just 5-10 points and temporary.</>
+        answer: <>No. Checking your own credit is a "soft inquiry" that does not affect your score. Only "hard inquiries" from lenders when you apply for credit can impact your score, and even then the effect is usually just 5-10 points and temporary.</>,
+        schemaAnswer: 'No. Checking your own credit is a soft inquiry that does not affect your score. Only hard inquiries from lenders when you apply for credit can impact your score, and even then the effect is usually just 5-10 points and temporary.'
       },
       {
         question: 'Should I close old credit cards I do not use?',
-        answer: <>Generally no. Closing old accounts reduces your total available credit (raising utilization) and can shorten your credit history. Keep old cards open with occasional small purchases. The only exception is cards with high annual fees you cannot justify.</>
+        answer: <>Generally no. Closing old accounts reduces your total available credit (raising utilization) and can shorten your credit history. Keep old cards open with occasional small purchases. The only exception is cards with high annual fees you cannot justify.</>,
+        schemaAnswer: 'Generally no. Closing old accounts reduces your total available credit, raising your utilization ratio, and can shorten your credit history. Keep old cards open with occasional small purchases. The only exception is cards with high annual fees you cannot justify.'
       },
       {
         question: 'Will paying off collections improve my score?',
-        answer: <>It depends on the scoring model. FICO 9 and VantageScore 4.0 ignore paid collections entirely. Older models still count them. Before paying, try negotiating a "pay for delete" agreement where the collector removes the item entirely in exchange for payment.</>
+        answer: <>It depends on the scoring model. FICO 9 and VantageScore 4.0 ignore paid collections entirely. Older models still count them. Before paying, try negotiating a "pay for delete" agreement where the collector removes the item entirely in exchange for payment.</>,
+        schemaAnswer: 'It depends on the scoring model. FICO 9 and VantageScore 4.0 ignore paid collections entirely, while older models still count them. Before paying, try negotiating a pay-for-delete agreement where the collector removes the item entirely in exchange for payment.'
       },
       {
         question: 'How many credit cards should I have?',
-        answer: <>There is no magic number, but having 3-5 credit cards with low utilization across all of them typically produces the best scores. Having too few accounts can limit your credit mix, while too many can suggest over-reliance on credit.</>
+        answer: <>There is no magic number, but having 3-5 credit cards with low utilization across all of them typically produces the best scores. Having too few accounts can limit your credit mix, while too many can suggest over-reliance on credit.</>,
+        schemaAnswer: 'There is no magic number, but having 3-5 credit cards with low utilization across all of them typically produces the best scores. Having too few accounts can limit your credit mix, while too many can suggest over-reliance on credit.'
       },
     ],
     relatedArticles: ['first-time-business-loans', 'online-loans-for-poor-credit-score', 'secured-vs-unsecured-loans-which-is-better'],
@@ -759,23 +775,28 @@ export const articleData: Record<string, ArticleData> = {
     faqs: [
       {
         question: 'What percentage of my invoice can I receive upfront?',
-        answer: <>Most invoice financing companies advance 80-90% of the invoice value upfront. You receive the remaining 10-20% (minus fees) once your customer pays. The exact advance rate depends on your industry, customer creditworthiness, and invoice volume.</>
+        answer: <>Most invoice financing companies advance 80-90% of the invoice value upfront. You receive the remaining 10-20% (minus fees) once your customer pays. The exact advance rate depends on your industry, customer creditworthiness, and invoice volume.</>,
+        schemaAnswer: 'Most invoice financing companies advance 80-90% of the invoice value upfront. You receive the remaining 10-20% (minus fees) once your customer pays. The exact advance rate depends on your industry, customer creditworthiness, and invoice volume.'
       },
       {
         question: 'Will my customers know I am using invoice financing?',
-        answer: <>With invoice factoring, yes—your customers will be notified to pay the factoring company directly. With invoice loans or confidential factoring arrangements, you can often keep the financing private and continue collecting payments yourself.</>
+        answer: <>With invoice factoring, yes—your customers will be notified to pay the factoring company directly. With invoice loans or confidential factoring arrangements, you can often keep the financing private and continue collecting payments yourself.</>,
+        schemaAnswer: 'With invoice factoring, yes, your customers will be notified to pay the factoring company directly. With invoice loans or confidential factoring arrangements, you can often keep the financing private and continue collecting payments yourself.'
       },
       {
         question: 'What happens if my customer does not pay?',
-        answer: <>This depends on whether you have recourse or non-recourse financing. With recourse factoring, you are responsible for buying back unpaid invoices. Non-recourse factoring shifts this risk to the factor (at higher fees). Invoice loans typically require you to repay regardless of customer payment.</>
+        answer: <>This depends on whether you have recourse or non-recourse financing. With recourse factoring, you are responsible for buying back unpaid invoices. Non-recourse factoring shifts this risk to the factor (at higher fees). Invoice loans typically require you to repay regardless of customer payment.</>,
+        schemaAnswer: 'This depends on whether you have recourse or non-recourse financing. With recourse factoring, you are responsible for buying back unpaid invoices. Non-recourse factoring shifts this risk to the factor at higher fees. Invoice loans typically require you to repay regardless of customer payment.'
       },
       {
         question: 'How quickly can I get funded?',
-        answer: <>Initial setup typically takes 3-7 days for underwriting and account establishment. Once set up, funding on new invoices usually happens within 24-48 hours. Some providers offer same-day funding for established accounts.</>
+        answer: <>Initial setup typically takes 3-7 days for underwriting and account establishment. Once set up, funding on new invoices usually happens within 24-48 hours. Some providers offer same-day funding for established accounts.</>,
+        schemaAnswer: 'Initial setup typically takes 3-7 days for underwriting and account establishment. Once set up, funding on new invoices usually happens within 24-48 hours. Some providers offer same-day funding for established accounts.'
       },
       {
         question: 'Do I need to finance all my invoices?',
-        answer: <>Not necessarily. Many providers offer selective invoice financing where you choose which invoices to finance. This can be useful if you only need occasional cash flow support or want to finance specific large invoices. However, some providers require minimum volumes.</>
+        answer: <>Not necessarily. Many providers offer selective invoice financing where you choose which invoices to finance. This can be useful if you only need occasional cash flow support or want to finance specific large invoices. However, some providers require minimum volumes.</>,
+        schemaAnswer: 'Not necessarily. Many providers offer selective invoice financing where you choose which invoices to finance. This can be useful if you only need occasional cash flow support or want to finance specific large invoices. However, some providers require minimum volumes.'
       },
     ],
     relatedArticles: ['invoice-factoring-loans', 'short-term-business-financing', 'cash-loans-direct'],
@@ -922,23 +943,28 @@ export const articleData: Record<string, ArticleData> = {
     faqs: [
       {
         question: 'How much money should I raise in a pre-seed round?',
-        answer: <>Raise enough to reach your next significant milestone—typically 12-18 months of runway. Most pre-seed rounds range from $50,000 to $500,000, though some reach $1 million in competitive markets. The key is having a clear plan for how the capital gets you to a point where you can raise a larger seed round.</>
+        answer: <>Raise enough to reach your next significant milestone—typically 12-18 months of runway. Most pre-seed rounds range from $50,000 to $500,000, though some reach $1 million in competitive markets. The key is having a clear plan for how the capital gets you to a point where you can raise a larger seed round.</>,
+        schemaAnswer: 'Raise enough to reach your next significant milestone, typically 12-18 months of runway. Most pre-seed rounds range from $50,000 to $500,000, though some reach $1 million in competitive markets. The key is having a clear plan for how the capital gets you to a point where you can raise a larger seed round.'
       },
       {
         question: 'What equity percentage do pre-seed investors typically take?',
-        answer: <>Pre-seed investors typically receive 10-25% of your company, depending on the amount raised and your valuation. With a $2 million valuation cap and $250,000 raised, you would give up approximately 12.5%. Maintain enough equity to have meaningful ownership through future rounds.</>
+        answer: <>Pre-seed investors typically receive 10-25% of your company, depending on the amount raised and your valuation. With a $2 million valuation cap and $250,000 raised, you would give up approximately 12.5%. Maintain enough equity to have meaningful ownership through future rounds.</>,
+        schemaAnswer: 'Pre-seed investors typically receive 10-25% of your company, depending on the amount raised and your valuation. With a $2 million valuation cap and $250,000 raised, you would give up approximately 12.5%. Maintain enough equity to have meaningful ownership through future rounds.'
       },
       {
         question: 'Do I need revenue to raise pre-seed funding?',
-        answer: <>No, revenue is not required for pre-seed. Investors at this stage invest in your team, vision, and market opportunity. However, any early traction—waitlists, letters of intent, pilot customers, or even strong customer interview insights—strengthens your position significantly.</>
+        answer: <>No, revenue is not required for pre-seed. Investors at this stage invest in your team, vision, and market opportunity. However, any early traction—waitlists, letters of intent, pilot customers, or even strong customer interview insights—strengthens your position significantly.</>,
+        schemaAnswer: 'No, revenue is not required for pre-seed. Investors at this stage invest in your team, vision, and market opportunity. However, any early traction such as waitlists, letters of intent, pilot customers, or strong customer interview insights strengthens your position significantly.'
       },
       {
         question: 'What is the difference between pre-seed and seed funding?',
-        answer: <>Pre-seed typically comes before you have product-market fit, often before you even have a working product. Seed rounds usually happen after you have built an MVP and have some early traction or validation. Seed rounds are larger (typically $500K to $3M) and often come from institutional investors.</>
+        answer: <>Pre-seed typically comes before you have product-market fit, often before you even have a working product. Seed rounds usually happen after you have built an MVP and have some early traction or validation. Seed rounds are larger (typically $500K to $3M) and often come from institutional investors.</>,
+        schemaAnswer: 'Pre-seed typically comes before you have product-market fit, often before you even have a working product. Seed rounds usually happen after you have built an MVP and have some early traction or validation. Seed rounds are larger, typically $500K to $3M, and often come from institutional investors.'
       },
       {
         question: 'Should I use a SAFE or convertible note?',
-        answer: <>SAFEs are simpler and more founder-friendly—no interest accrual or maturity date. Convertible notes are debt instruments with interest and a maturity date, which some investors prefer for downside protection. In most cases, SAFEs are the better choice for early-stage fundraising.</>
+        answer: <>SAFEs are simpler and more founder-friendly—no interest accrual or maturity date. Convertible notes are debt instruments with interest and a maturity date, which some investors prefer for downside protection. In most cases, SAFEs are the better choice for early-stage fundraising.</>,
+        schemaAnswer: 'SAFEs are simpler and more founder-friendly with no interest accrual or maturity date. Convertible notes are debt instruments with interest and a maturity date, which some investors prefer for downside protection. In most cases, SAFEs are the better choice for early-stage fundraising.'
       },
     ],
     relatedArticles: ['first-time-business-loans', 'how-to-get-a-startup-business-loan-with-bad-credit', 'short-term-business-financing'],
@@ -1085,23 +1111,28 @@ export const articleData: Record<string, ArticleData> = {
     faqs: [
       {
         question: 'Are secured loans always better because of lower rates?',
-        answer: <>Not necessarily. Lower rates save money, but secured loans carry asset risk. If your business struggles, you could lose critical equipment or property. For smaller loans or short-term needs, the convenience and reduced risk of unsecured financing may outweigh the rate difference.</>
+        answer: <>Not necessarily. Lower rates save money, but secured loans carry asset risk. If your business struggles, you could lose critical equipment or property. For smaller loans or short-term needs, the convenience and reduced risk of unsecured financing may outweigh the rate difference.</>,
+        schemaAnswer: 'Not necessarily. Lower rates save money, but secured loans carry asset risk. If your business struggles, you could lose critical equipment or property. For smaller loans or short-term needs, the convenience and reduced risk of unsecured financing may outweigh the rate difference.'
       },
       {
         question: 'What can be used as collateral for a secured loan?',
-        answer: <>Common collateral includes commercial real estate, equipment and machinery, vehicles, inventory, accounts receivable, cash savings or CDs, and investment accounts. The collateral must typically be free of other liens and have clear, documentable value.</>
+        answer: <>Common collateral includes commercial real estate, equipment and machinery, vehicles, inventory, accounts receivable, cash savings or CDs, and investment accounts. The collateral must typically be free of other liens and have clear, documentable value.</>,
+        schemaAnswer: 'Common collateral includes commercial real estate, equipment and machinery, vehicles, inventory, accounts receivable, cash savings or CDs, and investment accounts. The collateral must typically be free of other liens and have clear, documentable value.'
       },
       {
         question: 'Can I get an unsecured loan with bad credit?',
-        answer: <>It is more difficult but possible. Some online lenders work with credit scores as low as 500, though you will pay significantly higher rates. Alternatively, consider <Link href="/business-loans/equipment-financing" className="text-quicklend-600 font-medium hover:underline">equipment financing</Link> where the equipment itself serves as collateral, reducing credit requirements.</>
+        answer: <>It is more difficult but possible. Some online lenders work with credit scores as low as 500, though you will pay significantly higher rates. Alternatively, consider <Link href="/business-loans/equipment-financing" className="text-quicklend-600 font-medium hover:underline">equipment financing</Link> where the equipment itself serves as collateral, reducing credit requirements.</>,
+        schemaAnswer: 'It is more difficult but possible. Some online lenders work with credit scores as low as 500, though you will pay significantly higher rates. Alternatively, consider equipment financing where the equipment itself serves as collateral, reducing credit requirements.'
       },
       {
         question: 'What happens if I default on a secured loan?',
-        answer: <>The lender can seize and sell the collateral to recover their losses. If the collateral sale does not cover the full debt, you may still owe the difference. With a personal guarantee, your personal assets could also be pursued.</>
+        answer: <>The lender can seize and sell the collateral to recover their losses. If the collateral sale does not cover the full debt, you may still owe the difference. With a personal guarantee, your personal assets could also be pursued.</>,
+        schemaAnswer: 'The lender can seize and sell the collateral to recover their losses. If the collateral sale does not cover the full debt, you may still owe the difference. With a personal guarantee, your personal assets could also be pursued.'
       },
       {
         question: 'Is a personal guarantee the same as collateral?',
-        answer: <>No. Collateral is a specific asset the lender can claim. A personal guarantee is your promise to repay using any personal assets if needed. You can have both on the same loan—specific collateral plus a personal guarantee for additional security.</>
+        answer: <>No. Collateral is a specific asset the lender can claim. A personal guarantee is your promise to repay using any personal assets if needed. You can have both on the same loan—specific collateral plus a personal guarantee for additional security.</>,
+        schemaAnswer: 'No. Collateral is a specific asset the lender can claim. A personal guarantee is your promise to repay using any personal assets if needed. You can have both on the same loan, with specific collateral plus a personal guarantee for additional security.'
       },
     ],
     relatedArticles: ['no-collateral-business-loan', 'first-time-business-loans', 'small-business-equipment-financing'],
@@ -1253,23 +1284,28 @@ export const articleData: Record<string, ArticleData> = {
     faqs: [
       {
         question: 'How fast can I get short-term business financing?',
-        answer: <>Many online lenders can approve and fund within 24-48 hours once you submit your application with required documents. Some same-day funding options exist for established borrowers. Traditional banks take longer, typically 1-2 weeks even for short-term products.</>
+        answer: <>Many online lenders can approve and fund within 24-48 hours once you submit your application with required documents. Some same-day funding options exist for established borrowers. Traditional banks take longer, typically 1-2 weeks even for short-term products.</>,
+        schemaAnswer: 'Many online lenders can approve and fund within 24-48 hours once you submit your application with required documents. Some same-day funding options exist for established borrowers. Traditional banks take longer, typically 1-2 weeks even for short-term products.'
       },
       {
         question: 'What are typical interest rates for short-term business loans?',
-        answer: <>Rates vary widely based on your qualifications. Well-qualified borrowers may see APRs from 10-25%. Borrowers with lower credit or shorter time in business often pay 25-50% or higher. Merchant cash advances can have effective APRs exceeding 100% in some cases.</>
+        answer: <>Rates vary widely based on your qualifications. Well-qualified borrowers may see APRs from 10-25%. Borrowers with lower credit or shorter time in business often pay 25-50% or higher. Merchant cash advances can have effective APRs exceeding 100% in some cases.</>,
+        schemaAnswer: 'Rates vary widely based on your qualifications. Well-qualified borrowers may see APRs from 10-25%. Borrowers with lower credit or shorter time in business often pay 25-50% or higher. Merchant cash advances can have effective APRs exceeding 100% in some cases.'
       },
       {
         question: 'Can I pay off a short-term loan early?',
-        answer: <>It depends on the loan structure. Some lenders offer prepayment discounts while others charge the same total regardless of when you pay. Factor rate products (common in merchant cash advances) typically charge the full factor regardless of early repayment. Always ask about prepayment terms before signing.</>
+        answer: <>It depends on the loan structure. Some lenders offer prepayment discounts while others charge the same total regardless of when you pay. Factor rate products (common in merchant cash advances) typically charge the full factor regardless of early repayment. Always ask about prepayment terms before signing.</>,
+        schemaAnswer: 'It depends on the loan structure. Some lenders offer prepayment discounts while others charge the same total regardless of when you pay. Factor rate products, common in merchant cash advances, typically charge the full factor regardless of early repayment. Always ask about prepayment terms before signing.'
       },
       {
         question: 'What is the difference between a factor rate and an interest rate?',
-        answer: <>An interest rate is the annual cost of borrowing expressed as a percentage. A factor rate is a decimal multiplied by your loan amount to determine total repayment. A factor rate of 1.2 on $10,000 means you repay $12,000 total. Factor rates do not account for loan term, so a 1.2 factor on 6 months is much more expensive than 1.2 over 12 months.</>
+        answer: <>An interest rate is the annual cost of borrowing expressed as a percentage. A factor rate is a decimal multiplied by your loan amount to determine total repayment. A factor rate of 1.2 on $10,000 means you repay $12,000 total. Factor rates do not account for loan term, so a 1.2 factor on 6 months is much more expensive than 1.2 over 12 months.</>,
+        schemaAnswer: 'An interest rate is the annual cost of borrowing expressed as a percentage. A factor rate is a decimal multiplied by your loan amount to determine total repayment. For example, a factor rate of 1.2 on $10,000 means you repay $12,000 total. Factor rates do not account for loan term, so a 1.2 factor on 6 months is much more expensive than 1.2 over 12 months.'
       },
       {
         question: 'Is short-term financing a good option for startups?',
-        answer: <>It can be, but proceed carefully. Short-term financing is often more accessible to startups than traditional loans, but the higher costs can strain new businesses. Consider whether the capital will generate returns quickly enough to cover the financing cost. <Link href="/financial-insights/pre-seed-funding" className="text-quicklend-600 font-medium hover:underline">Equity funding</Link> may be a better fit for longer-term startup needs.</>
+        answer: <>It can be, but proceed carefully. Short-term financing is often more accessible to startups than traditional loans, but the higher costs can strain new businesses. Consider whether the capital will generate returns quickly enough to cover the financing cost. <Link href="/financial-insights/pre-seed-funding" className="text-quicklend-600 font-medium hover:underline">Equity funding</Link> may be a better fit for longer-term startup needs.</>,
+        schemaAnswer: 'It can be, but proceed carefully. Short-term financing is often more accessible to startups than traditional loans, but the higher costs can strain new businesses. Consider whether the capital will generate returns quickly enough to cover the financing cost. Equity funding may be a better fit for longer-term startup needs.'
       },
     ],
     relatedArticles: ['first-time-business-loans', 'invoice-financing', 'how-to-improve-credit-fast'],
@@ -1422,27 +1458,33 @@ export const articleData: Record<string, ArticleData> = {
     faqs: [
       {
         question: 'What credit score do I need for a veteran business loan?',
-        answer: <>SBA Veterans Advantage loans generally look for credit scores above 650, though some community lenders may work with lower scores. StreetShares and similar veteran-focused lenders often have more flexible credit requirements. If your credit needs work, start with a secured credit card and consistent payments while building your plan. Learn more about <Link href="/financial-insights/how-to-improve-credit-fast" className="text-quicklend-600 font-medium hover:underline">improving your credit score</Link>.</>
+        answer: <>SBA Veterans Advantage loans generally look for credit scores above 650, though some community lenders may work with lower scores. StreetShares and similar veteran-focused lenders often have more flexible credit requirements. If your credit needs work, start with a secured credit card and consistent payments while building your plan. Learn more about <Link href="/financial-insights/how-to-improve-credit-fast" className="text-quicklend-600 font-medium hover:underline">improving your credit score</Link>.</>,
+        schemaAnswer: 'SBA Veterans Advantage loans generally look for credit scores above 650, though some community lenders may work with lower scores. StreetShares and similar veteran-focused lenders often have more flexible credit requirements. If your credit needs work, start with a secured credit card and consistent payments while building your plan.'
       },
       {
         question: 'Can I get a veteran business loan with no money down?',
-        answer: <>Some programs allow zero-down financing, particularly for smaller SBA Express loans. However, most lenders prefer to see some owner investment as it demonstrates commitment. Even a small down payment can improve your approval odds and loan terms.</>
+        answer: <>Some programs allow zero-down financing, particularly for smaller SBA Express loans. However, most lenders prefer to see some owner investment as it demonstrates commitment. Even a small down payment can improve your approval odds and loan terms.</>,
+        schemaAnswer: 'Some programs allow zero-down financing, particularly for smaller SBA Express loans. However, most lenders prefer to see some owner investment as it demonstrates commitment. Even a small down payment can improve your approval odds and loan terms.'
       },
       {
         question: 'How long does the veteran loan application process take?',
-        answer: <>SBA Express loans can be approved in 36 hours through the streamlined process. Standard SBA 7(a) loans typically take 2-4 weeks. MREIDL disaster loans may take 3-4 weeks. StreetShares and private veteran lenders often fund within 1-2 weeks. Start the process well before you need funds.</>
+        answer: <>SBA Express loans can be approved in 36 hours through the streamlined process. Standard SBA 7(a) loans typically take 2-4 weeks. MREIDL disaster loans may take 3-4 weeks. StreetShares and private veteran lenders often fund within 1-2 weeks. Start the process well before you need funds.</>,
+        schemaAnswer: 'SBA Express loans can be approved in 36 hours through the streamlined process. Standard SBA 7(a) loans typically take 2-4 weeks. MREIDL disaster loans may take 3-4 weeks. StreetShares and private veteran lenders often fund within 1-2 weeks. Start the process well before you need funds.'
       },
       {
         question: 'Do I need to be a combat veteran to qualify?',
-        answer: <>No. Most veteran business loan programs are available to all honorably discharged veterans, regardless of combat experience. Programs vary in specific eligibility—some include active-duty members, Reserve and Guard members, and military spouses. Check each program individual requirements.</>
+        answer: <>No. Most veteran business loan programs are available to all honorably discharged veterans, regardless of combat experience. Programs vary in specific eligibility—some include active-duty members, Reserve and Guard members, and military spouses. Check each program individual requirements.</>,
+        schemaAnswer: 'No. Most veteran business loan programs are available to all honorably discharged veterans, regardless of combat experience. Programs vary in specific eligibility, with some including active-duty members, Reserve and Guard members, and military spouses. Check each program\'s individual requirements.'
       },
       {
         question: 'Can military spouses apply for veteran business loan programs?',
-        answer: <>Yes, several programs extend eligibility to military spouses. The SBA Veterans Advantage program includes spouses of veterans and widowed spouses of service members. The StreetShares Foundation also accepts applications from military spouse-owned businesses.</>
+        answer: <>Yes, several programs extend eligibility to military spouses. The SBA Veterans Advantage program includes spouses of veterans and widowed spouses of service members. The StreetShares Foundation also accepts applications from military spouse-owned businesses.</>,
+        schemaAnswer: 'Yes, several programs extend eligibility to military spouses. The SBA Veterans Advantage program includes spouses of veterans and widowed spouses of service members. The StreetShares Foundation also accepts applications from military spouse-owned businesses.'
       },
       {
         question: 'What documents do I need to apply?',
-        answer: <>Most applications require your DD-214, a business plan with financial projections, personal and business tax returns, bank statements (3-6 months), photo ID, and proof of business registration. Service-disabled veteran programs may also require a VA disability rating letter.</>
+        answer: <>Most applications require your DD-214, a business plan with financial projections, personal and business tax returns, bank statements (3-6 months), photo ID, and proof of business registration. Service-disabled veteran programs may also require a VA disability rating letter.</>,
+        schemaAnswer: 'Most applications require your DD-214, a business plan with financial projections, personal and business tax returns, bank statements (3-6 months), photo ID, and proof of business registration. Service-disabled veteran programs may also require a VA disability rating letter.'
       },
     ],
     relatedArticles: ['first-time-business-loans', 'how-to-get-a-startup-business-loan-with-bad-credit', 'no-collateral-business-loan'],

@@ -5,7 +5,9 @@ import { getAllArticles, getArticle } from '@/lib/content'
 import { generatePageMetadata } from '@/lib/metadata'
 import { breadcrumbSchema, articleSchema, faqSchema } from '@/lib/schema'
 import { getArticleData, hasStructuredArticle } from '@/lib/article-data'
+import { getArticleFaqs } from '@/lib/faq-data'
 import ArticlePageLayout from '@/components/ArticlePageLayout'
+import FAQSection from '@/components/FAQSection'
 import { MdPhone, MdAccessTime, MdTrendingUp, MdCheckCircle, MdArrowForward, MdBookmark } from 'react-icons/md'
 
 export function generateStaticParams() {
@@ -165,7 +167,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
     })
 
     const faqData = structuredArticle.faqs.length > 0
-      ? faqSchema(structuredArticle.faqs.map(f => ({ question: f.question, answer: typeof f.answer === 'string' ? f.answer : 'See article for full answer.' })))
+      ? faqSchema(structuredArticle.faqs.map(f => ({ question: f.question, answer: f.schemaAnswer })))
       : null
 
     return (
@@ -195,6 +197,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
 
   const allArticles = getAllArticles()
   const readingTime = estimateReadingTime(article.content)
+  const articleFaqs = getArticleFaqs(params.slug)
 
   // Get related articles
   const relatedSlugs = relatedArticlesByTopic[params.slug] || []
@@ -233,6 +236,12 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleStructuredData) }}
       />
+      {articleFaqs && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema(articleFaqs.map(f => ({ question: f.question, answer: f.schemaAnswer })))) }}
+        />
+      )}
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-quicklend-800 to-quicklend-900 text-white pt-24 md:pt-28 pb-16">
@@ -414,6 +423,11 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           </div>
         </div>
       </section>
+
+      {/* FAQ Section */}
+      {articleFaqs && articleFaqs.length > 0 && (
+        <FAQSection faqs={articleFaqs} />
+      )}
 
       {/* More Articles Section */}
       <section className="py-12 lg:py-16 bg-quicklend-50">

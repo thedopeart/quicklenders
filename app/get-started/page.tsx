@@ -1,8 +1,9 @@
 import { Suspense } from 'react'
 import Link from 'next/link'
 import { generatePageMetadata } from '@/lib/metadata'
-import { breadcrumbSchema } from '@/lib/schema'
+import { breadcrumbSchema, faqSchema } from '@/lib/schema'
 import GetStartedForm from './GetStartedForm'
+import FAQSection from '@/components/FAQSection'
 import { MdShield, MdSpeed, MdSupportAgent, MdCheckCircle } from 'react-icons/md'
 
 export const metadata = generatePageMetadata({
@@ -19,17 +20,51 @@ const benefits = [
   { icon: MdCheckCircle, text: 'No obligation to proceed' },
 ]
 
+const getStartedFaqs = [
+  {
+    question: 'What happens after I submit the form?',
+    answer: <>After submitting your information, a dedicated lending specialist reviews your details and reaches out within 1 business day with personalized financing options. You will receive offers to compare, and there is no obligation to proceed with any of them. The entire process is confidential and designed to match you with the best options for your situation.</>,
+    schemaAnswer: 'After submitting your information, a dedicated lending specialist reviews your details and reaches out within 1 business day with personalized financing options. You will receive offers to compare with no obligation to proceed. The process is confidential and designed to match you with the best options.',
+  },
+  {
+    question: 'Will this affect my credit score?',
+    answer: <>No. Our initial pre-qualification only requires a soft credit check, which does not impact your credit score. A hard credit inquiry only occurs if you decide to proceed with a formal loan application after reviewing your options. You can explore what you qualify for without any risk to your credit. Learn more about how credit works in our <Link href="/financial-insights/how-to-improve-credit-fast" className="text-quicklend-600 font-medium hover:underline">credit improvement guide</Link>.</>,
+    schemaAnswer: 'No. Our initial pre-qualification only requires a soft credit check, which does not impact your credit score. A hard credit inquiry only occurs if you decide to proceed with a formal loan application after reviewing your options.',
+  },
+  {
+    question: 'How long does approval take?',
+    answer: <>Timeline depends on the loan type. <Link href="/business-loans/term-loans" className="text-quicklend-600 font-medium hover:underline">Term loans</Link> and <Link href="/business-loans/lines-of-credit" className="text-quicklend-600 font-medium hover:underline">lines of credit</Link> can be approved within 24 hours with same-day funding possible. <Link href="/business-loans/equipment-financing" className="text-quicklend-600 font-medium hover:underline">Equipment financing</Link> and <Link href="/business-loans/asset-backed-loans" className="text-quicklend-600 font-medium hover:underline">asset-based lending</Link> typically take 1 to 4 weeks due to additional verification. Having your documents ready speeds up the process.</>,
+    schemaAnswer: 'Timeline depends on the loan type. Term loans and lines of credit can be approved within 24 hours with same-day funding possible. Equipment financing and asset-based lending typically take 1 to 4 weeks due to additional verification. Having your documents ready speeds up the process.',
+  },
+  {
+    question: 'What documents do I need to apply?',
+    answer: <>You will typically need 3 to 6 months of business bank statements, recent tax returns, and basic business information including your EIN, time in business, and annual revenue. Some loan types may require additional documentation like accounts receivable reports or equipment quotes. Our lending specialists will let you know exactly what is needed based on the options you qualify for.</>,
+    schemaAnswer: 'You will typically need 3 to 6 months of business bank statements, recent tax returns, and basic business information including your EIN, time in business, and annual revenue. Some loan types may require additional documentation. Our specialists will advise on exactly what is needed.',
+  },
+  {
+    question: 'What if I am approved for less than I need?',
+    answer: <>You can accept the lower amount, apply with additional lenders for supplementary financing, or improve your qualifications and reapply later. Sometimes accepting a smaller loan and building a strong repayment history helps you qualify for more in the future. Our specialists can also help you explore combining multiple <Link href="/business-loans" className="text-quicklend-600 font-medium hover:underline">financing products</Link> to meet your total capital needs.</>,
+    schemaAnswer: 'You can accept the lower amount, apply with additional lenders, or improve your qualifications and reapply later. Accepting a smaller loan and building a strong repayment history can help you qualify for more in the future. Our specialists can help you explore combining multiple financing products.',
+  },
+]
+
 export default function GetStartedPage() {
   const breadcrumbs = breadcrumbSchema([
     { name: 'Home', url: '/' },
     { name: 'Get Started', url: '/get-started' },
   ])
 
+  const faqData = faqSchema(getStartedFaqs.map(f => ({ question: f.question, answer: f.schemaAnswer })))
+
   return (
     <main className="flex flex-grow flex-col w-full">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbs) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }}
       />
 
       {/* Hero Section */}
@@ -159,6 +194,8 @@ export default function GetStartedPage() {
           </div>
         </div>
       </section>
+
+      <FAQSection faqs={getStartedFaqs} />
     </main>
   )
 }

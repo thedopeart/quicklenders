@@ -45,7 +45,7 @@ export default function LoanProductPage({ params }: PageProps) {
     { name: product.name, url: `/business-loans/${product.slug}` },
   ])
 
-  const faqData = faqSchema(product.faqs)
+  const faqData = faqSchema(product.faqs.map(f => ({ question: f.question, answer: f.schemaAnswer })))
 
   return (
     <>
