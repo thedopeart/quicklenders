@@ -4,14 +4,14 @@ import { useState } from 'react'
 import Link from "next/link"
 import Image from "next/image"
 import { companyName, phoneFormatted, hours, loanProducts } from "@/lib/config"
-import { Phone, ChevronDown, Menu, X, Clock, Building2, Briefcase, Calculator, BarChart, BookOpen } from "lucide-react"
+import { Phone, ChevronDown, Menu, X, Clock, Building2, Briefcase, Calculator, BarChart, BookOpen, Wrench } from "lucide-react"
 
 const solutionsLinks = [
     { name: 'Small Business', href: '/business-loans', icon: Building2 },
     { name: 'Startups', href: '/business-loans', icon: Briefcase },
     { name: 'Enterprise', href: '/business-loans', icon: BarChart },
     { name: 'Financial Insights', href: '/financial-insights', icon: BookOpen },
-    { name: 'Loan Calculator', href: '/get-started', icon: Calculator },
+    { name: 'Loan Calculator', href: '/tools', icon: Calculator },
 ]
 
 const Header = () => {
@@ -76,6 +76,10 @@ const Header = () => {
                                     ))}
                                 </div>
                             </div>
+
+                            <Link href="/tools" className="text-gray-700 hover:text-quicklend-600 text-lg font-medium">
+                                Tools
+                            </Link>
 
                             <Link href="/contact" className="text-gray-700 hover:text-quicklend-600 text-lg font-medium">
                                 Contact
@@ -153,6 +157,15 @@ const Header = () => {
                                     ))}
                                 </div>
                             </div>
+
+                            <Link
+                                href="/tools"
+                                className="flex items-center text-gray-700 py-2 border-b border-gray-200"
+                                onClick={() => setMobileOpen(false)}
+                            >
+                                <Wrench className="h-4 w-4 mr-2 text-quicklend-600" />
+                                Tools
+                            </Link>
 
                             <Link
                                 href="/contact"

@@ -85,6 +85,32 @@ export function faqSchema(faqs: { question: string; answer: string }[]) {
   }
 }
 
+export function softwareApplicationSchema(tool: {
+  name: string
+  description: string
+  url: string
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: tool.name,
+    description: tool.description,
+    url: `https://quicklenders.com${tool.url}`,
+    applicationCategory: 'FinanceApplication',
+    operatingSystem: 'Web',
+    offers: {
+      '@type': 'Offer',
+      price: '0',
+      priceCurrency: 'USD',
+    },
+    provider: {
+      '@type': 'FinancialService',
+      name: 'Quick Lenders',
+      url: 'https://quicklenders.com',
+    },
+  }
+}
+
 export function articleSchema(article: {
   title: string
   description: string

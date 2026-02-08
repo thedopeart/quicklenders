@@ -13,6 +13,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'bonds',
   ]
 
+  const toolSlugs = [
+    'loan-payment-calculator',
+    'factor-rate-to-apr-calculator',
+  ]
+
   const blogSlugs = [
     'bootstrapping-finance',
     'cash-loans-direct',
@@ -43,6 +48,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/business-loans`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.9 },
     ...loanSlugs.map((slug) => ({
       url: `${baseUrl}/business-loans/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    })),
+    { url: `${baseUrl}/tools`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
+    ...toolSlugs.map((slug) => ({
+      url: `${baseUrl}/tools/${slug}`,
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: 0.8,
