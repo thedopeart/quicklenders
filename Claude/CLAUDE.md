@@ -370,17 +370,29 @@ NEW PAGES (post-migration)
 ├── /book-a-call                         Cal.com scheduling
 ├── /how-it-works                        Process walkthrough
 ├── /business-loans/application-checklist Document prep guide
-├── /tools                               Tools hub
-│   ├── /tools/loan-finder-quiz
-│   ├── /tools/break-even-analyzer
-│   ├── /tools/loan-payment-calculator
-│   ├── /tools/equipment-financing-vs-leasing
-│   ├── /tools/loan-comparison
-│   ├── /tools/affordability-calculator
-│   ├── /tools/dscr-calculator
-│   ├── /tools/cash-flow-forecast
-│   ├── /tools/sba-eligibility-checker
-│   └── /tools/working-capital-calculator
+├── /tools                               Tools hub (LIVE)
+│   ├── /tools/loan-payment-calculator   (LIVE)
+│   ├── /tools/factor-rate-to-apr-calculator (LIVE)
+│   ├── /tools/total-cost-of-capital-calculator
+│   ├── /tools/break-even-calculator
+│   ├── /tools/roi-calculator
+│   ├── /tools/equipment-financing-calculator
+│   ├── /tools/debt-service-coverage-calculator
+│   ├── /tools/prepayment-savings-calculator
+│   ├── /tools/refinance-savings-calculator
+│   ├── /tools/cash-flow-forecast-tool
+│   ├── /tools/business-loan-comparison-tool
+│   ├── /tools/funding-readiness-assessment
+│   ├── /tools/loan-type-finder
+│   ├── /tools/invoice-factoring-calculator
+│   ├── /tools/mca-payback-calculator
+│   ├── /tools/sba-loan-payment-calculator
+│   ├── /tools/business-valuation-estimator
+│   ├── /tools/working-capital-calculator
+│   ├── /tools/loan-affordability-calculator
+│   ├── /tools/loan-document-checklist
+│   ├── /tools/business-loan-glossary
+│   └── /tools/interest-rate-comparison-chart
 ├── /glossary                            Glossary hub
 │   └── /glossary/[term]                 Individual terms (120+)
 ├── /industries/[slug]                   Industry pages (10-15)
@@ -466,6 +478,79 @@ Use descriptive anchor text. "See our term loan options" not "click here." "Try 
 - Feature branches for tools, content batches, and major changes
 - Content updates (new MDX files) can go directly to `main` via PR
 - Code changes (components, API routes, config) go through feature branch → PR → review → merge
+
+---
+
+## Tools Hub — Build Progress (Updated Feb 7, 2026)
+
+### What Was Built
+
+| Item | Route | Status |
+|------|-------|--------|
+| Tools Hub page | `/tools` | Live |
+| Tool data + schema | `lib/tools-data.tsx`, `lib/schema.ts` | Live |
+| Header nav (Tools dropdown) | Desktop + mobile | Live |
+| Footer (Tools section) | All pages | Live |
+| Loan Payment Calculator | `/tools/loan-payment-calculator` | Live |
+| Factor Rate to APR Converter | `/tools/factor-rate-to-apr-calculator` | Live |
+| Sitemap | 3 tool routes added | Live |
+
+### Key Files
+
+| File | What It Does |
+|------|-------------|
+| `lib/tools-data.tsx` | ToolData interface, all 22 tools metadata (2 live, 20 coming-soon), helper functions (`getToolBySlug`, `getToolsByCategory`, `getLiveTools`) |
+| `lib/schema.ts` | Added `softwareApplicationSchema()` for tool pages |
+| `components/ToolPageLayout/index.tsx` | Reusable layout for all tool pages (hero, tool area, SEO content, how-it-works, what-you-get, FAQ, CTA, related tools) |
+| `app/tools/page.tsx` | Hub page with category grid, feature cards, value props, FAQ |
+| `app/tools/loan-payment-calculator/` | Page + `LoanPaymentCalculatorTool.tsx` (React Hook Form + Zod, sliders, amortization Recharts AreaChart, expandable schedule table) |
+| `app/tools/factor-rate-to-apr-calculator/` | Page + `FactorRateCalculatorTool.tsx` (factor rate input, APR display, cost breakdown, context callout) |
+
+### Design Decisions
+- Hub page uses dark blue (`quicklend-900`) background with white cards, amber/gold accents, matching homepage ServicesSection
+- Live tool cards are fully clickable (entire card is a Link)
+- Each tool page has 300-500 words of SEO content with internal links
+- BreadcrumbList + FAQPage + SoftwareApplication schema on every tool page
+- Tools nav is a dropdown in both desktop and mobile header
+- Adding new tools: create component in `app/tools/[slug]/`, add to `toolsData` in `lib/tools-data.tsx`, update status to `live`, add slug to `app/sitemap.ts`
+
+### Remaining Tools To-Do (20 tools, coming-soon in tools-data.tsx)
+
+**Calculators (Phase 2-3):**
+1. Total Cost of Capital Calculator
+2. Break-Even Calculator
+3. ROI Calculator
+4. Equipment Financing Calculator (lease vs buy)
+5. DSCR Calculator
+6. Prepayment Savings Calculator
+7. Refinance Savings Calculator
+8. Cash Flow Forecast Tool
+9. Invoice Factoring Calculator
+10. MCA Payback Calculator
+11. SBA Loan Payment Calculator
+12. Working Capital Calculator
+13. Loan Affordability Calculator
+
+**Interactive Tools (Phase 3-4):**
+14. Loan Comparison Tool (side-by-side)
+15. Funding Readiness Assessment
+16. Loan Type Finder (quiz)
+17. Business Valuation Estimator
+
+**Content Assets (Phase 4-5):**
+18. Loan Document Checklist
+19. Business Loan Glossary
+20. Interest Rate Comparison Chart
+
+### Notion Update Needed
+
+**TODO:** Update Notion task board when MCP integration is available:
+- Mark "Build Tools Hub Page" as Done
+- Mark "Build Loan Payment Calculator" as Done
+- Mark "Build Factor Rate to APR Converter" as Done
+- Mark "Add Tools to Nav/Footer" as Done
+- Create tasks for remaining 20 tools per phases above
+- Notion MCP server was added (`claude mcp add --transport http notion https://mcp.notion.com/mcp`) but not connecting yet — retry after restart
 
 ---
 
