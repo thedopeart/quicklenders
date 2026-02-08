@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://quicklenders.com/sitemap.xml
+
+Disallow: /wp-admin/
+Disallow: /wp-content/
+Disallow: /wp-includes/
