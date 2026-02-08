@@ -16,6 +16,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const toolSlugs = [
     'loan-payment-calculator',
     'factor-rate-to-apr-calculator',
+    'break-even-calculator',
   ]
 
   const blogSlugs = [

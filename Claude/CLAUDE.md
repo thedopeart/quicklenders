@@ -481,7 +481,7 @@ Use descriptive anchor text. "See our term loan options" not "click here." "Try 
 
 ---
 
-## Tools Hub — Build Progress (Updated Feb 7, 2026)
+## Tools Hub — Build Progress (Updated Feb 8, 2026)
 
 ### What Was Built
 
@@ -493,18 +493,20 @@ Use descriptive anchor text. "See our term loan options" not "click here." "Try 
 | Footer (Tools section) | All pages | Live |
 | Loan Payment Calculator | `/tools/loan-payment-calculator` | Live |
 | Factor Rate to APR Converter | `/tools/factor-rate-to-apr-calculator` | Live |
-| Sitemap | 3 tool routes added | Live |
+| Break-Even Calculator | `/tools/break-even-calculator` | Live |
+| Sitemap | 4 tool routes added | Live |
 
 ### Key Files
 
 | File | What It Does |
 |------|-------------|
-| `lib/tools-data.tsx` | ToolData interface, all 22 tools metadata (2 live, 20 coming-soon), helper functions (`getToolBySlug`, `getToolsByCategory`, `getLiveTools`) |
+| `lib/tools-data.tsx` | ToolData interface, all 22 tools metadata (3 live, 19 coming-soon), helper functions (`getToolBySlug`, `getToolsByCategory`, `getLiveTools`) |
 | `lib/schema.ts` | Added `softwareApplicationSchema()` for tool pages |
 | `components/ToolPageLayout/index.tsx` | Reusable layout for all tool pages (hero, tool area, SEO content, how-it-works, what-you-get, FAQ, CTA, related tools) |
 | `app/tools/page.tsx` | Hub page with category grid, feature cards, value props, FAQ |
 | `app/tools/loan-payment-calculator/` | Page + `LoanPaymentCalculatorTool.tsx` (React Hook Form + Zod, sliders, amortization Recharts AreaChart, expandable schedule table) |
 | `app/tools/factor-rate-to-apr-calculator/` | Page + `FactorRateCalculatorTool.tsx` (factor rate input, APR display, cost breakdown, context callout) |
+| `app/tools/break-even-calculator/` | Page + `BreakEvenCalculatorTool.tsx` (3 slider inputs, break-even units/revenue, contribution margin, Recharts LineChart with loss/profit zones, edge case handling) |
 
 ### Design Decisions
 - Hub page uses dark blue (`quicklend-900`) background with white cards, amber/gold accents, matching homepage ServicesSection
@@ -514,12 +516,11 @@ Use descriptive anchor text. "See our term loan options" not "click here." "Try 
 - Tools nav is a dropdown in both desktop and mobile header
 - Adding new tools: create component in `app/tools/[slug]/`, add to `toolsData` in `lib/tools-data.tsx`, update status to `live`, add slug to `app/sitemap.ts`
 
-### Remaining Tools To-Do (20 tools, coming-soon in tools-data.tsx)
+### Remaining Tools To-Do (19 tools, coming-soon in tools-data.tsx)
 
 **Calculators (Phase 2-3):**
 1. Total Cost of Capital Calculator
-2. Break-Even Calculator
-3. ROI Calculator
+2. ROI Calculator
 4. Equipment Financing Calculator (lease vs buy)
 5. DSCR Calculator
 6. Prepayment Savings Calculator
