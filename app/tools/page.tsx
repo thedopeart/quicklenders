@@ -110,58 +110,70 @@ export default function ToolsPage() {
       </section>
 
       {/* Tool Categories Grid */}
-      <section id="tools" className="py-16 lg:py-20">
+      <section id="tools" className="py-16 lg:py-20 bg-quicklend-900">
         <div className="container mx-auto px-4">
           {categories.map((category) => {
             const tools = getToolsByCategory(category)
             if (tools.length === 0) return null
             return (
               <div key={category} className="mb-16 last:mb-0">
-                <h2 className="text-2xl font-bold text-quicklend-900 mb-8">
-                  {categoryLabels[category]}
-                </h2>
+                <div className="mb-8">
+                  <span className="text-amber-500 font-semibold text-sm uppercase tracking-wider">{categoryLabels[category]}</span>
+                  <div className="w-12 h-0.5 bg-amber-500 mt-2"></div>
+                </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                   {tools.map((tool) => {
                     const Icon = tool.icon
                     const isLive = tool.status === 'live'
+                    const CardWrapper = isLive ? Link : 'div'
+                    const cardProps = isLive
+                      ? { href: `/tools/${tool.slug}` }
+                      : {}
                     return (
-                      <div
+                      <CardWrapper
                         key={tool.slug}
-                        className="bg-white rounded-xl p-6 border border-gray-100 shadow-sm hover:shadow-md transition-shadow flex flex-col"
+                        {...(cardProps as any)}
+                        className={`bg-white rounded-xl overflow-hidden shadow-lg flex flex-col group transition-all duration-300 ${
+                          isLive
+                            ? 'hover:shadow-2xl hover:-translate-y-1 cursor-pointer'
+                            : 'opacity-75'
+                        }`}
                       >
-                        <div className="flex items-start justify-between mb-4">
-                          <div className="w-12 h-12 rounded-lg bg-quicklend-50 flex items-center justify-center">
-                            <Icon className="h-6 w-6 text-quicklend-600" />
+                        <div className="p-6 flex flex-col flex-grow">
+                          <div className="flex items-start justify-between mb-4">
+                            <div className="bg-quicklend-100 rounded-full p-3">
+                              <div className="bg-amber-500 p-2.5 rounded-full">
+                                <Icon className="h-5 w-5 text-white" />
+                              </div>
+                            </div>
+                            <span
+                              className={`text-xs font-bold px-3 py-1 rounded-full ${
+                                isLive
+                                  ? 'bg-amber-500 text-white'
+                                  : 'bg-gray-100 text-gray-500'
+                              }`}
+                            >
+                              {isLive ? 'LIVE' : 'COMING SOON'}
+                            </span>
                           </div>
-                          <span
-                            className={`text-xs font-semibold px-3 py-1 rounded-full ${
-                              isLive
-                                ? 'bg-green-100 text-green-700'
-                                : 'bg-gray-100 text-gray-500'
-                            }`}
-                          >
-                            {isLive ? 'Live' : 'Coming Soon'}
-                          </span>
+                          <h3 className="text-lg font-bold text-quicklend-900 mb-1">
+                            {tool.name}
+                          </h3>
+                          <div className="w-10 h-0.5 bg-amber-500 mb-3"></div>
+                          <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">
+                            {tool.shortDescription}
+                          </p>
+                          {isLive ? (
+                            <span className="inline-flex items-center justify-center w-full py-3 bg-amber-500 group-hover:bg-amber-600 transition-colors text-white font-semibold rounded-lg text-sm">
+                              Use Tool <ArrowRight className="ml-2 h-4 w-4" />
+                            </span>
+                          ) : (
+                            <span className="inline-flex items-center justify-center w-full py-3 bg-gray-100 text-gray-400 font-medium rounded-lg text-sm cursor-not-allowed">
+                              Coming Soon
+                            </span>
+                          )}
                         </div>
-                        <h3 className="text-lg font-bold text-quicklend-900 mb-2">
-                          {tool.name}
-                        </h3>
-                        <p className="text-gray-600 text-sm leading-relaxed mb-4 flex-grow">
-                          {tool.shortDescription}
-                        </p>
-                        {isLive ? (
-                          <Link
-                            href={`/tools/${tool.slug}`}
-                            className="inline-flex items-center text-quicklend-600 font-semibold text-sm hover:text-quicklend-700 transition-colors"
-                          >
-                            Use Tool <ArrowRight className="ml-1 h-4 w-4" />
-                          </Link>
-                        ) : (
-                          <span className="inline-flex items-center text-gray-400 font-medium text-sm cursor-not-allowed">
-                            Coming Soon
-                          </span>
-                        )}
-                      </div>
+                      </CardWrapper>
                     )
                   })}
                 </div>
