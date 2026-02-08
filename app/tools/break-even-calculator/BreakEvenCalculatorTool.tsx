@@ -120,6 +120,19 @@ export default function BreakEvenCalculatorTool() {
 
   return (
     <div className="bg-white rounded-2xl shadow-sm border border-gray-100 overflow-hidden">
+      {/* Intro */}
+      <div className="p-6 sm:p-8 lg:p-10 pb-0">
+        <p className="text-gray-700 leading-relaxed mb-2">
+          Enter three numbers below: your total monthly fixed costs (rent, salaries, loan payments, etc.),
+          the price you charge per unit, and the variable cost to produce or deliver each unit.
+          The calculator shows how many units you need to sell to cover all costs, and the chart
+          highlights exactly where you cross from loss into profit.
+        </p>
+        <p className="text-gray-500 text-sm mb-0">
+          All results update in real time as you move the sliders or type new values.
+        </p>
+      </div>
+
       {/* Form */}
       <div className="p-6 sm:p-8 lg:p-10">
         <div className="grid md:grid-cols-3 gap-8">
@@ -410,22 +423,22 @@ export default function BreakEvenCalculatorTool() {
                 profit.
               </p>
               <p className="text-gray-600 text-sm">
-                If you are considering financing to grow your business — such as a{' '}
+                If you are considering financing to grow your business (a{' '}
                 <Link
                   href="/business-loans/term-loans"
                   className="text-theme-primary-light font-medium hover:underline"
                 >
                   term loan
-                </Link>{' '}
-                or{' '}
+                </Link>
+                ,{' '}
                 <Link
                   href="/business-loans/equipment-financing"
                   className="text-theme-primary-light font-medium hover:underline"
                 >
                   equipment financing
-                </Link>{' '}
-                — add the monthly payment to your fixed costs and re-run this calculator to see the
-                new break-even point.
+                </Link>
+                , etc.), try adding the monthly payment to your fixed costs and re-running this
+                calculator. That shows your new break-even point with the loan factored in.
               </p>
             </div>
           </div>

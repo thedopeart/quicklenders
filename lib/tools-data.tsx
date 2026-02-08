@@ -160,12 +160,12 @@ export const toolsData: Record<string, ToolData> = {
     status: 'live',
     icon: Target,
     shortDescription: 'Determine how many units or revenue you need to cover costs and start generating profit.',
-    longDescription: 'Our free break-even calculator helps you determine exactly how many units you need to sell — or how much revenue you need to generate — to cover your fixed and variable costs. Visualize your profit zone with an interactive chart and make smarter pricing and financing decisions.',
+    longDescription: 'Figure out exactly how many units you need to sell before your business turns a profit. Enter your fixed costs, price, and variable cost per unit, and this calculator does the rest. You will see your break-even point in units and revenue, plus an interactive chart showing your loss and profit zones.',
     features: ['Break-even units & revenue', 'Contribution margin analysis', 'Interactive profit chart', 'Real-time calculations'],
     faqs: [
       {
         question: 'What is a break-even point?',
-        answer: <>The break-even point is the number of units sold (or total revenue) at which your business covers all of its costs — both fixed and variable — with zero profit and zero loss. Every unit sold beyond the break-even point generates profit. Knowing your break-even point is essential when planning a new product launch, evaluating <Link href="/business-loans/term-loans" className="text-theme-primary-light font-medium hover:underline">business loan</Link> feasibility, or setting prices for your products and services.</>,
+        answer: <>The break-even point is the number of units you need to sell (or total revenue you need to earn) to cover all of your costs, both fixed and variable, with zero profit and zero loss. Every unit sold beyond that point generates profit. Knowing your break-even point is useful when planning a product launch, evaluating <Link href="/business-loans/term-loans" className="text-theme-primary-light font-medium hover:underline">business loan</Link> feasibility, or setting prices.</>,
         schemaAnswer: 'The break-even point is the number of units sold (or total revenue) at which your business covers all of its costs, both fixed and variable, with zero profit and zero loss. Every unit sold beyond the break-even point generates profit. Knowing your break-even point is essential for planning product launches, evaluating loan feasibility, and setting prices.',
       },
       {
@@ -175,23 +175,23 @@ export const toolsData: Record<string, ToolData> = {
       },
       {
         question: 'What is a contribution margin?',
-        answer: <>The contribution margin is the amount each unit sold contributes toward covering your fixed costs and generating profit. It is calculated as the selling price minus the variable cost per unit. A higher contribution margin means you need fewer sales to break even. The contribution margin ratio — expressed as a percentage of the selling price — helps you understand how efficiently each dollar of revenue contributes to covering overhead. For businesses evaluating <Link href="/business-loans/equipment-financing" className="text-theme-primary-light font-medium hover:underline">equipment financing</Link>, improving contribution margin is a key lever.</>,
+        answer: <>The contribution margin is the amount each unit sold contributes toward covering your fixed costs and generating profit. It equals the selling price minus the variable cost per unit. A higher contribution margin means you need fewer sales to break even. The contribution margin ratio (expressed as a percentage of the selling price) shows how efficiently each dollar of revenue covers overhead. For businesses evaluating <Link href="/business-loans/equipment-financing" className="text-theme-primary-light font-medium hover:underline">equipment financing</Link>, improving contribution margin is a key lever.</>,
         schemaAnswer: 'The contribution margin is the amount each unit sold contributes toward covering fixed costs and generating profit, calculated as selling price minus variable cost per unit. A higher contribution margin means fewer sales are needed to break even. The contribution margin ratio, expressed as a percentage of selling price, shows how efficiently each revenue dollar covers overhead.',
       },
       {
         question: 'What counts as a fixed cost vs. a variable cost?',
-        answer: <>Fixed costs remain constant regardless of how many units you sell — examples include rent, salaries, insurance, and <Link href="/business-loans/term-loans" className="text-theme-primary-light font-medium hover:underline">loan payments</Link>. Variable costs change directly with production volume — examples include raw materials, packaging, shipping, and sales commissions. Correctly categorizing your costs is critical for an accurate break-even analysis. If you are unsure, a good rule of thumb is: if the cost exists even when you sell zero units, it is fixed.</>,
+        answer: <>Fixed costs stay the same regardless of how many units you sell. Examples: rent, salaries, insurance, and <Link href="/business-loans/term-loans" className="text-theme-primary-light font-medium hover:underline">loan payments</Link>. Variable costs change with production volume. Examples: raw materials, packaging, shipping, and sales commissions. Correctly categorizing your costs is critical for an accurate break-even analysis. A good rule of thumb: if the cost exists even when you sell zero units, it is fixed.</>,
         schemaAnswer: 'Fixed costs remain constant regardless of how many units you sell, such as rent, salaries, insurance, and loan payments. Variable costs change directly with production volume, such as raw materials, packaging, shipping, and sales commissions. If a cost exists even when you sell zero units, it is fixed.',
       },
       {
         question: 'How can break-even analysis help with financing decisions?',
-        answer: <>Break-even analysis shows you exactly how much additional revenue a new investment or loan needs to generate before it becomes profitable. If you are considering a <Link href="/business-loans/term-loans" className="text-theme-primary-light font-medium hover:underline">term loan</Link> to fund expansion, add the loan payment to your fixed costs and recalculate — this tells you the minimum sales volume needed to cover the financing. You can also use our <Link href="/tools/loan-payment-calculator" className="text-theme-primary-light font-medium hover:underline">loan payment calculator</Link> to determine exact monthly payments before plugging them into this tool.</>,
+        answer: <>Break-even analysis shows you how much additional revenue a new investment or loan needs to generate before it pays for itself. If you are considering a <Link href="/business-loans/term-loans" className="text-theme-primary-light font-medium hover:underline">term loan</Link> to fund expansion, add the loan payment to your fixed costs and recalculate. That tells you the minimum sales volume needed to cover the financing. You can also use our <Link href="/tools/loan-payment-calculator" className="text-theme-primary-light font-medium hover:underline">loan payment calculator</Link> to determine exact monthly payments before plugging them into this tool.</>,
         schemaAnswer: 'Break-even analysis shows how much additional revenue a new investment or loan needs to generate before it becomes profitable. By adding loan payments to fixed costs and recalculating, you can determine the minimum sales volume needed to cover financing costs.',
       },
     ],
     seo: {
       title: 'Break-Even Calculator | Free Business Tool | Quick Lenders',
-      description: 'Calculate your break-even point in units and revenue. Visualize your profit zone with our free interactive chart — no signup required.',
+      description: 'Calculate your break-even point in units and revenue. Free interactive chart shows your profit zone. No signup required.',
     },
     relatedTools: ['loan-payment-calculator', 'roi-calculator', 'total-cost-of-capital-calculator'],
     relatedLoanProducts: ['term-loans', 'equipment-financing', 'lines-of-credit'],

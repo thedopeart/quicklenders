@@ -24,7 +24,7 @@ const howItWorks = [
   },
   {
     title: 'Visualize Your Profit Zone',
-    text: 'The interactive chart shows exactly where your revenue line crosses your cost line — everything beyond that point is profit.',
+    text: 'The interactive chart shows exactly where your revenue line crosses your cost line. Everything beyond that crossing point is profit.',
   },
 ]
 
@@ -43,7 +43,7 @@ const whatYouGet = [
   },
   {
     title: 'Contribution Margin Ratio',
-    text: 'The percentage of each revenue dollar that goes toward covering fixed costs — a key profitability metric.',
+    text: 'The percentage of each revenue dollar that goes toward covering fixed costs. A key profitability metric for any business.',
   },
   {
     title: 'Interactive Profit Chart',
@@ -101,10 +101,10 @@ export default function BreakEvenCalculatorPage() {
               Understanding Break-Even Analysis for Your Business
             </h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              Break-even analysis is one of the most fundamental financial tools for any business owner. It answers a simple but critical question: how many units do I need to sell — or how much revenue do I need to generate — before my business starts making money? Whether you are launching a new product, opening a second location, or evaluating a <Link href="/business-loans/term-loans" className="text-theme-primary-light font-medium hover:underline">business term loan</Link> for expansion, knowing your break-even point is essential.
+              Break-even analysis answers a straightforward question: how many units do you need to sell before your business starts making money? Whether you are launching a new product, opening a second location, or evaluating a <Link href="/business-loans/term-loans" className="text-theme-primary-light font-medium hover:underline">business term loan</Link> for expansion, knowing your break-even point helps you plan with real numbers instead of guesses.
             </p>
             <p className="text-gray-700 leading-relaxed mb-4">
-              The formula is straightforward: Break-Even Units = Fixed Costs / (Price Per Unit - Variable Cost Per Unit). The denominator — price minus variable cost — is called the contribution margin. A higher contribution margin means you need fewer sales to cover your overhead. The contribution margin ratio, expressed as a percentage of the selling price, tells you how efficiently each dollar of revenue contributes to covering fixed costs.
+              The formula: Break-Even Units = Fixed Costs / (Price Per Unit - Variable Cost Per Unit). The bottom half of that equation (price minus variable cost) is called the contribution margin. A higher contribution margin means you need fewer sales to cover your overhead. The contribution margin ratio, expressed as a percentage of selling price, tells you how much of each revenue dollar goes toward covering fixed costs.
             </p>
             <p className="text-gray-700 leading-relaxed mb-4">
               Fixed costs are expenses that remain constant regardless of your sales volume: rent, salaries, insurance, loan payments, and subscriptions. Variable costs fluctuate with production or sales: raw materials, packaging, shipping, and sales commissions. Correctly categorizing your costs is the key to an accurate break-even analysis.
