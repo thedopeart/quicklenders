@@ -377,7 +377,7 @@ NEW PAGES (post-migration)
 │   ├── /tools/break-even-calculator
 │   ├── /tools/roi-calculator
 │   ├── /tools/equipment-financing-calculator
-│   ├── /tools/debt-service-coverage-calculator
+│   ├── /tools/dscr-calculator
 │   ├── /tools/prepayment-savings-calculator
 │   ├── /tools/refinance-savings-calculator
 │   ├── /tools/cash-flow-forecast-tool
@@ -481,7 +481,7 @@ Use descriptive anchor text. "See our term loan options" not "click here." "Try 
 
 ---
 
-## Tools Hub — Build Progress (Updated Feb 8, 2026)
+## Tools Hub — Build Progress (Updated Feb 11, 2026)
 
 ### What Was Built
 
@@ -494,19 +494,65 @@ Use descriptive anchor text. "See our term loan options" not "click here." "Try 
 | Loan Payment Calculator | `/tools/loan-payment-calculator` | Live |
 | Factor Rate to APR Converter | `/tools/factor-rate-to-apr-calculator` | Live |
 | Break-Even Calculator | `/tools/break-even-calculator` | Live |
-| Sitemap | 4 tool routes added | Live |
+| Loan Finder Quiz | `/tools/loan-finder-quiz` | Live |
+| DSCR Calculator | `/tools/dscr-calculator` | Live |
+| Loan Affordability Calculator | `/tools/loan-affordability-calculator` | Live |
+| Line of Credit Interest Calculator | `/tools/line-of-credit-interest-calculator` | Live |
+| Invoice Factoring Calculator | `/tools/invoice-factoring-calculator` | Live |
+| Equipment Financing Calculator | `/tools/equipment-financing-calculator` | Live |
+| Loan Comparison Tool | `/tools/business-loan-comparison-tool` | Live |
+| Working Capital Calculator | `/tools/working-capital-calculator` | Live |
+| SBA Loan Payment Calculator | `/tools/sba-loan-payment-calculator` | Live |
+| ROI Calculator | `/tools/roi-calculator` | Live |
+| Startup Cost Calculator | `/tools/startup-cost-calculator` | Live |
+| Prepayment Penalty Calculator | `/tools/prepayment-penalty-calculator` | Live |
+| Cash Flow Forecast Tool | `/tools/cash-flow-forecast-tool` | Live |
+| Business Valuation Calculator | `/tools/business-valuation-calculator` | Live |
+| Loan Offer Analyzer | `/tools/loan-offer-analyzer` | Live |
+| Loan Rejection Decoder | `/tools/loan-rejection-decoder` | Live |
+| Total Cost of Capital Calculator | `/tools/total-cost-of-capital-calculator` | Live |
+| Refinance Savings Calculator | `/tools/refinance-savings-calculator` | Live |
+| MCA Payback Calculator | `/tools/mca-payback-calculator` | Live |
+| Funding Readiness Assessment | `/tools/funding-readiness-assessment` | Live |
+| Loan Document Checklist | `/tools/loan-document-checklist` | Live |
+| Business Loan Glossary | `/tools/business-loan-glossary` | Live |
+| Interest Rate Comparison Chart | `/tools/interest-rate-comparison-chart` | Live |
+| Sitemap | 26 tool routes added | Live |
 
 ### Key Files
 
 | File | What It Does |
 |------|-------------|
-| `lib/tools-data.tsx` | ToolData interface, all 22 tools metadata (3 live, 19 coming-soon), helper functions (`getToolBySlug`, `getToolsByCategory`, `getLiveTools`) |
+| `lib/tools-data.tsx` | ToolData interface, all 26 tools metadata (26 live, 0 coming-soon), helper functions (`getToolBySlug`, `getToolsByCategory`, `getLiveTools`). All 26 live tools quality-scanned and tested. |
 | `lib/schema.ts` | Added `softwareApplicationSchema()` for tool pages |
 | `components/ToolPageLayout/index.tsx` | Reusable layout for all tool pages (hero, tool area, SEO content, how-it-works, what-you-get, FAQ, CTA, related tools) |
 | `app/tools/page.tsx` | Hub page with category grid, feature cards, value props, FAQ |
 | `app/tools/loan-payment-calculator/` | Page + `LoanPaymentCalculatorTool.tsx` (React Hook Form + Zod, sliders, amortization Recharts AreaChart, expandable schedule table) |
 | `app/tools/factor-rate-to-apr-calculator/` | Page + `FactorRateCalculatorTool.tsx` (factor rate input, APR display, cost breakdown, context callout) |
 | `app/tools/break-even-calculator/` | Page + `BreakEvenCalculatorTool.tsx` (3 slider inputs, break-even units/revenue, contribution margin, Recharts LineChart with loss/profit zones, edge case handling) |
+| `app/tools/loan-finder-quiz/` | Page + `LoanFinderQuiz.tsx` (5-question weighted scoring quiz, 7 loan products, progress bar, animated transitions, result card with rates/terms, alternative recommendation, next steps) |
+| `app/tools/dscr-calculator/` | Page + `DSCRCalculatorTool.tsx` (simple/detailed modes, NOI calculator, visual gauge with color zones, 7-tier interpretation, lender requirements table, what-if scenarios, max affordable payment, dynamic CTA by tier) |
+| `app/tools/loan-affordability-calculator/` | Page + `LoanAffordabilityTool.tsx` (reverse amortization, payment budget slider + presets, rate/term selectors, term comparison table, rate impact analysis, optional revenue cash flow check, dynamic CTA with calculated amount) |
+| `app/tools/line-of-credit-interest-calculator/` | Page + `LineOfCreditInterestTool.tsx` (credit limit + draw amount inputs, interest-only vs P+I toggle, draw fee slider, credit utilization bar, LOC vs term loan comparison table, month-by-month schedule, effective APR with fee impact) |
+| `app/tools/invoice-factoring-calculator/` | Page + `InvoiceFactoringTool.tsx` (invoice amount + presets, advance rate/fee sliders, days-to-payment dropdown, invoices-per-month, optional additional fees, Day 1/reserve timeline, cost breakdown, monthly/annual projection, worth-it analysis, dynamic CTA by APR tier) |
+| `app/tools/equipment-financing-calculator/` | Page + `EquipmentFinancingTool.tsx` (lease vs buy comparison, equipment category selector with default presets, cost/useful life/residual inputs, side-by-side financing vs leasing columns, Section 179 toggle, tax bracket slider, comparison table with net cost, tax breakdown, decision factors, dynamic CTA by winner) |
+| `app/tools/business-loan-comparison-tool/` | Page + `LoanComparisonTool.tsx` (2-3 loan cards with add/remove, per-loan name/amount/rate/term/fees, side-by-side comparison table, winner badges for total cost/payment/payoff, savings callout, stacked bar cost breakdown chart, cumulative payment timeline, decision guidance, dynamic CTA) |
+| `app/tools/working-capital-calculator/` | Page + `WorkingCapitalTool.tsx` (assets vs liabilities inputs in green/red cards, optional monthly expenses/revenue/COGS, net working capital + ratio with 5-tier health indicator, assets vs liabilities bar visual, cash conversion cycle DIO/DSO/DPO, cash runway analysis with 3-month/6-month targets, 3-tier financing recommendation min/comfortable/growth, ratio reference table, dynamic CTA by tier) |
+| `app/tools/sba-loan-payment-calculator/` | Page + `SBALoanTool.tsx` (7(a)/504 program toggle, loan amount with presets, rate slider, term dropdown with program-specific options, down payment slider, loan purpose selector, SBA guarantee fee calculations with tiered rates, 504 three-party structure bank 50%/CDC 40%/borrower 10%, monthly payment/total interest/down payment cards, total cost bar with conventional savings, fee breakdown table, SBA vs conventional comparison table, qualification requirements overview, dynamic CTA) |
+| `app/tools/roi-calculator/` | Page + `ROICalculatorTool.tsx` (loan amount with presets, rate slider, term dropdown, monthly revenue increase + cost savings inputs, ramp-up period selector, ROI percentage with 4-tier verdict banner, net profit/payback period/monthly cash flow/total cost cards, cost vs return summary bar, cumulative profit chart with break-even crossover, collapsible monthly breakdown table, dynamic CTA by verdict) |
+| `app/tools/startup-cost-calculator/` | Page + `StartupCostTool.tsx` (6 industry templates with pre-filled defaults, 8 expense category accordions with line-item inputs, running total sidebar, category breakdown horizontal bar chart sorted by size, funding plan with personal savings/friends/family/other inputs and financing needed calculation, 3-tier launch scenarios lean/current/comfortable, 20% buffer recommendation, average costs by business type reference table, dynamic CTA by financing needed) |
+| `app/tools/prepayment-penalty-calculator/` | Page + `PrepaymentPenaltyTool.tsx` (current loan inputs, 5 penalty type selector with dynamic inputs per type including SBA declining scale, payoff vs refinance toggle, refinance inputs for new rate/term/fees, penalty amount + interest saved + net savings cards, total payoff vs keep comparison bar, refinance comparison table, break-even analysis with timeline bar visualization, common penalty structures reference table, dynamic CTA by verdict) |
+| `app/tools/cash-flow-forecast-tool/` | Page + `CashFlowForecastTool.tsx` (starting cash balance, monthly revenue with growth rate slider -5% to 10%, COGS + operating expenses, existing loan payments, new proposed loan toggle, seasonal revenue adjustments with 12 individual month percentage inputs, cash shortfall alert banner, ending cash/avg monthly/lowest balance/net change metric cards, new loan impact callout, monthly cash flow bar chart green surplus/red deficit, running cash balance bar chart, collapsible monthly breakdown table, dynamic CTA by cash position) |
+| `app/tools/business-valuation-calculator/` | Page + `BusinessValuationTool.tsx` (4-step form with progress bar, 12 industry selector with specific multiples, revenue/SDE/EBITDA/asset-based valuation methods, profitability inputs for SDE and EBITDA calculations, asset and liability inputs, adjustment factors for customer concentration/owner dependency/recurring revenue/business age/revenue trend, valuation comparison table with recommended method badge, visual comparison bars, expandable calculation breakdowns for each method, positive and risk factor analysis with impact percentages, value increase tips, industry multiples reference table, dynamic CTA by valuation size) |
+| `app/tools/loan-offer-analyzer/` | Page + `LoanOfferAnalyzerTool.tsx` (3-step form: loan terms with cost type selector APR/factor-rate/fee/not-sure and payment frequency, 8-question yes/no/not-sure red flag checklist for confession of judgment/personal guarantee/prepayment penalty/stacking/blanket lien/ACH/reconciliation/future receivables, lender details with contact method and pressure level, severity-based analysis engine with critical/serious/caution tiers, color-coded report card banner, severity count cards, true cost summary with amount/repay/cost/APR, market rate comparison bars vs SBA/bank/online, detailed findings cards with what-found/why-matters/what-to-do, dynamic CTA by risk level) |
+| `app/tools/loan-rejection-decoder/` | Page + `LoanRejectionDecoderTool.tsx` (3-step form: 9 loan type selector, 14 rejection reason multi-select with checkboxes, profile inputs for credit score/time in business/monthly revenue, rejection reason database with 12 detailed roadmap entries each containing severity/target/timeframe/action-plan/alternatives, alternatives matcher scoring 8 financing types against user profile as likely/possible/unlikely with credit and time requirements, expandable roadmap cards with week-by-week action plans and checkbox tasks, financing options list with color-coded match status, timeline visualization showing when each financing type becomes available, dynamic CTA by available options count) |
+| `app/tools/total-cost-of-capital-calculator/` | Page + `TotalCostOfCapitalTool.tsx` (loan amount with presets, APR/factor rate toggle, rate slider, term/frequency selectors, origination fee slider with amount display, expandable detailed fees section for closing/doc/other fees, Newton's method effective APR solver, 4-tier cost verdict banner low/moderate/high/very-high, metric cards for total repayment/total fees/total cost/cost per dollar, stated vs effective rate comparison bars, payment and net proceeds dark summary, proportional cost breakdown stacked bar with legend, collapsible full cost breakdown table, dynamic CTA by cost tier) |
+| `app/tools/refinance-savings-calculator/` | Page + `RefinanceSavingsTool.tsx` (2-section form: current loan balance/rate/remaining months with auto-calculate payment toggle, new loan rate/term/origination fee/closing costs/prepayment penalty, 4-tier verdict banner strong/moderate/marginal/not-worth-it, metric cards for monthly savings/interest saved/refinance costs/break-even months, side-by-side dark summary current vs new with rates and totals, dual-bar balance payoff chart red=current green=new, break-even timeline progress bar, collapsible full comparison table, dynamic CTA by verdict) |
+| `app/tools/mca-payback-calculator/` | Page + `MCAPaybackTool.tsx` (advance amount with presets, factor rate slider with total repayment display, holdback percentage slider, daily/weekly payment toggle, daily revenue input, 4-tier cost verdict reasonable/moderate/expensive/very-expensive, metric cards for payment amount/total repayment/payback period/cost per dollar, revenue holdback split bar showing kept vs withheld, monthly revenue impact grid, payback progress weekly bar chart, MCA vs 12% term loan comparison dark summary, collapsible full cost breakdown table, dynamic CTA by cost tier) |
+| `app/tools/funding-readiness-assessment/` | Page + `FundingReadinessTool.tsx` (8-question assessment covering credit/time-in-business/revenue/profitability/existing-debt/collateral/documentation/loan-purpose, weighted scoring with max points from question options, 4-category breakdown Credit&History/Revenue&Profitability/Debt&Collateral/Documentation&Purpose, overall readiness score with 4-tier verdict strong/good/fair/needs-work, 7 loan type recommendations SBA/bank-term/online-term/LOC/equipment/factoring/MCA rated likely/possible/unlikely, improvement tips per category, retake flow, dynamic CTA) |
+| `app/tools/loan-document-checklist/` | Page + `LoanDocumentChecklistTool.tsx` (7 loan type selector term-loan/LOC/SBA/equipment/factoring/MCA/not-sure, 6 document categories Financial-Statements/Bank-Statements/Business-Docs/Personal-Docs/Collateral/Existing-Debt, ~20 document items with required/recommended flags, checkbox tracking per item, overall progress bar, category accordion sections, document descriptions, preparation tips section, dynamic CTA) |
+| `app/tools/business-loan-glossary/` | Page + `BusinessLoanGlossaryTool.tsx` (40+ terms with name/definition/category/related-terms, keyword search filtering on name+definition+category, 7 category filter buttons All/Loan-Types/Financial-Metrics/Costs-Fees/Application-Process/Collateral-Security/Repayment, alphabetical grouping by first letter with letter headers, expandable term cards, clickable related terms that set search query, CTA section) |
+| `app/tools/interest-rate-comparison-chart/` | Page + `InterestRateComparisonTool.tsx` (9 products SBA-7a/SBA-504/Bank-Term/Online-Term/LOC/Equipment/Factoring/MCA/Asset-Based, visual rate range bar chart with color coding green/blue/amber/red by rate tier, sortable by rate/speed/credit/A-Z, detailed comparison table with product/rate/term/amount/approval/credit columns, hover highlighting synced between chart and table, product links to loan pages, credit score color badges, disclaimer, CTA) |
 
 ### Design Decisions
 - Hub page uses dark blue (`quicklend-900`) background with white cards, amber/gold accents, matching homepage ServicesSection
@@ -516,42 +562,54 @@ Use descriptive anchor text. "See our term loan options" not "click here." "Try 
 - Tools nav is a dropdown in both desktop and mobile header
 - Adding new tools: create component in `app/tools/[slug]/`, add to `toolsData` in `lib/tools-data.tsx`, update status to `live`, add slug to `app/sitemap.ts`
 
-### Remaining Tools To-Do (19 tools, coming-soon in tools-data.tsx)
+### Completed Tools (26 live on site)
 
-**Calculators (Phase 2-3):**
-1. Total Cost of Capital Calculator
-2. ROI Calculator
-4. Equipment Financing Calculator (lease vs buy)
-5. DSCR Calculator
-6. Prepayment Savings Calculator
-7. Refinance Savings Calculator
-8. Cash Flow Forecast Tool
-9. Invoice Factoring Calculator
-10. MCA Payback Calculator
-11. SBA Loan Payment Calculator
-12. Working Capital Calculator
-13. Loan Affordability Calculator
+All 26 tools are live, tested, and quality-scanned. Listed by priority:
 
-**Interactive Tools (Phase 3-4):**
-14. Loan Comparison Tool (side-by-side)
-15. Funding Readiness Assessment
-16. Loan Type Finder (quiz)
-17. Business Valuation Estimator
+| P# | Tool | Route | Status |
+|----|------|-------|--------|
+| P1 | Loan Payment Calculator | `/tools/loan-payment-calculator` | Live |
+| P2 | Factor Rate to APR Converter | `/tools/factor-rate-to-apr-calculator` | Live |
+| P3 | Loan Finder Quiz | `/tools/loan-finder-quiz` | Live |
+| P4 | DSCR Calculator | `/tools/dscr-calculator` | Live |
+| P5 | Loan Affordability Calculator | `/tools/loan-affordability-calculator` | Live |
+| P6 | Break-Even Calculator | `/tools/break-even-calculator` | Live |
+| P7 | Line of Credit Interest Calculator | `/tools/line-of-credit-interest-calculator` | Live |
+| P8 | Invoice Factoring Calculator | `/tools/invoice-factoring-calculator` | Live |
+| P9 | Equipment Financing Calculator | `/tools/equipment-financing-calculator` | Live |
+| P10 | Business Loan Comparison Tool | `/tools/business-loan-comparison-tool` | Live |
+| P11 | Working Capital Calculator | `/tools/working-capital-calculator` | Live |
+| P12 | SBA Loan Payment Calculator | `/tools/sba-loan-payment-calculator` | Live |
+| P13 | ROI Calculator | `/tools/roi-calculator` | Live |
+| P15 | Startup Cost Calculator | `/tools/startup-cost-calculator` | Live |
+| P16 | Cash Flow Forecast Tool | `/tools/cash-flow-forecast-tool` | Live |
+| P17 | Prepayment Penalty Calculator | `/tools/prepayment-penalty-calculator` | Live |
+| P18 | Business Valuation Calculator | `/tools/business-valuation-calculator` | Live |
+| P19 | Loan Offer Analyzer | `/tools/loan-offer-analyzer` | Live |
+| P20 | Loan Rejection Decoder | `/tools/loan-rejection-decoder` | Live |
+| P21 | Total Cost of Capital Calculator | `/tools/total-cost-of-capital-calculator` | Live |
+| P22 | Refinance Savings Calculator | `/tools/refinance-savings-calculator` | Live |
+| P23 | MCA Payback Calculator | `/tools/mca-payback-calculator` | Live |
+| P24 | Funding Readiness Assessment | `/tools/funding-readiness-assessment` | Live |
+| P25 | Loan Document Checklist | `/tools/loan-document-checklist` | Live |
+| P26 | Business Loan Glossary | `/tools/business-loan-glossary` | Live |
+| P27 | Interest Rate Comparison Chart | `/tools/interest-rate-comparison-chart` | Live |
 
-**Content Assets (Phase 4-5):**
-18. Loan Document Checklist
-19. Business Loan Glossary
-20. Interest Rate Comparison Chart
+### Quality Scan Completed (Feb 2026)
 
-### Notion Update Needed
+All 26 tools passed a full quality audit:
+- **SEO scan**: All titles 50-60 chars, descriptions 130-170 chars, 6 features each
+- **Copy scan**: Zero em dashes, zero banned AI words, all CTA language compliant
+- **Calculation testing**: All formulas verified correct, edge cases handled, no NaN/Infinity risks
+- **Bug fixes applied**: Equipment Financing (negative tax savings), Business Valuation (negative format), Working Capital (table highlight), Loan Affordability (rate comparison), Cash Flow Forecast (month display), Loan Offer Analyzer (factor rate clamp)
 
-**TODO:** Update Notion task board when MCP integration is available:
-- Mark "Build Tools Hub Page" as Done
-- Mark "Build Loan Payment Calculator" as Done
-- Mark "Build Factor Rate to APR Converter" as Done
-- Mark "Add Tools to Nav/Footer" as Done
-- Create tasks for remaining 20 tools per phases above
-- Notion MCP server was added (`claude mcp add --transport http notion https://mcp.notion.com/mcp`) but not connecting yet — retry after restart
+### All Tools Complete
+
+All 26 tools are live. No remaining to-do items.
+
+### Notion Integration
+
+Notion MCP is connected and synced. Tools & Features page ID: `30128f46-9059-8196-b6bb-cb702b8db2fb`
 
 ---
 

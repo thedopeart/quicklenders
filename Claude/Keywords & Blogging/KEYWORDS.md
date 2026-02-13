@@ -52,7 +52,7 @@ High difficulty or low relevance. Track but don't prioritize.
 |---------|--------|----------|-------------|
 | online loan calculators | 74,000 | 36 | /tools (hub page) |
 | term loan calculator | 1,300 | 78 | /tools/loan-payment-calculator |
-| equipment financing calculator | 590 | 49 | /tools/equipment-financing-vs-leasing |
+| equipment financing calculator | 590 | 49 | /tools/equipment-financing-calculator |
 
 ### Startup & New Business Keywords
 
@@ -215,16 +215,16 @@ These keywords align with our products and roadmap but weren't in the uploaded l
 | business loan payment calculator | Calculate monthly payment | /tools/loan-payment-calculator |
 | business loan calculator monthly payment | Same | Same |
 | loan amortization calculator business | Amortization schedule | /tools/loan-payment-calculator |
-| break even calculator business | ROI analysis | /tools/break-even-analyzer |
+| break even calculator business | ROI analysis | /tools/break-even-calculator |
 | break even loan calculator | Same | Same |
-| equipment lease vs buy calculator | Lease vs finance decision | /tools/equipment-financing-vs-leasing |
+| equipment lease vs buy calculator | Lease vs finance decision | /tools/equipment-financing-calculator |
 | equipment lease vs loan calculator | Same | Same |
 | DSCR calculator | Debt service coverage | /tools/dscr-calculator |
 | debt service coverage ratio calculator | Same | Same |
-| how much business loan can I afford | Affordability | /tools/affordability-calculator |
+| how much business loan can I afford | Affordability | /tools/loan-affordability-calculator |
 | business loan affordability calculator | Same | Same |
 | working capital calculator | Working capital needs | /tools/working-capital-calculator |
-| SBA loan eligibility calculator | SBA qualification | /tools/sba-eligibility-checker |
+| SBA loan eligibility calculator | SBA qualification | /tools/sba-loan-payment-calculator |
 | do I qualify for SBA loan | Same | Same |
 | SBA loan eligibility requirements | Same | Same |
 
@@ -324,21 +324,52 @@ These keywords align with our products and roadmap but weren't in the uploaded l
 | /business-loans/investment-banking | investment banking | (low search volume — focus on E-E-A-T) |
 | /business-loans/bonds | bond financing | (low search volume — focus on E-E-A-T) |
 
-### Tool Pages
+### Tool Pages (26 Live Tools)
 
-| Page | Primary Keyword | Secondary Keywords |
-|------|----------------|-------------------|
-| /tools | online loan calculators | business loan calculators, business financing tools |
-| /tools/loan-payment-calculator | business loan payment calculator | term loan calculator, loan amortization calculator |
-| /tools/break-even-analyzer | break even calculator business | loan ROI calculator |
-| /tools/equipment-financing-vs-leasing | equipment lease vs buy calculator | equipment financing vs leasing |
-| /tools/loan-finder-quiz | business loan quiz | what business loan do I need |
-| /tools/affordability-calculator | how much business loan can I afford | business loan affordability calculator |
-| /tools/dscr-calculator | DSCR calculator | debt service coverage ratio calculator |
-| /tools/working-capital-calculator | working capital calculator | how much working capital do I need |
-| /tools/sba-eligibility-checker | SBA loan eligibility | do I qualify for SBA loan |
-| /tools/loan-comparison | compare business loans | business loan comparison |
-| /tools/cash-flow-forecast | business cash flow calculator | cash flow projection |
+| Page | Primary Keyword | Est. Volume | Difficulty | Secondary Keywords |
+|------|----------------|-------------|------------|-------------------|
+| /tools | online loan calculators | 74,000 | 36 | business loan calculators, business financing tools |
+| /tools/loan-payment-calculator | business loan payment calculator | 4,400 | Med (45) | business loan calculator (33,100), loan amortization calculator business (1,300), business loan monthly payment calculator (880) |
+| /tools/factor-rate-to-apr-calculator | factor rate to apr calculator | 1,300 | Low (28) | factor rate calculator (2,400), convert factor rate to apr (720), factor rate to interest rate (590) |
+| /tools/break-even-calculator | break even calculator | 22,200 | High (62) | break even analysis calculator (2,900), break even point calculator (1,900), break even calculator business (880) |
+| /tools/loan-finder-quiz | what business loan do i need | 1,600 | Low (26) | business loan quiz (480), which business loan is right for me (320), business loan finder (590) |
+| /tools/dscr-calculator | dscr calculator | 14,800 | Med (52) | debt service coverage ratio calculator (6,600), dscr ratio calculator (1,600), dscr calculator for business loan (480) |
+| /tools/loan-affordability-calculator | how much business loan can i afford | 1,600 | Low (25) | business loan affordability calculator (590), business loan amount calculator (480), how much can i borrow business loan (720) |
+| /tools/line-of-credit-interest-calculator | line of credit interest calculator | 1,900 | Low (32) | line of credit calculator (6,600), business line of credit calculator (1,300), line of credit payment calculator (880) |
+| /tools/invoice-factoring-calculator | invoice factoring calculator | 1,300 | Low (30) | factoring calculator (2,400), factoring fee calculator (320), invoice factoring rates calculator (210) |
+| /tools/equipment-financing-calculator | equipment lease vs buy calculator | 1,600 | Med (42) | equipment financing calculator (590), equipment lease calculator (1,900), lease vs buy calculator business (480) |
+| /tools/business-loan-comparison-tool | compare business loans | 2,400 | Med (55) | business loan comparison (1,600), business loan comparison tool (320), compare business loan rates (480) |
+| /tools/working-capital-calculator | working capital calculator | 3,600 | Med (40) | working capital ratio calculator (1,300), net working capital calculator (880), how much working capital do i need (590) |
+| /tools/sba-loan-payment-calculator | sba loan calculator | 18,100 | High (68) | sba loan payment calculator (2,900), sba 7a loan calculator (1,600), sba 504 loan calculator (1,300) |
+| /tools/roi-calculator | business loan roi calculator | 720 | Low (22) | roi calculator business (2,900), return on investment calculator (9,900), loan roi calculator (320) |
+| /tools/startup-cost-calculator | startup cost calculator | 4,400 | Med (48) | startup costs estimator (880), how much does it cost to start a business (6,600), business startup cost calculator (590) |
+| /tools/prepayment-penalty-calculator | prepayment penalty calculator | 1,600 | Low (30) | early payoff penalty calculator (590), loan prepayment calculator (1,900), prepayment fee calculator (210) |
+| /tools/cash-flow-forecast-tool | business cash flow calculator | 1,900 | Med (42) | cash flow forecast template (2,400), cash flow projection calculator (880), 12 month cash flow forecast (590) |
+| /tools/business-valuation-calculator | business valuation calculator | 6,600 | High (61) | how much is my business worth calculator (4,400), business value calculator (2,900), small business valuation calculator (1,300) |
+| /tools/loan-offer-analyzer | predatory lending checker | 880 | Low (22) | loan offer comparison tool (210), is my loan predatory (320), predatory loan checker (480) |
+| /tools/loan-rejection-decoder | denied business loan | 1,300 | Low (28) | business loan rejection reasons (590), why was my business loan denied (480), loan denial reasons (720) |
+| /tools/total-cost-of-capital-calculator | cost of capital calculator | 2,400 | Med (45) | total cost of loan calculator (880), effective apr calculator (1,300), true cost of borrowing calculator (210) |
+| /tools/refinance-savings-calculator | refinance calculator | 74,000 | High (78) | refinance savings calculator (1,600), business loan refinance calculator (320), should i refinance my loan calculator (480) |
+| /tools/mca-payback-calculator | merchant cash advance calculator | 2,900 | Low (35) | mca calculator (1,600), mca payback calculator (480), merchant cash advance payback calculator (210) |
+| /tools/funding-readiness-assessment | am i ready for a business loan | 590 | Low (18) | business loan readiness checklist (210), business loan qualification check (320), do i qualify for a business loan (2,400) |
+| /tools/loan-document-checklist | documents needed for business loan | 2,900 | Low (32) | business loan document checklist (880), business loan application documents (590), what documents do i need for a business loan (1,300) |
+| /tools/business-loan-glossary | business loan terms glossary | 480 | Low (15) | business lending terminology (210), loan terms glossary (590), business finance glossary (170) |
+| /tools/interest-rate-comparison-chart | business loan interest rates | 6,600 | High (62) | business loan rates comparison (1,300), average business loan interest rates (2,900), business loan rates by type (480) |
+
+#### Tool SEO Tiers
+
+**Tier 1 (Low difficulty, target now):** Factor Rate to APR (28), Loan Affordability (25), LOC Interest (32), Invoice Factoring (30), ROI (22), Prepayment Penalty (30), MCA Payback (35), Loan Finder Quiz (26), Loan Offer Analyzer (22), Loan Rejection Decoder (28), Funding Readiness (18), Loan Document Checklist (32), Glossary (15)
+
+**Tier 2 (Medium difficulty, target soon):** Loan Payment (45), DSCR (52), Equipment Financing (42), Loan Comparison (55), Working Capital (40), Startup Cost (48), Cash Flow Forecast (42), Total Cost of Capital (45)
+
+**Tier 3 (High difficulty, long-term):** Break-Even (62), SBA Loan (68), Business Valuation (61), Refinance Savings (78), Interest Rate Chart (62)
+
+**Best bang for the buck (highest volume-to-difficulty ratio):**
+- MCA Payback Calculator: 2,900/mo, difficulty 35
+- Loan Document Checklist: 2,900/mo, difficulty 32
+- LOC Interest Calculator: 1,900/mo, difficulty 32
+- Prepayment Penalty Calculator: 1,600/mo, difficulty 30
+- Loan Affordability Calculator: 1,600/mo, difficulty 25
 
 ### Use Case Pages
 
@@ -417,15 +448,24 @@ Based on this research, these are the highest-priority content gaps to fill:
 4. **Build comparison articles:** term loan vs line of credit, SBA vs conventional, equipment financing vs leasing
 5. **Build application process content:** checklist page, requirements article, documents needed article
 
-### Tools to prioritize by keyword opportunity
+### Tool SEO optimization priority (all 26 tools built)
 
-| Tool | Primary Keyword | Volume | Difficulty | Priority |
-|------|----------------|--------|------------|----------|
-| Loan Payment Calculator | business loan payment calculator | Est. 5k+ | Low-Med | 1st (after quiz) |
-| Affordability Calculator | how much business loan can I afford | Est. 2k+ | Low | 2nd |
-| DSCR Calculator | DSCR calculator | Est. 1k+ | Low | 3rd |
-| SBA Eligibility Checker | SBA loan eligibility | Est. 3k+ | Med | 4th |
-| Working Capital Calculator | working capital calculator | Est. 1k+ | Med | 5th |
+All tools are live. Focus SEO effort on these high-opportunity Tier 1 tools first:
+
+| Tool | Primary Keyword | Volume | Difficulty | Action |
+|------|----------------|--------|------------|--------|
+| MCA Payback Calculator | merchant cash advance calculator | 2,900 | 35 | Build backlinks, target long-tail content |
+| Loan Document Checklist | documents needed for business loan | 2,900 | 32 | Internal link from blog articles about applications |
+| LOC Interest Calculator | line of credit interest calculator | 1,900 | 32 | Target secondary "line of credit calculator" (6,600) |
+| Prepayment Penalty Calculator | prepayment penalty calculator | 1,600 | 30 | Unique tool, low competition |
+| Loan Affordability Calculator | how much business loan can I afford | 1,600 | 25 | Strong commercial intent, optimize meta |
+| Factor Rate to APR Calculator | factor rate to apr calculator | 1,300 | 28 | MCA niche, backlink magnet |
+| Loan Rejection Decoder | denied business loan | 1,300 | 28 | Unique tool, no direct competitors |
+| Invoice Factoring Calculator | invoice factoring calculator | 1,300 | 30 | Niche tool, low competition |
+| Loan Offer Analyzer | predatory lending checker | 880 | 22 | Unique concept, PR/backlink potential |
+| ROI Calculator | business loan roi calculator | 720 | 22 | Target secondary "roi calculator business" (2,900) |
+| Funding Readiness Assessment | am i ready for a business loan | 590 | 18 | Lowest difficulty, capture early funnel |
+| Glossary | business loan terms glossary | 480 | 15 | Lowest difficulty, internal link hub |
 
 ---
 
@@ -446,6 +486,22 @@ Track rankings weekly for these priority keyword clusters:
 - restaurant business loans
 - construction loans
 
+### Must-Track (Tool Keywords — Tier 1)
+
+- merchant cash advance calculator
+- documents needed for business loan
+- line of credit interest calculator
+- prepayment penalty calculator
+- how much business loan can i afford
+- factor rate to apr calculator
+- denied business loan
+- invoice factoring calculator
+- predatory lending checker
+- business loan roi calculator
+- am i ready for a business loan
+- business loan terms glossary
+- what business loan do i need
+
 ### Should-Track (Secondary Keywords)
 
 - short-term business loans
@@ -458,6 +514,11 @@ Track rankings weekly for these priority keyword clusters:
 - equipment financing calculator
 - first-time business loans
 - no-collateral business loans
+- business loan payment calculator
+- working capital calculator
+- startup cost calculator
+- cost of capital calculator
+- business cash flow calculator
 
 ### Watch (Competitive Keywords)
 
