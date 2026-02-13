@@ -35,7 +35,7 @@ const whatYouGet = [
   },
   {
     title: 'Total Repayment Amount',
-    text: 'See exactly how much you will repay in total — the original amount plus all interest and fees.',
+    text: 'See exactly how much you will repay in total: the original amount plus all interest and fees.',
   },
   {
     title: 'Cost per Dollar Borrowed',
@@ -101,10 +101,10 @@ export default function FactorRateCalculatorPage() {
               Understanding Factor Rates and Why APR Matters
             </h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              Factor rates are commonly used in merchant cash advances and short-term business financing. Unlike traditional interest rates quoted as an annual percentage, a factor rate is a simple decimal multiplier applied to your total advance amount. While this makes the calculation straightforward — multiply your advance by the factor rate to get your total repayment — it can mask the true cost of borrowing, especially on shorter terms.
+              Factor rates are commonly used in merchant cash advances and short-term business financing. Unlike traditional interest rates quoted as an annual percentage, a factor rate is a simple decimal multiplier applied to your total advance amount. While this makes the calculation straightforward (multiply your advance by the factor rate to get your total repayment), it can mask the true cost of borrowing, especially on shorter terms.
             </p>
             <p className="text-gray-700 leading-relaxed mb-4">
-              For example, a factor rate of 1.35 on a $50,000 advance means you repay $67,500 total — $17,500 in fees. If the repayment term is 6 months, the annualized cost is roughly 70% APR. That same factor rate over 12 months drops to about 35% APR. This is why converting to APR is critical: the same factor rate represents dramatically different costs depending on how quickly you repay.
+              For example, a factor rate of 1.35 on a $50,000 advance means you repay $67,500 total, which is $17,500 in fees. If the repayment term is 6 months, the annualized cost is roughly 70% APR. That same factor rate over 12 months drops to about 35% APR. This is why converting to APR is critical: the same factor rate represents dramatically different costs depending on how quickly you repay.
             </p>
             <p className="text-gray-700 leading-relaxed mb-4">
               Traditional <Link href="/business-loans/term-loans" className="text-theme-primary-light font-medium hover:underline">business term loans</Link> use standard interest rates expressed as APR, making comparisons between products straightforward. If you are considering a merchant cash advance or factor-rate-based product, always calculate the equivalent APR first. Our calculator does this instantly, while also showing your total repayment, payment amount, and cost per dollar borrowed.

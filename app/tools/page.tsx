@@ -7,14 +7,14 @@ import { ArrowRight, DollarSign, ShieldCheck, Users, Zap, BarChart3, Lock } from
 
 export const metadata = generatePageMetadata({
   title: 'Free Business Loan Calculators & Tools | Quick Lenders',
-  description: 'Free business loan calculators and financial tools. Calculate payments, convert factor rates, compare loans, and more — no signup required.',
+  description: 'Free business loan calculators and financial tools. Calculate payments, convert factor rates, compare loans, and more. No signup required.',
   path: '/tools',
 })
 
 const hubFaqs = [
   {
     question: 'Are these business loan tools really free?',
-    answer: 'Yes, every tool on this page is 100% free to use with no signup, email, or account required. We built these calculators to help business owners make informed financing decisions. There are no hidden charges, paywalls, or data harvesting — just useful tools.',
+    answer: 'Yes, every tool on this page is 100% free to use with no signup, email, or account required. We built these calculators to help business owners make informed financing decisions. There are no hidden charges, paywalls, or data harvesting. Just useful tools.',
     schemaAnswer: 'Yes, every tool is 100% free to use with no signup, email, or account required. They are built to help business owners make informed financing decisions with no hidden charges, paywalls, or data harvesting.',
   },
   {
@@ -34,16 +34,16 @@ const hubFaqs = [
   },
   {
     question: 'Will you be adding more tools in the future?',
-    answer: 'Yes! We have over 20 tools planned across calculators, interactive assessments, and educational resources. New tools are released regularly — check back often or explore our Financial Insights for the latest business financing resources.',
+    answer: 'Yes! We have over 20 tools planned across calculators, interactive assessments, and educational resources. New tools are released regularly. Check back often or explore our Financial Insights for the latest business financing resources.',
     schemaAnswer: 'Yes, over 20 tools are planned across calculators, interactive assessments, and educational resources. New tools are released regularly.',
   },
 ]
 
 const featureCards = [
-  { number: 1, title: 'Instant Calculations', description: 'Get real-time results as you adjust inputs — no waiting, no submit buttons, no page reloads.' },
+  { number: 1, title: 'Instant Calculations', description: 'Get real-time results as you adjust inputs. No waiting, no submit buttons, no page reloads.' },
   { number: 2, title: 'Visual Breakdowns', description: 'Interactive charts and tables help you understand exactly where your money goes over the life of a loan.' },
   { number: 3, title: 'Compare Options', description: 'Evaluate different loan amounts, terms, and rates side by side to find the structure that fits your budget.' },
-  { number: 4, title: 'Mobile-Friendly', description: 'Every tool works seamlessly on phones, tablets, and desktops so you can calculate anywhere.' },
+  { number: 4, title: 'Mobile-Friendly', description: 'Every tool works on phones, tablets, and desktops so you can calculate anywhere.' },
   { number: 5, title: 'Educational Context', description: 'Each tool includes explanations, formulas, and FAQs so you understand the numbers, not just see them.' },
   { number: 6, title: 'Actionable Next Steps', description: 'Ready to move forward? Every tool connects you directly to personalized financing options.' },
 ]
@@ -89,7 +89,7 @@ export default function ToolsPage() {
               Business Financing <span className="text-quicklend-200">Tools</span>
             </h1>
             <p className="text-lg text-white/80 leading-relaxed mb-8 max-w-2xl">
-              Free calculators and interactive tools to help you understand loan costs, compare options, and make confident financing decisions — no signup required.
+              Free calculators and interactive tools to help you understand loan costs, compare options, and make confident financing decisions. No signup required.
             </p>
             <div className="flex flex-wrap items-center gap-4">
               <Link
@@ -227,7 +227,7 @@ export default function ToolsPage() {
               {
                 icon: Users,
                 title: 'Built by Lending Experts',
-                description: 'Every calculator is designed by professionals who understand business lending — not generic templates from a finance textbook.',
+                description: 'Every calculator is designed by professionals who understand business lending, not generic templates from a finance textbook.',
               },
               {
                 icon: Lock,
@@ -253,7 +253,7 @@ export default function ToolsPage() {
       {/* FAQ */}
       <FAQSection
         faqs={hubFaqs.map((f) => ({ question: f.question, answer: f.answer }))}
-        title="Tools — Frequently Asked Questions"
+        title="Tools: Frequently Asked Questions"
       />
 
       {/* CTA Banner */}

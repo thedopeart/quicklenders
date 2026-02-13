@@ -20,7 +20,7 @@ const howItWorks = [
   },
   {
     title: 'See Instant Results',
-    text: 'Your monthly payment, total interest, and total cost update in real time as you adjust any input — no submit button needed.',
+    text: 'Your monthly payment, total interest, and total cost update in real time as you adjust any input. No submit button needed.',
   },
   {
     title: 'Analyze the Breakdown',
@@ -104,7 +104,7 @@ export default function LoanPaymentCalculatorPage() {
               When you take out a <Link href="/business-loans/term-loans" className="text-theme-primary-light font-medium hover:underline">business term loan</Link>, understanding your payment structure is essential for effective cash flow management. Our loan payment calculator uses the standard amortization formula that lenders rely on to determine your fixed monthly payment amount, total interest charges, and complete repayment schedule.
             </p>
             <p className="text-gray-700 leading-relaxed mb-4">
-              The amortization formula — M = P[r(1+r)^n] / [(1+r)^n - 1] — calculates a fixed payment that covers both principal and interest in every installment. In the early months, a larger portion of each payment goes toward interest. As you pay down the balance, the principal component grows while interest shrinks. This shift is clearly visible in the amortization chart above.
+              The amortization formula (M = P[r(1+r)^n] / [(1+r)^n - 1]) calculates a fixed payment that covers both principal and interest in every installment. In the early months, a larger portion of each payment goes toward interest. As you pay down the balance, the principal component grows while interest shrinks. This shift is clearly visible in the amortization chart above.
             </p>
             <p className="text-gray-700 leading-relaxed mb-4">
               Payment frequency is an often-overlooked factor that can meaningfully impact total borrowing costs. Switching from monthly to biweekly payments effectively adds one extra full payment per year, accelerating principal paydown and reducing total interest. For a $250,000 loan at 8% over 5 years, biweekly payments can save several thousand dollars in interest compared to the standard monthly schedule.
@@ -113,7 +113,7 @@ export default function LoanPaymentCalculatorPage() {
               Whether you are evaluating a <Link href="/business-loans/term-loans" className="text-theme-primary-light font-medium hover:underline">term loan</Link> for expansion, comparing rates on <Link href="/business-loans/lines-of-credit" className="text-theme-primary-light font-medium hover:underline">business lines of credit</Link>, or assessing <Link href="/business-loans/equipment-financing" className="text-theme-primary-light font-medium hover:underline">equipment financing</Link> options, this calculator helps you make informed decisions before committing to any financing agreement.
             </p>
             <p className="text-gray-700 leading-relaxed">
-              For financing products that use factor rates instead of traditional interest rates — such as merchant cash advances — use our <Link href="/tools/factor-rate-to-apr-calculator" className="text-theme-primary-light font-medium hover:underline">Factor Rate to APR Converter</Link> to understand the true annual cost of borrowing before you sign.
+              For financing products that use factor rates instead of traditional interest rates, such as merchant cash advances, use our <Link href="/tools/factor-rate-to-apr-calculator" className="text-theme-primary-light font-medium hover:underline">Factor Rate to APR Converter</Link> to understand the true annual cost of borrowing before you sign.
             </p>
           </div>
         }
