@@ -117,6 +117,13 @@ export default function LoanFinderQuizPage() {
       >
         <LoanFinderQuiz />
       </ToolPageLayout>
+      <div className="bg-gray-50 border-t border-gray-100 py-4">
+        <div className="container mx-auto px-4">
+          <p className="text-center text-xs text-gray-400">
+            Tool built by <a href="https://digitaljesse.com" target="_blank" rel="noopener noreferrer" className="text-gray-500 hover:text-gray-600 underline decoration-gray-300">Digital Jesse</a>
+          </p>
+        </div>
+      </div>
     </>
   )
 }
