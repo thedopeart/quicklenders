@@ -485,20 +485,20 @@ export default function RefinanceSavingsTool() {
                 <div>
                   <p className="text-quicklend-300 text-xs uppercase tracking-wider mb-2">Current Loan</p>
                   <p className="text-white font-bold text-lg">{formatCurrency(results.monthlyPaymentCurrent)}<span className="text-quicklend-300 text-xs font-normal">/mo</span></p>
-                  <p className="text-quicklend-400 text-xs mt-1">{currentRate}% for {currentRemaining} months</p>
-                  <p className="text-quicklend-400 text-xs">Total remaining: {formatCurrency(results.totalRemainingCurrent)}</p>
+                  <p className="text-quicklend-300 text-xs mt-1">{currentRate}% for {currentRemaining} months</p>
+                  <p className="text-quicklend-300 text-xs">Total remaining: {formatCurrency(results.totalRemainingCurrent)}</p>
                 </div>
                 <div className="flex items-center justify-center">
                   <div className="text-center">
-                    <ArrowRight className="h-6 w-6 text-quicklend-400 mx-auto" />
-                    <p className="text-xs text-quicklend-400 mt-1">vs</p>
+                    <ArrowRight className="h-6 w-6 text-quicklend-300 mx-auto" />
+                    <p className="text-xs text-quicklend-300 mt-1">vs</p>
                   </div>
                 </div>
                 <div>
                   <p className="text-quicklend-300 text-xs uppercase tracking-wider mb-2">New Loan</p>
                   <p className="text-amber-400 font-bold text-lg">{formatCurrency(results.monthlyPaymentNew)}<span className="text-quicklend-300 text-xs font-normal">/mo</span></p>
-                  <p className="text-quicklend-400 text-xs mt-1">{newRate}% for {newTermMonths} months</p>
-                  <p className="text-quicklend-400 text-xs">Total cost: {formatCurrency(results.totalRepaymentNew + results.totalNewFees)}</p>
+                  <p className="text-quicklend-300 text-xs mt-1">{newRate}% for {newTermMonths} months</p>
+                  <p className="text-quicklend-300 text-xs">Total cost: {formatCurrency(results.totalRepaymentNew + results.totalNewFees)}</p>
                 </div>
               </div>
             </div>

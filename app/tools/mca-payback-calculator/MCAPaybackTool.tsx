@@ -502,20 +502,20 @@ export default function MCAPaybackTool() {
                 <div>
                   <p className="text-quicklend-300 text-xs uppercase tracking-wider mb-2">This MCA</p>
                   <p className="text-white font-bold text-lg">{formatCurrency(results.totalRepayment)}</p>
-                  <p className="text-quicklend-400 text-xs mt-1">total repayment</p>
-                  <p className="text-quicklend-400 text-xs">{formatCurrency(results.totalCost)} in costs</p>
+                  <p className="text-quicklend-300 text-xs mt-1">total repayment</p>
+                  <p className="text-quicklend-300 text-xs">{formatCurrency(results.totalCost)} in costs</p>
                 </div>
                 <div className="flex items-center justify-center">
                   <div className="text-center">
-                    <ArrowRight className="h-6 w-6 text-quicklend-400 mx-auto" />
-                    <p className="text-xs text-quicklend-400 mt-1">vs</p>
+                    <ArrowRight className="h-6 w-6 text-quicklend-300 mx-auto" />
+                    <p className="text-xs text-quicklend-300 mt-1">vs</p>
                   </div>
                 </div>
                 <div>
                   <p className="text-quicklend-300 text-xs uppercase tracking-wider mb-2">Term Loan at 12%</p>
                   <p className="text-amber-400 font-bold text-lg">{formatCurrency(results.termLoanTotal)}</p>
-                  <p className="text-quicklend-400 text-xs mt-1">total repayment</p>
-                  <p className="text-quicklend-400 text-xs">{formatCurrency(results.termLoanCost)} in interest</p>
+                  <p className="text-quicklend-300 text-xs mt-1">total repayment</p>
+                  <p className="text-quicklend-300 text-xs">{formatCurrency(results.termLoanCost)} in interest</p>
                 </div>
               </div>
               {results.potentialSavings > 0 && (
