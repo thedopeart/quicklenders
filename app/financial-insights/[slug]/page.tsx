@@ -76,6 +76,7 @@ const relatedArticlesByTopic: Record<string, string[]> = {
   'business-loan-interest-rates-by-type': ['how-to-compare-business-loan-offers', 'sba-loans-7a-vs-504-how-to-qualify', 'true-cost-of-merchant-cash-advance'],
   'sba-loans-7a-vs-504-how-to-qualify': ['business-loan-interest-rates-by-type', 'documents-needed-for-business-loan', 'is-your-business-ready-for-a-loan'],
   'should-you-refinance-your-business-loan': ['prepayment-penalties-business-loans', 'how-to-compare-business-loan-offers', 'business-loan-interest-rates-by-type'],
+  'work-life-balance-tips-for-business-owners': ['is-your-business-ready-for-a-loan', 'how-much-business-loan-can-you-afford', 'documents-needed-for-business-loan'],
 }
 
 // Key takeaways for each article
@@ -235,6 +236,12 @@ const keyTakeaways: Record<string, string[]> = {
     'Prepayment penalties can erase refinancing savings',
     'Compare total cost of new loan plus penalties vs remaining cost of current loan',
     'Do not extend the term without a specific reason',
+  ],
+  'work-life-balance-tips-for-business-owners': [
+    'Burnout leads to financial mistakes, bad hires, and poor decisions',
+    'A 3 to 6 month cash reserve reduces stress more than any productivity hack',
+    'Automate recurring financial tasks to reclaim personal time',
+    'Strategic financing can reduce workload pressure, not just add to it',
   ],
 }
 
@@ -400,6 +407,11 @@ const relatedToolsByArticle: Record<string, { slug: string; name: string }[]> = 
     { slug: 'refinance-savings-calculator', name: 'Refinance Savings Calculator' },
     { slug: 'prepayment-penalty-calculator', name: 'Prepayment Penalty Calculator' },
     { slug: 'business-loan-comparison-tool', name: 'Loan Comparison Tool' },
+  ],
+  'work-life-balance-tips-for-business-owners': [
+    { slug: 'cash-flow-forecast-tool', name: 'Cash Flow Forecast Tool' },
+    { slug: 'loan-affordability-calculator', name: 'Loan Affordability Calculator' },
+    { slug: 'dscr-calculator', name: 'DSCR Calculator' },
   ],
 }
 

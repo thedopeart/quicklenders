@@ -77,6 +77,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'business-loan-interest-rates-by-type',
     'sba-loans-7a-vs-504-how-to-qualify',
     'should-you-refinance-your-business-loan',
+    'work-life-balance-tips-for-business-owners',
   ]
 
   return [
