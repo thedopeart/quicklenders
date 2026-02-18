@@ -466,21 +466,21 @@ export default function ROICalculatorTool() {
             <div className="bg-quicklend-900 rounded-xl p-5">
               <div className="grid sm:grid-cols-3 gap-4 text-center">
                 <div>
-                  <p className="text-quicklend-200 text-sm">Total Loan Cost</p>
+                  <p className="text-white/70 text-sm">Total Loan Cost</p>
                   <p className="text-xl font-bold text-white">{formatCurrency(results.totalLoanCost)}</p>
-                  <p className="text-quicklend-300 text-xs">{formatCurrency(results.monthlyPayment)}/mo x {termMonths} months</p>
+                  <p className="text-white/50 text-xs">{formatCurrency(results.monthlyPayment)}/mo x {termMonths} months</p>
                 </div>
                 <div className="flex items-center justify-center">
-                  <span className="text-quicklend-400 text-lg font-bold">vs</span>
+                  <span className="text-white/40 text-lg font-bold">vs</span>
                 </div>
                 <div>
-                  <p className="text-quicklend-200 text-sm">Total Expected Return</p>
+                  <p className="text-white/70 text-sm">Total Expected Return</p>
                   <p className="text-xl font-bold text-amber-400">{formatCurrency(results.totalReturn)}</p>
-                  <p className="text-quicklend-300 text-xs">{formatCurrency(results.totalMonthlyReturn)}/mo x {results.productiveMonths} months</p>
+                  <p className="text-white/50 text-xs">{formatCurrency(results.totalMonthlyReturn)}/mo x {results.productiveMonths} months</p>
                 </div>
               </div>
               {rampUpMonths > 0 && (
-                <p className="text-xs text-quicklend-400 text-center mt-3">
+                <p className="text-xs text-white/50 text-center mt-3">
                   During the {rampUpMonths}-month ramp-up, your monthly cash flow impact is {formatCurrency(results.rampUpCashFlow)}/mo (loan payment with no returns yet).
                 </p>
               )}
