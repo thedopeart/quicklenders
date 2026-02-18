@@ -20,7 +20,7 @@
     "gray-matter": "^4.0.3",
     "lucide-react": "^0.311.0",
     "next": "14.0.4",
-    "next-mdx-remote": "^5.0.0",
+    "next-mdx-remote": "^6.0.0",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.71.1",
