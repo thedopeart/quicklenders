@@ -101,7 +101,7 @@ export default function InterestRateComparisonChartPage() {
               Business Loan Rates: What to Expect
             </h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              Interest rates vary widely depending on the type of financing, the lender, and your business profile. SBA loans start as low as 6%, while merchant cash advances can exceed 100% APR equivalent. The chart above shows typical ranges, but your actual rate depends on factors like credit score, time in business, revenue, industry, and the loan amount. Stronger profiles get lower rates. Weaker profiles pay more, but still have options.
+              Interest rates vary widely depending on the type of financing, the lender, and your business profile. SBA loans start as low as <strong>6%</strong>, while merchant cash advances can exceed <strong>100% APR equivalent</strong>. The chart above shows typical ranges, but your actual rate depends on factors like credit score, time in business, revenue, industry, and the loan amount. Stronger profiles get lower rates. Weaker profiles pay more, but still have options.
             </p>
 
             <h3 className="text-xl font-bold text-quicklend-900 mb-3 mt-6">Why Rates Vary So Much</h3>
@@ -111,12 +111,12 @@ export default function InterestRateComparisonChartPage() {
 
             <h3 className="text-xl font-bold text-quicklend-900 mb-3 mt-6">Rate vs Total Cost</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
-              A lower rate does not always mean a lower total cost. A 10% rate over 5 years costs more in total interest than a 15% rate over 2 years, even though the monthly payment is lower. Factor in origination fees, closing costs, and other charges. Use our <Link href="/tools/total-cost-of-capital-calculator" className="text-theme-primary-light font-medium hover:underline">total cost of capital calculator</Link> to compare the all-in cost of different options, or the <Link href="/tools/loan-payment-calculator" className="text-theme-primary-light font-medium hover:underline">loan payment calculator</Link> to see how rates affect monthly payments.
+              A lower rate does not always mean a lower total cost. A <strong>10% rate over 5 years</strong> costs more in total interest than a <strong>15% rate over 2 years</strong>, even though the monthly payment is lower. Factor in origination fees, closing costs, and other charges. Use our <Link href="/tools/total-cost-of-capital-calculator" className="text-theme-primary-light font-medium hover:underline">total cost of capital calculator</Link> to compare the all-in cost of different options, or the <Link href="/tools/loan-payment-calculator" className="text-theme-primary-light font-medium hover:underline">loan payment calculator</Link> to see how rates affect monthly payments.
             </p>
 
             <h3 className="text-xl font-bold text-quicklend-900 mb-3 mt-6">Getting the Best Rate for Your Business</h3>
             <p className="text-gray-700 leading-relaxed">
-              The best way to get a competitive rate is to improve your credit score, show consistent revenue, reduce existing debt, and have organized financial documentation. Then compare offers from multiple lenders. Rates for the same loan can vary by 5 to 10 percentage points between lenders. Our <Link href="/tools/business-loan-comparison-tool" className="text-theme-primary-light font-medium hover:underline">loan comparison tool</Link> lets you put offers side by side. Or <Link href="/get-started" className="text-theme-primary-light font-medium hover:underline">talk to a funding specialist</Link> who can match you with lenders offering the best rates for your profile, with no impact to your credit score.
+              The best way to get a competitive rate is to improve your credit score, show consistent revenue, reduce existing debt, and have organized financial documentation. Then compare offers from multiple lenders. Rates for the same loan can vary by <strong>5 to 10 percentage points</strong> between lenders. Our <Link href="/tools/business-loan-comparison-tool" className="text-theme-primary-light font-medium hover:underline">loan comparison tool</Link> lets you put offers side by side. Or <Link href="/get-started" className="text-theme-primary-light font-medium hover:underline">talk to a funding specialist</Link> who can match you with lenders offering the best rates for your profile, with no impact to your credit score.
             </p>
           </div>
         }

@@ -101,7 +101,7 @@ export default function ROICalculatorPage() {
               Is a Business Loan Worth It?
             </h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              Every business loan is an investment. The question is whether the return justifies the cost. A $200,000 equipment loan at 10% over 3 years costs roughly $232,000 in total payments. If that equipment generates $350,000 in new revenue over the same period, the net profit is $118,000 and your ROI is 59%. That is a strong return. But if the equipment only generates $220,000, the net profit is just $12,000 for a 6% ROI, which is marginal after factoring in risk and opportunity cost. This calculator runs these numbers so you can make the decision with real data, not guesswork.
+              Every business loan is an investment. The question is whether the return justifies the cost. A <strong>$200,000 equipment loan at 10% over 3 years</strong> costs roughly <strong>$232,000</strong> in total payments. If that equipment generates <strong>$350,000</strong> in new revenue over the same period, the net profit is $118,000 and your <strong>ROI is 59%</strong>. That is a strong return. But if the equipment only generates $220,000, the net profit is just $12,000 for a 6% ROI, which is marginal after factoring in risk and opportunity cost. This calculator runs these numbers so you can make the decision with real data, not guesswork.
             </p>
 
             <h3 className="text-xl font-bold text-quicklend-900 mb-3 mt-6">Accounting for Ramp-Up Time</h3>
@@ -111,7 +111,7 @@ export default function ROICalculatorPage() {
 
             <h3 className="text-xl font-bold text-quicklend-900 mb-3 mt-6">ROI vs Payback Period</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
-              ROI tells you the total percentage return over the life of the investment. Payback period tells you when you get your money back. Both matter. A 60% ROI with a 30-month payback on a 36-month loan means you only have 6 months of pure profit after recovering costs. A 30% ROI with a 12-month payback gives you 24 months of profit, which might be preferable if cash flow flexibility matters. Use the <Link href="/tools/loan-payment-calculator" className="text-theme-primary-light font-medium hover:underline">loan payment calculator</Link> to see exact payment amounts, or the <Link href="/tools/business-loan-comparison-tool" className="text-theme-primary-light font-medium hover:underline">loan comparison tool</Link> to weigh multiple financing options side by side.
+              ROI tells you the total percentage return over the life of the investment. Payback period tells you when you get your money back. Both matter. A <strong>60% ROI with a 30-month payback</strong> on a 36-month loan means you only have 6 months of pure profit after recovering costs. A <strong>30% ROI with a 12-month payback</strong> gives you 24 months of profit, which might be preferable if cash flow flexibility matters. Use the <Link href="/tools/loan-payment-calculator" className="text-theme-primary-light font-medium hover:underline">loan payment calculator</Link> to see exact payment amounts, or the <Link href="/tools/business-loan-comparison-tool" className="text-theme-primary-light font-medium hover:underline">loan comparison tool</Link> to weigh multiple financing options side by side.
             </p>
 
             <h3 className="text-xl font-bold text-quicklend-900 mb-3 mt-6">Choosing the Right Loan for Your Investment</h3>

@@ -101,7 +101,7 @@ export default function LineOfCreditInterestCalculatorPage() {
               How Much Does a Business Line of Credit Really Cost?
             </h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              A business line of credit works differently from a term loan. You get access to a set credit limit and only pay interest on what you actually draw. This makes it ideal for managing cash flow gaps, covering seasonal expenses, or having funds available for unexpected opportunities. The cost depends on how much you draw, how long you keep it outstanding, and whether you make interest-only or amortizing payments.
+              A business line of credit works differently from a term loan. You get access to a set credit limit and <strong>only pay interest on what you actually draw</strong>. This makes it ideal for managing cash flow gaps, covering seasonal expenses, or having funds available for unexpected opportunities. The cost depends on how much you draw, how long you keep it outstanding, and whether you make interest-only or amortizing payments.
             </p>
             <p className="text-gray-700 leading-relaxed mb-4">
               This calculator shows the true cost of a specific draw from your <Link href="/business-loans/lines-of-credit" className="text-theme-primary-light font-medium hover:underline">business line of credit</Link>. Enter your credit limit and draw amount to see monthly payments, total interest, and how fees affect your effective APR. The comparison feature shows how the same amount would cost as a <Link href="/business-loans/term-loans" className="text-theme-primary-light font-medium hover:underline">term loan</Link>.
@@ -114,7 +114,7 @@ export default function LineOfCreditInterestCalculatorPage() {
 
             <h3 className="text-xl font-bold text-quicklend-900 mb-3 mt-6">Watch for Hidden Fees</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
-              The stated interest rate is not always the full cost. Some lenders charge draw fees (0.5% to 2% per draw), annual maintenance fees, or inactivity fees if you do not use the line. Draw fees can significantly increase your effective APR, especially on short-term draws. A 1% draw fee on a 3-month draw adds roughly 4% to your annualized cost. Always ask about all fees before signing and use the draw fee slider in this calculator to see the impact.
+              The stated interest rate is not always the full cost. Some lenders charge <strong>draw fees (0.5% to 2% per draw)</strong>, annual maintenance fees, or inactivity fees if you do not use the line. Draw fees can significantly increase your effective APR, especially on short-term draws. A <strong>1% draw fee</strong> on a 3-month draw adds roughly <strong>4% to your annualized cost</strong>. Always ask about all fees before signing and use the draw fee slider in this calculator to see the impact.
             </p>
 
             <h3 className="text-xl font-bold text-quicklend-900 mb-3 mt-6">When a LOC Beats a Term Loan</h3>

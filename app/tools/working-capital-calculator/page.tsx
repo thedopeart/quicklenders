@@ -101,12 +101,12 @@ export default function WorkingCapitalCalculatorPage() {
               Understanding Working Capital
             </h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              Working capital is the money available for day-to-day operations: the difference between what you own (current assets) and what you owe (current liabilities) in the short term. Positive working capital means you can pay suppliers, cover payroll, and handle unexpected costs. Negative or tight working capital means you are constantly juggling, potentially missing payments, and vulnerable to any disruption.
+              <strong>Working capital</strong> is the money available for day-to-day operations: the difference between what you own (<strong>current assets</strong>) and what you owe (<strong>current liabilities</strong>) in the short term. Positive working capital means you can pay suppliers, cover payroll, and handle unexpected costs. Negative or tight working capital means you are constantly juggling, potentially missing payments, and vulnerable to any disruption.
             </p>
 
             <h3 className="text-xl font-bold text-quicklend-900 mb-3 mt-6">The Working Capital Cycle</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
-              Cash flows through your business in a cycle: you pay suppliers for inventory, sell to customers, then wait for customers to pay you. The longer this cycle takes, the more working capital you need. If customers take 60 days to pay but you owe suppliers in 30 days, you need cash to bridge that 30-day gap. The cash conversion cycle analysis in this calculator measures exactly how long your money is tied up. Shortening the cycle by speeding up collections or negotiating longer supplier terms reduces your working capital needs. Our <Link href="/tools/invoice-factoring-calculator" className="text-theme-primary-light font-medium hover:underline">invoice factoring calculator</Link> shows what it costs to convert receivables to cash immediately.
+              Cash flows through your business in a cycle: you pay suppliers for inventory, sell to customers, then wait for customers to pay you. The longer this cycle takes, the more working capital you need. If customers take 60 days to pay but you owe suppliers in 30 days, you need cash to bridge that <strong>30-day gap</strong>. The <strong>cash conversion cycle</strong> analysis in this calculator measures exactly how long your money is tied up. Shortening the cycle by speeding up collections or negotiating longer supplier terms reduces your working capital needs. Our <Link href="/tools/invoice-factoring-calculator" className="text-theme-primary-light font-medium hover:underline">invoice factoring calculator</Link> shows what it costs to convert receivables to cash immediately.
             </p>
 
             <h3 className="text-xl font-bold text-quicklend-900 mb-3 mt-6">Financing Options for Working Capital</h3>

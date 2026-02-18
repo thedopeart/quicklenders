@@ -101,7 +101,7 @@ export default function LoanComparisonPage() {
               How to Compare Business Loan Offers
             </h2>
             <p className="text-gray-700 leading-relaxed mb-4">
-              A lower interest rate does not always mean a cheaper loan. Term length, fees, and payment structure all affect what you actually pay. Two offers with the same rate can have dramatically different total costs if one has a 3% origination fee and the other has none. This tool runs the math on up to three offers so you can compare them on equal footing.
+              A lower interest rate does not always mean a cheaper loan. Term length, fees, and payment structure all affect what you actually pay. Two offers with the same rate can have dramatically different total costs if one has a <strong>3% origination fee</strong> and the other has none. This tool runs the math on up to three offers so you can compare them on equal footing.
             </p>
 
             <h3 className="text-xl font-bold text-quicklend-900 mb-3 mt-6">Total Cost vs. Monthly Payment</h3>
@@ -111,7 +111,7 @@ export default function LoanComparisonPage() {
 
             <h3 className="text-xl font-bold text-quicklend-900 mb-3 mt-6">Fees Change the Equation</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
-              Origination fees typically range from 1% to 5% of the loan amount and are either deducted from your proceeds or added to your balance. A $100,000 loan with a 3% origination fee means you either receive $97,000 or owe $103,000. Either way, it raises your effective borrowing cost. Always include fees when comparing offers. The effective APR shown in this calculator accounts for fees so you can see the true annual cost. Use our <Link href="/tools/factor-rate-to-apr-calculator" className="text-theme-primary-light font-medium hover:underline">factor rate to APR converter</Link> if any of your offers use factor rates instead of interest rates.
+              <strong>Origination fees</strong> typically range from <strong>1% to 5%</strong> of the loan amount and are either deducted from your proceeds or added to your balance. A <strong>$100,000</strong> loan with a 3% origination fee means you either receive $97,000 or owe $103,000. Either way, it raises your effective borrowing cost. Always include fees when comparing offers. The effective APR shown in this calculator accounts for fees so you can see the true annual cost. Use our <Link href="/tools/factor-rate-to-apr-calculator" className="text-theme-primary-light font-medium hover:underline">factor rate to APR converter</Link> if any of your offers use factor rates instead of interest rates.
             </p>
 
             <h3 className="text-xl font-bold text-quicklend-900 mb-3 mt-6">When the Cheapest Loan Is Not the Best Choice</h3>

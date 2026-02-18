@@ -109,12 +109,12 @@ export default function LoanAffordabilityCalculatorPage() {
 
             <h3 className="text-xl font-bold text-quicklend-900 mb-3 mt-6">The Payment-to-Revenue Rule</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
-              A common guideline: keep loan payments under 10% to 15% of monthly revenue. This leaves room for operating expenses, unexpected costs, and profit. A business earning $30,000 per month might comfortably afford $3,000 to $4,500 in monthly loan payments. This is not a hard rule. Businesses with high margins can handle more, while seasonal businesses may need a lower ratio.
+              A common guideline: keep loan payments under <strong>10% to 15% of monthly revenue</strong>. This leaves room for operating expenses, unexpected costs, and profit. A business earning <strong>$30,000 per month</strong> might comfortably afford <strong>$3,000 to $4,500</strong> in monthly loan payments. This is not a hard rule. Businesses with high margins can handle more, while seasonal businesses may need a lower ratio.
             </p>
 
             <h3 className="text-xl font-bold text-quicklend-900 mb-3 mt-6">How Interest Rate Affects Borrowing Power</h3>
             <p className="text-gray-700 leading-relaxed mb-4">
-              Lower rates dramatically increase how much you can borrow at the same payment. At $5,000 per month over 3 years, a 10% rate supports roughly $156,000 in borrowing, while 20% limits you to about $136,500. That is a $19,500 difference from rate alone. This is why improving your credit before applying can meaningfully expand your options on <Link href="/business-loans/term-loans" className="text-theme-primary-light font-medium hover:underline">term loans</Link> and <Link href="/business-loans/lines-of-credit" className="text-theme-primary-light font-medium hover:underline">lines of credit</Link>.
+              Lower rates dramatically increase how much you can borrow at the same payment. At <strong>$5,000 per month</strong> over 3 years, a 10% rate supports roughly <strong>$156,000</strong> in borrowing, while 20% limits you to about <strong>$136,500</strong>. That is a <strong>$19,500 difference</strong> from rate alone. This is why improving your credit before applying can meaningfully expand your options on <Link href="/business-loans/term-loans" className="text-theme-primary-light font-medium hover:underline">term loans</Link> and <Link href="/business-loans/lines-of-credit" className="text-theme-primary-light font-medium hover:underline">lines of credit</Link>.
             </p>
 
             <h3 className="text-xl font-bold text-quicklend-900 mb-3 mt-6">What If You Need More Than You Can Afford?</h3>
