@@ -34,6 +34,7 @@ import {
 interface ArticlePageLayoutProps {
   article: ArticleData
   relatedArticleTitles: { slug: string; title: string }[]
+  relatedTools?: { slug: string; name: string }[]
 }
 
 const iconMap: Record<string, React.ComponentType<{ className?: string }>> = {
@@ -56,7 +57,7 @@ function getIcon(iconName?: string) {
   return iconMap[iconName] || MdCheckCircle
 }
 
-export default function ArticlePageLayout({ article, relatedArticleTitles }: ArticlePageLayoutProps) {
+export default function ArticlePageLayout({ article, relatedArticleTitles, relatedTools = [] }: ArticlePageLayoutProps) {
   return (
     <main className="flex flex-grow flex-col w-full">
       {/* Hero Section */}
@@ -203,6 +204,39 @@ export default function ArticlePageLayout({ article, relatedArticleTitles }: Art
                   </AccordionItem>
                 ))}
               </Accordion>
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Related Tools */}
+      {relatedTools.length > 0 && (
+        <section className="py-16 lg:py-20 bg-quicklend-50">
+          <div className="container mx-auto px-4">
+            <div className="max-w-4xl mx-auto">
+              <h2 className="text-2xl font-bold text-quicklend-900 mb-3 text-center">
+                Try These Free Tools
+              </h2>
+              <p className="text-gray-600 text-center mb-8">
+                Put what you learned into action with these calculators and tools.
+              </p>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {relatedTools.map((tool) => (
+                  <Link
+                    key={tool.slug}
+                    href={`/tools/${tool.slug}`}
+                    className="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-lg hover:border-quicklend-600/30 transition-all group"
+                  >
+                    <h3 className="font-bold text-quicklend-900 group-hover:text-quicklend-600 transition-colors mb-1 text-sm">
+                      {tool.name}
+                    </h3>
+                    <span className="text-quicklend-600 text-xs font-medium inline-flex items-center gap-1">
+                      Use Tool
+                      <MdArrowForward className="text-xs" />
+                    </span>
+                  </Link>
+                ))}
+              </div>
             </div>
           </div>
         </section>

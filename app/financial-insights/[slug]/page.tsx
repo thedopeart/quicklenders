@@ -238,6 +238,171 @@ const keyTakeaways: Record<string, string[]> = {
   ],
 }
 
+// Related tools for each article
+const relatedToolsByArticle: Record<string, { slug: string; name: string }[]> = {
+  'first-time-business-loans': [
+    { slug: 'loan-finder-quiz', name: 'Loan Finder Quiz' },
+    { slug: 'loan-affordability-calculator', name: 'Loan Affordability Calculator' },
+    { slug: 'funding-readiness-assessment', name: 'Funding Readiness Assessment' },
+  ],
+  'how-to-improve-credit-fast': [
+    { slug: 'loan-rejection-decoder', name: 'Loan Rejection Decoder' },
+    { slug: 'funding-readiness-assessment', name: 'Funding Readiness Assessment' },
+  ],
+  'short-term-business-financing': [
+    { slug: 'working-capital-calculator', name: 'Working Capital Calculator' },
+    { slug: 'loan-payment-calculator', name: 'Loan Payment Calculator' },
+    { slug: 'cash-flow-forecast-tool', name: 'Cash Flow Forecast Tool' },
+  ],
+  'small-business-equipment-financing': [
+    { slug: 'equipment-financing-calculator', name: 'Equipment Financing Calculator' },
+    { slug: 'loan-payment-calculator', name: 'Loan Payment Calculator' },
+    { slug: 'roi-calculator', name: 'ROI Calculator' },
+  ],
+  'pre-seed-funding': [
+    { slug: 'startup-cost-calculator', name: 'Startup Cost Calculator' },
+    { slug: 'break-even-calculator', name: 'Break-Even Calculator' },
+    { slug: 'business-valuation-calculator', name: 'Business Valuation Calculator' },
+  ],
+  'how-to-get-vc-financing': [
+    { slug: 'business-valuation-calculator', name: 'Business Valuation Calculator' },
+    { slug: 'roi-calculator', name: 'ROI Calculator' },
+  ],
+  'venture-capital-funding-from-investors': [
+    { slug: 'business-valuation-calculator', name: 'Business Valuation Calculator' },
+    { slug: 'startup-cost-calculator', name: 'Startup Cost Calculator' },
+  ],
+  'bootstrapping-finance': [
+    { slug: 'cash-flow-forecast-tool', name: 'Cash Flow Forecast Tool' },
+    { slug: 'break-even-calculator', name: 'Break-Even Calculator' },
+    { slug: 'startup-cost-calculator', name: 'Startup Cost Calculator' },
+  ],
+  'invoice-financing': [
+    { slug: 'invoice-factoring-calculator', name: 'Invoice Factoring Calculator' },
+    { slug: 'cash-flow-forecast-tool', name: 'Cash Flow Forecast Tool' },
+    { slug: 'working-capital-calculator', name: 'Working Capital Calculator' },
+  ],
+  'invoice-factoring-loans': [
+    { slug: 'invoice-factoring-calculator', name: 'Invoice Factoring Calculator' },
+    { slug: 'factor-rate-to-apr-calculator', name: 'Factor Rate to APR Converter' },
+  ],
+  'large-business-loans': [
+    { slug: 'loan-affordability-calculator', name: 'Loan Affordability Calculator' },
+    { slug: 'dscr-calculator', name: 'DSCR Calculator' },
+    { slug: 'loan-payment-calculator', name: 'Loan Payment Calculator' },
+  ],
+  'long-term-business-loans': [
+    { slug: 'loan-payment-calculator', name: 'Loan Payment Calculator' },
+    { slug: 'total-cost-of-capital-calculator', name: 'Total Cost of Capital Calculator' },
+    { slug: 'prepayment-penalty-calculator', name: 'Prepayment Penalty Calculator' },
+  ],
+  'no-collateral-business-loan': [
+    { slug: 'loan-finder-quiz', name: 'Loan Finder Quiz' },
+    { slug: 'funding-readiness-assessment', name: 'Funding Readiness Assessment' },
+  ],
+  'online-loans-for-poor-credit-score': [
+    { slug: 'loan-finder-quiz', name: 'Loan Finder Quiz' },
+    { slug: 'loan-rejection-decoder', name: 'Loan Rejection Decoder' },
+    { slug: 'interest-rate-comparison-chart', name: 'Interest Rate Comparison Chart' },
+  ],
+  'secured-vs-unsecured-loans-which-is-better': [
+    { slug: 'business-loan-comparison-tool', name: 'Loan Comparison Tool' },
+    { slug: 'loan-finder-quiz', name: 'Loan Finder Quiz' },
+    { slug: 'interest-rate-comparison-chart', name: 'Interest Rate Comparison Chart' },
+  ],
+  'cash-loans-direct': [
+    { slug: 'loan-finder-quiz', name: 'Loan Finder Quiz' },
+    { slug: 'loan-payment-calculator', name: 'Loan Payment Calculator' },
+  ],
+  'direct-lender-loans-online': [
+    { slug: 'loan-finder-quiz', name: 'Loan Finder Quiz' },
+    { slug: 'loan-offer-analyzer', name: 'Loan Offer Analyzer' },
+  ],
+  'first-time-personal-loans-with-no-credit-history': [
+    { slug: 'loan-finder-quiz', name: 'Loan Finder Quiz' },
+    { slug: 'loan-rejection-decoder', name: 'Loan Rejection Decoder' },
+  ],
+  'how-to-get-a-startup-business-loan-with-bad-credit': [
+    { slug: 'loan-rejection-decoder', name: 'Loan Rejection Decoder' },
+    { slug: 'funding-readiness-assessment', name: 'Funding Readiness Assessment' },
+    { slug: 'startup-cost-calculator', name: 'Startup Cost Calculator' },
+  ],
+  'true-cost-of-merchant-cash-advance': [
+    { slug: 'mca-payback-calculator', name: 'MCA Payback Calculator' },
+    { slug: 'factor-rate-to-apr-calculator', name: 'Factor Rate to APR Converter' },
+    { slug: 'total-cost-of-capital-calculator', name: 'Total Cost of Capital Calculator' },
+  ],
+  'documents-needed-for-business-loan': [
+    { slug: 'loan-document-checklist', name: 'Loan Document Checklist' },
+    { slug: 'funding-readiness-assessment', name: 'Funding Readiness Assessment' },
+  ],
+  'how-much-business-loan-can-you-afford': [
+    { slug: 'loan-affordability-calculator', name: 'Loan Affordability Calculator' },
+    { slug: 'dscr-calculator', name: 'DSCR Calculator' },
+    { slug: 'loan-payment-calculator', name: 'Loan Payment Calculator' },
+  ],
+  'how-to-spot-predatory-business-loan': [
+    { slug: 'factor-rate-to-apr-calculator', name: 'Factor Rate to APR Converter' },
+    { slug: 'loan-offer-analyzer', name: 'Loan Offer Analyzer' },
+    { slug: 'total-cost-of-capital-calculator', name: 'Total Cost of Capital Calculator' },
+  ],
+  'business-loan-denied-what-to-do-next': [
+    { slug: 'loan-rejection-decoder', name: 'Loan Rejection Decoder' },
+    { slug: 'loan-finder-quiz', name: 'Loan Finder Quiz' },
+    { slug: 'funding-readiness-assessment', name: 'Funding Readiness Assessment' },
+  ],
+  'what-is-a-factor-rate': [
+    { slug: 'factor-rate-to-apr-calculator', name: 'Factor Rate to APR Converter' },
+    { slug: 'mca-payback-calculator', name: 'MCA Payback Calculator' },
+    { slug: 'loan-offer-analyzer', name: 'Loan Offer Analyzer' },
+  ],
+  'is-your-business-ready-for-a-loan': [
+    { slug: 'funding-readiness-assessment', name: 'Funding Readiness Assessment' },
+    { slug: 'loan-document-checklist', name: 'Loan Document Checklist' },
+    { slug: 'dscr-calculator', name: 'DSCR Calculator' },
+  ],
+  'prepayment-penalties-business-loans': [
+    { slug: 'prepayment-penalty-calculator', name: 'Prepayment Penalty Calculator' },
+    { slug: 'refinance-savings-calculator', name: 'Refinance Savings Calculator' },
+    { slug: 'loan-payment-calculator', name: 'Loan Payment Calculator' },
+  ],
+  'what-is-dscr-debt-service-coverage-ratio': [
+    { slug: 'dscr-calculator', name: 'DSCR Calculator' },
+    { slug: 'loan-affordability-calculator', name: 'Loan Affordability Calculator' },
+    { slug: 'cash-flow-forecast-tool', name: 'Cash Flow Forecast Tool' },
+  ],
+  'how-to-compare-business-loan-offers': [
+    { slug: 'business-loan-comparison-tool', name: 'Loan Comparison Tool' },
+    { slug: 'loan-offer-analyzer', name: 'Loan Offer Analyzer' },
+    { slug: 'total-cost-of-capital-calculator', name: 'Total Cost of Capital Calculator' },
+  ],
+  'how-much-working-capital-do-you-need': [
+    { slug: 'working-capital-calculator', name: 'Working Capital Calculator' },
+    { slug: 'cash-flow-forecast-tool', name: 'Cash Flow Forecast Tool' },
+    { slug: 'line-of-credit-interest-calculator', name: 'Line of Credit Interest Calculator' },
+  ],
+  'equipment-financing-vs-leasing': [
+    { slug: 'equipment-financing-calculator', name: 'Equipment Financing Calculator' },
+    { slug: 'roi-calculator', name: 'ROI Calculator' },
+    { slug: 'loan-payment-calculator', name: 'Loan Payment Calculator' },
+  ],
+  'business-loan-interest-rates-by-type': [
+    { slug: 'interest-rate-comparison-chart', name: 'Interest Rate Comparison Chart' },
+    { slug: 'loan-payment-calculator', name: 'Loan Payment Calculator' },
+    { slug: 'business-loan-comparison-tool', name: 'Loan Comparison Tool' },
+  ],
+  'sba-loans-7a-vs-504-how-to-qualify': [
+    { slug: 'sba-loan-payment-calculator', name: 'SBA Loan Payment Calculator' },
+    { slug: 'loan-document-checklist', name: 'Loan Document Checklist' },
+    { slug: 'dscr-calculator', name: 'DSCR Calculator' },
+  ],
+  'should-you-refinance-your-business-loan': [
+    { slug: 'refinance-savings-calculator', name: 'Refinance Savings Calculator' },
+    { slug: 'prepayment-penalty-calculator', name: 'Prepayment Penalty Calculator' },
+    { slug: 'business-loan-comparison-tool', name: 'Loan Comparison Tool' },
+  ],
+}
+
 // Reading time estimate
 function estimateReadingTime(content: string): number {
   const wordsPerMinute = 200
@@ -292,7 +457,7 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
             dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }}
           />
         )}
-        <ArticlePageLayout article={structuredArticle} relatedArticleTitles={relatedArticleTitles} />
+        <ArticlePageLayout article={structuredArticle} relatedArticleTitles={relatedArticleTitles} relatedTools={relatedToolsByArticle[params.slug] || []} />
       </>
     )
   }
@@ -502,6 +667,34 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
                       <MdArrowForward className="text-sm" />
                     </Link>
                   </div>
+
+                  {/* Related Tools */}
+                  {(relatedToolsByArticle[params.slug] || []).length > 0 && (
+                    <div className="bg-white border border-gray-200 rounded-xl p-6">
+                      <h3 className="font-bold text-quicklend-900 mb-4">Related Tools</h3>
+                      <div className="space-y-3">
+                        {(relatedToolsByArticle[params.slug] || []).map((tool) => (
+                          <Link
+                            key={tool.slug}
+                            href={`/tools/${tool.slug}`}
+                            className="block group"
+                          >
+                            <h4 className="font-medium text-gray-900 group-hover:text-quicklend-600 transition-colors text-sm leading-snug flex items-center gap-2">
+                              <MdArrowForward className="text-quicklend-600 flex-shrink-0" />
+                              {tool.name}
+                            </h4>
+                          </Link>
+                        ))}
+                      </div>
+                      <Link
+                        href="/tools"
+                        className="inline-flex items-center gap-1 text-quicklend-600 text-sm font-medium mt-4 hover:underline"
+                      >
+                        View All Tools
+                        <MdArrowForward className="text-sm" />
+                      </Link>
+                    </div>
+                  )}
 
                   {/* Quick Links */}
                   <div className="bg-white border border-gray-200 rounded-xl p-6">
