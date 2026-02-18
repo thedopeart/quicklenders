@@ -111,6 +111,50 @@ export function softwareApplicationSchema(tool: {
   }
 }
 
+export function loanOrCreditSchema(loan: {
+  name: string
+  description: string
+  url: string
+  minAmount: number
+  maxAmount: number
+  minRate?: number
+  maxRate?: number
+  termLength?: string
+}) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'LoanOrCredit',
+    name: loan.name,
+    description: loan.description,
+    url: `https://quicklenders.com${loan.url}`,
+    provider: {
+      '@type': 'FinancialService',
+      name: 'Quick Lenders',
+      url: 'https://quicklenders.com',
+      telephone: '+1-303-921-8529',
+    },
+    amount: {
+      '@type': 'MonetaryAmount',
+      minValue: loan.minAmount,
+      maxValue: loan.maxAmount,
+      currency: 'USD',
+    },
+    ...(loan.minRate && loan.maxRate
+      ? {
+          annualPercentageRate: {
+            '@type': 'QuantitativeValue',
+            minValue: loan.minRate,
+            maxValue: loan.maxRate,
+            unitText: 'PERCENT',
+          },
+        }
+      : {}),
+    ...(loan.termLength
+      ? { loanTerm: loan.termLength }
+      : {}),
+  }
+}
+
 export function articleSchema(article: {
   title: string
   description: string
@@ -126,9 +170,14 @@ export function articleSchema(article: {
     dateModified: article.datePublished,
     url: `https://quicklenders.com${article.url}`,
     author: {
-      '@type': 'Organization',
-      name: 'Quick Lenders',
-      url: 'https://quicklenders.com',
+      '@type': 'Person',
+      name: 'Quick Lenders Editorial Team',
+      jobTitle: 'Business Lending Specialists',
+      worksFor: {
+        '@type': 'FinancialService',
+        name: 'Quick Lenders',
+        url: 'https://quicklenders.com',
+      },
     },
     publisher: {
       '@type': 'Organization',

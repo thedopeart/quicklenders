@@ -182,7 +182,7 @@ const Footer = () => {
                     <p className="text-sm text-gray-400">
                         &copy; {new Date().getFullYear()} {companyName}. All rights reserved.
                     </p>
-                    <div className="flex items-center gap-6">
+                    <div className="flex flex-wrap items-center gap-x-6 gap-y-2">
                         <Link href="/privacy-policy" className="text-sm text-gray-400 hover:text-white transition-colors">
                             Privacy Policy
                         </Link>
@@ -191,6 +191,12 @@ const Footer = () => {
                         </Link>
                         <Link href="/california-privacy-policy" className="text-sm text-gray-400 hover:text-white transition-colors">
                             Cookie Policy
+                        </Link>
+                        <Link href="/editorial-policy" className="text-sm text-gray-400 hover:text-white transition-colors">
+                            Editorial Policy
+                        </Link>
+                        <Link href="/advertiser-disclosure" className="text-sm text-gray-400 hover:text-white transition-colors">
+                            Advertiser Disclosure
                         </Link>
                     </div>
                 </div>

@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation'
 import { Metadata } from 'next'
 import { generatePageMetadata } from '@/lib/metadata'
-import { financialProductSchema, breadcrumbSchema, faqSchema } from '@/lib/schema'
+import { financialProductSchema, loanOrCreditSchema, breadcrumbSchema, faqSchema } from '@/lib/schema'
 import { loanProductData, getLoanProduct, getRelatedProducts } from '@/lib/loan-data'
 import ProductPageLayout from '@/components/ProductPageLayout'
 
@@ -45,6 +45,16 @@ export default function LoanProductPage({ params }: PageProps) {
     { name: product.name, url: `/business-loans/${product.slug}` },
   ])
 
+  const loanSchema = loanOrCreditSchema({
+    name: product.name,
+    description: product.seo.description,
+    url: `/business-loans/${product.slug}`,
+    minAmount: product.seo.minAmount,
+    maxAmount: product.seo.maxAmount,
+    minRate: product.seo.minRate,
+    maxRate: product.seo.maxRate,
+  })
+
   const faqData = faqSchema(product.faqs.map(f => ({ question: f.question, answer: f.schemaAnswer })))
 
   return (
@@ -52,6 +62,10 @@ export default function LoanProductPage({ params }: PageProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(loanSchema) }}
       />
       <script
         type="application/ld+json"

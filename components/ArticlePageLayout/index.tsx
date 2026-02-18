@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import { ArticleData, ArticleSection } from '@/lib/article-data'
+import { defaultAuthor } from '@/lib/authors'
 import {
   Accordion,
   AccordionContent,
@@ -98,6 +99,25 @@ export default function ArticlePageLayout({ article, relatedArticleTitles }: Art
                   <MdPhone />
                   (303) 921-8529
                 </a>
+              </div>
+
+              <div className="mt-6 flex items-center gap-3 text-sm text-white/70">
+                <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white font-bold text-xs">
+                  QL
+                </div>
+                <div>
+                  <span className="text-white/90 font-medium">{defaultAuthor.name}</span>
+                  <span className="mx-2">|</span>
+                  <span>{defaultAuthor.role}</span>
+                  <span className="mx-2">|</span>
+                  <time>
+                    {new Date(article.date).toLocaleDateString('en-US', {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric',
+                    })}
+                  </time>
+                </div>
               </div>
             </div>
             {article.image && (

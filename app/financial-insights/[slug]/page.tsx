@@ -8,6 +8,7 @@ import { getArticleData, hasStructuredArticle } from '@/lib/article-data'
 import { getArticleFaqs } from '@/lib/faq-data'
 import ArticlePageLayout from '@/components/ArticlePageLayout'
 import FAQSection from '@/components/FAQSection'
+import { defaultAuthor } from '@/lib/authors'
 import { MdPhone, MdAccessTime, MdTrendingUp, MdCheckCircle, MdArrowForward, MdBookmark } from 'react-icons/md'
 
 export function generateStaticParams() {
@@ -370,6 +371,16 @@ export default function ArticlePage({ params }: { params: { slug: string } }) {
           </p>
 
           <div className="flex flex-wrap items-center gap-6 text-sm text-white/70">
+            <div className="flex items-center gap-3">
+              <div className="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center text-white font-bold text-xs">
+                QL
+              </div>
+              <div>
+                <span className="text-white/90 font-medium">{defaultAuthor.name}</span>
+                <span className="mx-1">|</span>
+                <span>{defaultAuthor.role}</span>
+              </div>
+            </div>
             <div className="flex items-center gap-2">
               <MdAccessTime className="text-lg" />
               <span>{readingTime} min read</span>
