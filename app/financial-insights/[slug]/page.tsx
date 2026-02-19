@@ -77,6 +77,11 @@ const relatedArticlesByTopic: Record<string, string[]> = {
   'sba-loans-7a-vs-504-how-to-qualify': ['business-loan-interest-rates-by-type', 'documents-needed-for-business-loan', 'is-your-business-ready-for-a-loan'],
   'should-you-refinance-your-business-loan': ['prepayment-penalties-business-loans', 'how-to-compare-business-loan-offers', 'business-loan-interest-rates-by-type'],
   'work-life-balance-tips-for-business-owners': ['is-your-business-ready-for-a-loan', 'how-much-business-loan-can-you-afford', 'documents-needed-for-business-loan'],
+  'best-business-loans': ['how-to-compare-business-loan-offers', 'business-loan-interest-rates-by-type', 'what-is-dscr-debt-service-coverage-ratio'],
+  'how-to-get-a-business-line-of-credit': ['how-much-working-capital-do-you-need', 'is-your-business-ready-for-a-loan', 'documents-needed-for-business-loan'],
+  'business-loans-for-bad-credit': ['how-to-get-a-startup-business-loan-with-bad-credit', 'how-to-improve-credit-fast', 'how-to-spot-predatory-business-loan'],
+  'same-day-business-loans': ['true-cost-of-merchant-cash-advance', 'short-term-business-financing', 'how-to-compare-business-loan-offers'],
+  'sba-504-loan-guide': ['sba-loans-7a-vs-504-how-to-qualify', 'documents-needed-for-business-loan', 'equipment-financing-vs-leasing'],
 }
 
 // Key takeaways for each article
@@ -242,6 +247,36 @@ const keyTakeaways: Record<string, string[]> = {
     'A 3 to 6 month cash reserve reduces stress more than any productivity hack',
     'Automate recurring financial tasks to reclaim personal time',
     'Strategic financing can reduce workload pressure, not just add to it',
+  ],
+  'best-business-loans': [
+    'The best loan depends on your purpose, timeline, and credit profile',
+    'SBA loans offer the lowest rates but take 4 to 13 weeks to fund',
+    'Always compare total repayment cost, not just the interest rate',
+    'MCAs should be a last resort due to effective APRs of 40% to 150%+',
+  ],
+  'how-to-get-a-business-line-of-credit': [
+    'You only pay interest on the amount you draw, not the full limit',
+    'Most lenders require 6 to 12 months in business and $50K+ revenue',
+    'Establish a line before you need it so capital is available instantly',
+    'Stay below 70% utilization to avoid lender concern and rate increases',
+  ],
+  'business-loans-for-bad-credit': [
+    'Credit below 650 limits but does not eliminate your financing options',
+    'Equipment financing and invoice factoring rely less on your credit score',
+    'Guaranteed approval claims are always a red flag for predatory lending',
+    'Fixing credit report errors can improve your score 20 to 50 points fast',
+  ],
+  'same-day-business-loans': [
+    'Existing credit lines provide the fastest and cheapest same-day access',
+    'Same-day MCAs can cost $12,000+ more than waiting 1 to 2 weeks',
+    'Prepare documents and lender relationships before emergencies hit',
+    'Repeated fast borrowing signals a cash flow problem, not a funding gap',
+  ],
+  'sba-504-loan-guide': [
+    'SBA 504 requires just 10% down for commercial real estate purchases',
+    'The CDC portion offers below-market fixed rates tied to Treasury yields',
+    'Owner-occupancy of 51% (existing) or 60% (new) is required',
+    'Total timeline from application to funding is typically 60 to 90 days',
   ],
 }
 
@@ -412,6 +447,31 @@ const relatedToolsByArticle: Record<string, { slug: string; name: string }[]> = 
     { slug: 'cash-flow-forecast-tool', name: 'Cash Flow Forecast Tool' },
     { slug: 'loan-affordability-calculator', name: 'Loan Affordability Calculator' },
     { slug: 'dscr-calculator', name: 'DSCR Calculator' },
+  ],
+  'best-business-loans': [
+    { slug: 'loan-finder-quiz', name: 'Loan Finder Quiz' },
+    { slug: 'business-loan-comparison-tool', name: 'Loan Comparison Tool' },
+    { slug: 'loan-payment-calculator', name: 'Loan Payment Calculator' },
+  ],
+  'how-to-get-a-business-line-of-credit': [
+    { slug: 'line-of-credit-interest-calculator', name: 'Line of Credit Interest Calculator' },
+    { slug: 'loan-affordability-calculator', name: 'Loan Affordability Calculator' },
+    { slug: 'cash-flow-forecast-tool', name: 'Cash Flow Forecast Tool' },
+  ],
+  'business-loans-for-bad-credit': [
+    { slug: 'factor-rate-to-apr-calculator', name: 'Factor Rate to APR Converter' },
+    { slug: 'funding-readiness-assessment', name: 'Funding Readiness Assessment' },
+    { slug: 'loan-finder-quiz', name: 'Loan Finder Quiz' },
+  ],
+  'same-day-business-loans': [
+    { slug: 'mca-payback-calculator', name: 'MCA Payback Calculator' },
+    { slug: 'total-cost-of-capital-calculator', name: 'Total Cost of Capital Calculator' },
+    { slug: 'loan-finder-quiz', name: 'Loan Finder Quiz' },
+  ],
+  'sba-504-loan-guide': [
+    { slug: 'sba-loan-payment-calculator', name: 'SBA Loan Payment Calculator' },
+    { slug: 'dscr-calculator', name: 'DSCR Calculator' },
+    { slug: 'loan-document-checklist', name: 'Loan Document Checklist' },
   ],
 }
 

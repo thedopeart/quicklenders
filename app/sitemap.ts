@@ -78,6 +78,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'sba-loans-7a-vs-504-how-to-qualify',
     'should-you-refinance-your-business-loan',
     'work-life-balance-tips-for-business-owners',
+    'best-business-loans',
+    'how-to-get-a-business-line-of-credit',
+    'business-loans-for-bad-credit',
+    'same-day-business-loans',
+    'sba-504-loan-guide',
   ]
 
   return [
