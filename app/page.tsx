@@ -5,13 +5,12 @@ import HeroSection from "./Sections/HeroSection"
 import TrustBannerSection from "./Sections/TrustBannerSection"
 import ServicesSection from "./Sections/ServicesSection"
 import BenefitsSection from "./Sections/BenefitsSection"
-import TestimonialsSection from "./Sections/TestimonialsSection"
 import ResourcesSection from "./Sections/ResourcesSection"
 import FAQSection from '@/components/FAQSection'
 
 export const metadata = generatePageMetadata({
   title: 'Quick Lenders | Business Loans & Financing Solutions',
-  description: 'Fast business financing from $50K to $100M. Term loans, lines of credit, equipment financing, asset-based lending, and more. Same-day funding available.',
+  description: 'Business financing from $50K to $100M. Term loans, lines of credit, equipment financing, asset-based lending, and more. Funding as fast as the same business day on select products.',
   path: '/',
 })
 
@@ -56,7 +55,6 @@ export default function Home() {
       <TrustBannerSection />
       <ServicesSection />
       <BenefitsSection />
-      <TestimonialsSection />
       <ResourcesSection />
       <FAQSection faqs={homeFaqs} className="bg-gray-50" />
     </main>

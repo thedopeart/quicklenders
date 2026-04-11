@@ -52,6 +52,9 @@ const leadSchema = z.object({
   timeInBusiness: z.string().min(1, 'Please select time in business'),
   urgency: z.string().min(1, 'Please select how soon you need funding'),
   notes: z.string().optional(),
+  consent: z.boolean().refine((v) => v === true, {
+    message: 'You must agree to the consent terms to continue',
+  }),
   website: z.string().optional(),
   source: z.string().optional(),
   page: z.string().optional(),
@@ -87,6 +90,7 @@ export default function GetStartedForm() {
       timeInBusiness: '',
       urgency: '',
       notes: '',
+      consent: false,
       website: '',
     },
   })
@@ -263,6 +267,30 @@ export default function GetStartedForm() {
         />
       </div>
 
+      {/* Consent */}
+      <div className="rounded-lg border border-gray-200 bg-gray-50 p-4">
+        <label htmlFor="consent" className="flex items-start gap-3 cursor-pointer">
+          <input
+            {...register('consent')}
+            id="consent"
+            type="checkbox"
+            className="mt-1 h-5 w-5 flex-shrink-0 rounded border-gray-300 text-blue-600 focus:ring-2 focus:ring-blue-600/20 cursor-pointer"
+          />
+          <span className="text-xs text-gray-600 leading-relaxed">
+            By checking this box and clicking &ldquo;Get Your Options,&rdquo; I agree to the{' '}
+            <a href="/terms-of-service" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-700">
+              Terms of Service
+            </a>{' '}
+            and{' '}
+            <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-700">
+              Privacy Policy
+            </a>
+            , and I provide my express written consent for Quick Lenders and its lending partners to contact me at the phone number and email address I provided &mdash; including via automated telephone dialing system, artificial or prerecorded voice, and SMS/text message &mdash; regarding my business financing request, even if my number is on a federal or state Do Not Call list. I understand that consent is not a condition of any purchase, that message and data rates may apply, and that I can reply STOP to opt out of text messages at any time. I also confirm that I am the subscriber to, or the customary user of, the phone number provided and that I am at least 18 years old.
+          </span>
+        </label>
+        {errors.consent && <p className={`${errorClasses} ml-8`}>{errors.consent.message}</p>}
+      </div>
+
       {serverError && (
         <p className="text-sm text-red-600 text-center">{serverError}</p>
       )}
@@ -275,8 +303,8 @@ export default function GetStartedForm() {
         {isSubmitting ? 'Sending...' : 'Get Your Options'}
       </button>
 
-      <p className="text-center text-sm text-gray-500">
-        No obligation. No hard credit pull. Your information is kept confidential.
+      <p className="text-center text-xs text-gray-500">
+        No obligation. No hard credit pull for pre-qualification. Your information is kept confidential.
       </p>
     </form>
   )

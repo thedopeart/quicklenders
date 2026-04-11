@@ -58,7 +58,7 @@ const TrustBannerSection = () => {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 bg-quicklend-50 border border-quicklend-100 rounded-full px-4 py-2 mb-6">
             <span className="w-2 h-2 rounded-full bg-quicklend-600 animate-pulse"></span>
-            <span className="text-quicklend-700 text-sm font-medium">Trusted by 1,000+ Businesses</span>
+            <span className="text-quicklend-700 text-sm font-medium">Backed by a team that&apos;s helped 1,000+ businesses</span>
           </div>
           <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-4">
             Why Choose <span className="text-quicklend-600">Quick Lenders</span>

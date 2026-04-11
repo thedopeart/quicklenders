@@ -5,9 +5,9 @@ import Link from 'next/link';
 import { Search, Shield, Clock, DollarSign, Users } from 'lucide-react';
 
 const trustStats = [
-  { icon: DollarSign, value: '$500M+', label: 'Total Funded' },
-  { icon: Clock, value: '24hr', label: 'Avg. Approval' },
-  { icon: Users, value: '1,000+', label: 'Businesses Helped' },
+  { icon: DollarSign, value: '$500M+', label: 'Funded by our team' },
+  { icon: Clock, value: '24hr', label: 'Decisions as fast as' },
+  { icon: Users, value: '1,000+', label: 'Businesses our team has helped' },
 ];
 
 const HeroSection = () => {
@@ -120,6 +120,9 @@ const HeroSection = () => {
             </div>
           ))}
         </div>
+        <p className="mt-4 text-xs text-white/50 max-w-2xl mx-auto text-center">
+          Combined track record of the team behind Quick Lenders across current and prior lending operations.
+        </p>
 
         {/* Security badge */}
         <div className="mt-8 flex items-center gap-2 text-white/60 text-sm animate-on-load animate-slide-up animate-delay-600">

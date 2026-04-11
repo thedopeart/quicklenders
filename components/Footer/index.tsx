@@ -12,7 +12,7 @@ const Footer = () => {
                     <div>
                         <h3 className="text-xl font-bold mb-4">{companyName}</h3>
                         <p className="text-sm text-gray-400 mb-4 leading-relaxed">
-                            Providing innovative financial solutions for businesses of all sizes since 2010.
+                            Connecting business owners with financing from our network of lending partners.
                         </p>
                         <div className="flex flex-col gap-2 mb-6 text-sm text-gray-400">
                             <a href="tel:3039218529" className="flex items-center gap-2 hover:text-white transition-colors">
