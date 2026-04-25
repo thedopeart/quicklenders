@@ -190,7 +190,7 @@ const Footer = () => {
                             Terms of Service
                         </Link>
                         <Link href="/california-privacy-policy" className="text-sm text-gray-400 hover:text-white transition-colors">
-                            Cookie Policy
+                            California Privacy
                         </Link>
                         <Link href="/editorial-policy" className="text-sm text-gray-400 hover:text-white transition-colors">
                             Editorial Policy

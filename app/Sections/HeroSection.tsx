@@ -1,8 +1,7 @@
 'use client';
 
-import { useState } from 'react';
 import Link from 'next/link';
-import { Search, Shield, Clock, DollarSign, Users } from 'lucide-react';
+import { Shield, Clock, DollarSign, Users } from 'lucide-react';
 
 const trustStats = [
   { icon: DollarSign, value: '$500M+', label: 'Funded by our team' },
@@ -11,13 +10,6 @@ const trustStats = [
 ];
 
 const HeroSection = () => {
-  const [searchQuery, setSearchQuery] = useState('');
-
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    console.log('Searching for:', searchQuery);
-  };
-
   return (
     <div className="relative bg-quicklend-600 text-white overflow-hidden">
       {/* Enhanced gradient overlay */}
@@ -75,29 +67,6 @@ const HeroSection = () => {
             </Link>
           </div>
 
-          {/* Glass morphism search bar */}
-          <form onSubmit={handleSearch} className="relative max-w-3xl mx-auto mb-10 animate-on-load animate-slide-up animate-delay-500">
-            <div className="relative flex items-center bg-white/10 backdrop-blur-md rounded-full border border-white/20 p-2 shadow-2xl">
-              <input
-                type="text"
-                placeholder="What type of funding are you looking for?"
-                className="pl-12 pr-4 py-4 bg-white rounded-full w-full text-lg text-gray-800
-                           border-2 border-transparent focus:border-amber-400
-                           focus:ring-4 focus:ring-amber-400/20 outline-none transition-all"
-                value={searchQuery}
-                onChange={(e) => setSearchQuery(e.target.value)}
-              />
-              <Search className="absolute left-6 text-gray-400 h-6 w-6" />
-              <button
-                type="submit"
-                className="absolute right-4 bg-quicklend-600 hover:bg-quicklend-500
-                           rounded-full h-12 px-8 text-white font-medium
-                           shadow-lg hover:shadow-xl transition-all"
-              >
-                Search
-              </button>
-            </div>
-          </form>
         </div>
 
         {/* Enhanced trust badges with glass cards */}
