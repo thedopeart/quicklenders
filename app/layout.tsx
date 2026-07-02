@@ -27,9 +27,12 @@ export const metadata: Metadata = {
     siteName: 'Quick Lenders',
     type: 'website',
     locale: 'en_US',
+    // Default branded card (homepage + any page that doesn't set its own).
+    images: [{ url: '/api/og', width: 1200, height: 630 }],
   },
   twitter: {
     card: 'summary_large_image',
+    images: ['/api/og'],
   },
   robots: {
     index: true,
