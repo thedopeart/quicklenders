@@ -8,11 +8,12 @@ import { join } from 'path'
 
 export const dynamic = 'force-dynamic'
 
+// Current brand lockup (matches the site header): blue block icon + wordmark.
 let logoDataUri: Promise<string> | null = null
 function getLogo(): Promise<string> {
   if (!logoDataUri) {
     logoDataUri = readFile(
-      join(process.cwd(), 'public/assets/images/site/quicklenders-logo-white.png')
+      join(process.cwd(), 'public/assets/images/site/logo-icon.png')
     ).then((buf) => `data:image/png;base64,${buf.toString('base64')}`)
   }
   return logoDataUri
@@ -73,8 +74,25 @@ export async function GET(request: Request) {
 
         {/* Top row: logo + tag chip */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between' }}>
-          {/* eslint-disable-next-line @next/next/no-img-element */}
-          <img src={logo} width={200} height={114} alt="" />
+          <div style={{ display: 'flex', alignItems: 'center', gap: 18 }}>
+            <div
+              style={{
+                display: 'flex',
+                width: 78,
+                height: 78,
+                borderRadius: 18,
+                background: '#FFFFFF',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src={logo} width={56} height={56} alt="" />
+            </div>
+            <div style={{ display: 'flex', fontSize: 34, fontWeight: 800, color: '#FFFFFF', letterSpacing: '-0.01em' }}>
+              Quick Lenders
+            </div>
+          </div>
           {tag ? (
             <div
               style={{
