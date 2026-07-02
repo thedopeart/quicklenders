@@ -13,7 +13,7 @@ function ogTagForPath(path: string): string {
 // pointed at a file that never existed.
 function defaultOgImage(title: string, path: string): string {
   const tag = ogTagForPath(path)
-  return `/api/og?title=${encodeURIComponent(title)}${tag ? `&tag=${encodeURIComponent(tag)}` : ''}`
+  return `/api/og?v=2&title=${encodeURIComponent(title)}${tag ? `&tag=${encodeURIComponent(tag)}` : ''}`
 }
 
 export function generatePageMetadata(page: {
