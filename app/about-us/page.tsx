@@ -163,13 +163,13 @@ export default function AboutPage() {
               <span className="text-theme-primary-light text-sm font-medium">Learn more →</span>
             </Link>
 
-            <Link href="/business-loans/line-of-credit" className="group bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all border border-gray-100">
+            <Link href="/business-loans/lines-of-credit" className="group bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all border border-gray-100">
               <h3 className="font-bold text-theme-primary-dark mb-2 group-hover:text-theme-primary-light transition-colors">Lines of Credit</h3>
               <p className="text-sm text-gray-600 mb-3">Revolving credit up to $10M. Draw funds as needed and only pay interest on what you use.</p>
               <span className="text-theme-primary-light text-sm font-medium">Learn more →</span>
             </Link>
 
-            <Link href="/business-loans/asset-based-lending" className="group bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all border border-gray-100">
+            <Link href="/business-loans/asset-backed-loans" className="group bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all border border-gray-100">
               <h3 className="font-bold text-theme-primary-dark mb-2 group-hover:text-theme-primary-light transition-colors">Asset-Based Lending</h3>
               <p className="text-sm text-gray-600 mb-3">$50K - $100M secured by your business assets. Ideal for companies with strong collateral.</p>
               <span className="text-theme-primary-light text-sm font-medium">Learn more →</span>
@@ -181,7 +181,7 @@ export default function AboutPage() {
               <span className="text-theme-primary-light text-sm font-medium">Learn more →</span>
             </Link>
 
-            <Link href="/business-loans/esop-financing" className="group bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all border border-gray-100">
+            <Link href="/business-loans/esop" className="group bg-white rounded-xl p-6 shadow-sm hover:shadow-md transition-all border border-gray-100">
               <h3 className="font-bold text-theme-primary-dark mb-2 group-hover:text-theme-primary-light transition-colors">ESOP Financing</h3>
               <p className="text-sm text-gray-600 mb-3">Specialized financing for employee stock ownership plans. Terms up to 10 years.</p>
               <span className="text-theme-primary-light text-sm font-medium">Learn more →</span>
@@ -275,7 +275,7 @@ export default function AboutPage() {
               <MdTrendingUp className="text-4xl text-theme-primary-light mb-4" />
               <h3 className="text-xl font-bold text-theme-primary-dark mb-3">Growth-Focused Solutions</h3>
               <p className="text-gray-600">
-                Our products are designed to fuel expansion, not just cover gaps. From <Link href="/business-loans/equipment-financing" className="text-theme-primary-light hover:underline">equipment financing</Link> to <Link href="/business-loans/line-of-credit" className="text-theme-primary-light hover:underline">lines of credit</Link>, we help businesses scale strategically.
+                Our products are designed to fuel expansion, not just cover gaps. From <Link href="/business-loans/equipment-financing" className="text-theme-primary-light hover:underline">equipment financing</Link> to <Link href="/business-loans/lines-of-credit" className="text-theme-primary-light hover:underline">lines of credit</Link>, we help businesses scale strategically.
               </p>
             </div>
 

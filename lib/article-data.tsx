@@ -1080,7 +1080,7 @@ export const articleData: Record<string, ArticleData> = {
             title: 'SBA Loans',
             text: 'Many SBA loans require collateral, though the SBA guarantee reduces lender risk.',
             icon: 'document',
-            link: { text: 'Learn More', href: '/business-loans/sba-loans' }
+            link: { text: 'Learn More', href: '/financial-insights/sba-504-loan-guide' }
           },
         ]
       },

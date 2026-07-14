@@ -232,14 +232,14 @@ export default function BusinessLoansPage() {
               <div className="bg-white rounded-xl p-6 border border-gray-100">
                 <h3 className="font-bold text-theme-primary-dark mb-2">1. Purpose of Funds</h3>
                 <p className="text-gray-600 text-sm">
-                  What do you need the capital for? <Link href="/business-loans/equipment-financing" className="text-theme-primary-light hover:underline">Equipment financing</Link> works best for asset purchases, while <Link href="/business-loans/line-of-credit" className="text-theme-primary-light hover:underline">lines of credit</Link> are ideal for ongoing working capital needs.
+                  What do you need the capital for? <Link href="/business-loans/equipment-financing" className="text-theme-primary-light hover:underline">Equipment financing</Link> works best for asset purchases, while <Link href="/business-loans/lines-of-credit" className="text-theme-primary-light hover:underline">lines of credit</Link> are ideal for ongoing working capital needs.
                 </p>
               </div>
 
               <div className="bg-white rounded-xl p-6 border border-gray-100">
                 <h3 className="font-bold text-theme-primary-dark mb-2">2. Timing Requirements</h3>
                 <p className="text-gray-600 text-sm">
-                  How quickly do you need funds? <Link href="/business-loans/term-loans" className="text-theme-primary-light hover:underline">Term loans</Link> can fund same-day, while <Link href="/business-loans/asset-based-lending" className="text-theme-primary-light hover:underline">asset-based lending</Link> typically takes 1-4 weeks due to collateral evaluation.
+                  How quickly do you need funds? <Link href="/business-loans/term-loans" className="text-theme-primary-light hover:underline">Term loans</Link> can fund same-day, while <Link href="/business-loans/asset-backed-loans" className="text-theme-primary-light hover:underline">asset-based lending</Link> typically takes 1-4 weeks due to collateral evaluation.
                 </p>
               </div>
 

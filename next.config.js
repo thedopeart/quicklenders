@@ -2,6 +2,13 @@
 const nextConfig = {
   async redirects() {
     return [
+      // Internal links pointed at business-loan slugs that don't exist. Map the
+      // 3 slug typos to their real pages; sba-loans has no page, so send it to
+      // the SBA guide. (Source links are also corrected; these cover cache/externals.)
+      { source: '/business-loans/asset-based-lending', destination: '/business-loans/asset-backed-loans', permanent: true },
+      { source: '/business-loans/line-of-credit', destination: '/business-loans/lines-of-credit', permanent: true },
+      { source: '/business-loans/esop-financing', destination: '/business-loans/esop', permanent: true },
+      { source: '/business-loans/sba-loans', destination: '/financial-insights/sba-504-loan-guide', permanent: true },
       { source: '/wp-content/:path*', destination: '/', permanent: true },
       { source: '/wp-admin/:path*', destination: '/', permanent: true },
       { source: '/wp-login.php', destination: '/', permanent: true },

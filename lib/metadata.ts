@@ -24,12 +24,22 @@ export function generatePageMetadata(page: {
   type?: string
 }): Metadata {
   const ogImage = page.ogImage || defaultOgImage(page.title, page.path)
+  // Some pages pass a title that already ends with " | Quick Lenders"; the root
+  // layout's title.template then appends the brand again, doubling it. Normalize
+  // to exactly one suffix and mark it absolute so the layout template does not
+  // re-wrap it. openGraph/twitter titles are not affected by the layout template,
+  // so they use the same single-branded string.
+  const BRAND = ' | Quick Lenders'
+  const cleanTitle = page.title.endsWith(BRAND)
+    ? page.title.slice(0, -BRAND.length)
+    : page.title
+  const brandedTitle = `${cleanTitle}${BRAND}`
   return {
-    title: page.title,
+    title: { absolute: brandedTitle },
     description: page.description,
     alternates: { canonical: `https://quicklenders.com${page.path}` },
     openGraph: {
-      title: page.title,
+      title: brandedTitle,
       description: page.description,
       url: `https://quicklenders.com${page.path}`,
       siteName: 'Quick Lenders',
@@ -38,7 +48,7 @@ export function generatePageMetadata(page: {
     },
     twitter: {
       card: 'summary_large_image',
-      title: page.title,
+      title: brandedTitle,
       description: page.description,
       images: [ogImage],
     },
