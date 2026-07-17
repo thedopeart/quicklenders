@@ -41,3 +41,9 @@ __pycache__/
 *.env.local.bak*
 *.zip
 .mcp.json
+
+# Ubersuggest audit exports (local only)
+_audit/
+
+# blog pipeline state (queue/topic json managed by luxury-wall-art/scripts blog engine)
+/data/blog-pipeline/
