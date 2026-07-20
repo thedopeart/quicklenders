@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { getAllArticles } from '@/lib/content'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://quicklenders.com'
@@ -42,48 +43,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'interest-rate-comparison-chart',
   ]
 
-  const blogSlugs = [
-    'bootstrapping-finance',
-    'cash-loans-direct',
-    'direct-lender-loans-online',
-    'first-time-business-loans',
-    'first-time-personal-loans-with-no-credit-history',
-    'how-to-get-vc-financing',
-    'pre-seed-funding',
-    'how-to-improve-credit-fast',
-    'invoice-financing',
-    'large-business-loans',
-    'long-term-business-loans',
-    'no-collateral-business-loan',
-    'online-loans-for-poor-credit-score',
-    'small-business-equipment-financing',
-    'short-term-business-financing',
-    'how-to-get-a-startup-business-loan-with-bad-credit',
-    'secured-vs-unsecured-loans-which-is-better',
-    'venture-capital-funding-from-investors',
-    'invoice-factoring-loans',
-    'true-cost-of-merchant-cash-advance',
-    'documents-needed-for-business-loan',
-    'how-much-business-loan-can-you-afford',
-    'how-to-spot-predatory-business-loan',
-    'business-loan-denied-what-to-do-next',
-    'what-is-a-factor-rate',
-    'is-your-business-ready-for-a-loan',
-    'prepayment-penalties-business-loans',
-    'what-is-dscr-debt-service-coverage-ratio',
-    'how-to-compare-business-loan-offers',
-    'how-much-working-capital-do-you-need',
-    'equipment-financing-vs-leasing',
-    'business-loan-interest-rates-by-type',
-    'sba-loans-7a-vs-504-how-to-qualify',
-    'should-you-refinance-your-business-loan',
-    'work-life-balance-tips-for-business-owners',
-    'best-business-loans',
-    'how-to-get-a-business-line-of-credit',
-    'business-loans-for-bad-credit',
-    'same-day-business-loans',
-    'sba-504-loan-guide',
-  ]
 
   return [
     { url: baseUrl, lastModified: new Date(), changeFrequency: 'monthly', priority: 1.0 },
@@ -105,9 +64,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     })),
     { url: `${baseUrl}/financial-insights`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.7 },
-    ...blogSlugs.map((slug) => ({
-      url: `${baseUrl}/financial-insights/${slug}`,
-      lastModified: new Date(),
+    // Blog posts come straight from content/financial-insights so the
+    // sitemap can't drift when a new .mdx lands. Dates are the post's own
+    // (clamped to now: Google distrusts future lastmod values).
+    ...getAllArticles().map((article) => ({
+      url: `${baseUrl}/financial-insights/${article.slug}`,
+      lastModified: new Date(Math.min(new Date(article.date).getTime(), Date.now())),
       changeFrequency: 'monthly' as const,
       priority: 0.7,
     })),
