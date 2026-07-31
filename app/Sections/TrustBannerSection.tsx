@@ -32,7 +32,7 @@ const cards = [
   {
     icon: Clock,
     title: 'Quick Decisions',
-    description: 'Get fast funding decisions so you can focus on what matters most — your business.',
+    description: 'Get fast funding decisions so you can focus on what matters most: your business.',
     bullets: [
       'Decisions within 24 hours',
       'Fast disbursement of funds',

@@ -67,27 +67,27 @@ export default function CaliforniaPrivacyPolicyPage() {
             </p>
             <ul className="list-disc pl-6 text-gray-600 space-y-2 mb-6">
               <li>
-                <strong>Identifiers</strong> — such as your name, email address,
+                <strong>Identifiers</strong>: such as your name, email address,
                 phone number, and IP address
               </li>
               <li>
-                <strong>Financial Information</strong> — such as business
+                <strong>Financial Information</strong>: such as business
                 revenue, loan amount requested, and time in business
               </li>
               <li>
-                <strong>Commercial Information</strong> — records of services
+                <strong>Commercial Information</strong>: records of services
                 considered or requested through our website
               </li>
               <li>
-                <strong>Internet or Network Activity</strong> — browsing
+                <strong>Internet or Network Activity</strong>: browsing
                 history, search history, and interactions with our website
               </li>
               <li>
-                <strong>Geolocation Data</strong> — approximate location derived
+                <strong>Geolocation Data</strong>: approximate location derived
                 from your IP address
               </li>
               <li>
-                <strong>Professional or Employment Information</strong> — such
+                <strong>Professional or Employment Information</strong>: such
                 as job title, industry, and business type
               </li>
             </ul>
@@ -128,18 +128,18 @@ export default function CaliforniaPrivacyPolicyPage() {
             </p>
             <ul className="list-disc pl-6 text-gray-600 space-y-2 mb-6">
               <li>
-                <strong>Right to Know</strong> — You may request information
+                <strong>Right to Know</strong>: You may request information
                 about the categories and specific pieces of personal information
                 we have collected, the sources, the business purposes, and the
                 third parties with whom we share it.
               </li>
               <li>
-                <strong>Right to Delete</strong> — You may request that we
+                <strong>Right to Delete</strong>: You may request that we
                 delete the personal information we have collected about you,
                 subject to certain exceptions.
               </li>
               <li>
-                <strong>Right to Non-Discrimination</strong> — We will not
+                <strong>Right to Non-Discrimination</strong>: We will not
                 discriminate against you for exercising your CCPA rights. You
                 will not receive different pricing or quality of service for
                 making a request.

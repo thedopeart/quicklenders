@@ -128,7 +128,7 @@ export default function ToolPageLayout({
       {tool.faqs.length > 0 && (
         <FAQSection
           faqs={tool.faqs.map((f) => ({ question: f.question, answer: f.answer }))}
-          title={`${tool.name} — Frequently Asked Questions`}
+          title={`${tool.name}: Frequently Asked Questions`}
         />
       )}
 

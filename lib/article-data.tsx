@@ -163,7 +163,7 @@ export const articleData: Record<string, ArticleData> = {
         content: (
           <>
             <p>Small business equipment financing allows businesses to purchase or lease the equipment they need without paying the full amount upfront. This type of financing is particularly useful for acquiring expensive items such as machinery, vehicles, technology, or specialized tools.</p>
-            <p>The equipment itself typically serves as collateral for the loan, which can make it easier to qualify compared to unsecured financing options. This security arrangement benefits both lenders and borrowers—lenders have reduced risk, and borrowers often receive more favorable terms.</p>
+            <p>The equipment itself typically serves as collateral for the loan, which can make it easier to qualify compared to unsecured financing options. This security arrangement benefits both lenders and borrowers: lenders have reduced risk, and borrowers often receive more favorable terms.</p>
           </>
         ),
         image: '/assets/images/site/equipment-loans-2.jpg',
@@ -266,7 +266,7 @@ export const articleData: Record<string, ArticleData> = {
         content: (
           <>
             <p>To make the most of <Link href="/business-loans/equipment-financing" className="text-quicklend-600 font-medium hover:underline">equipment financing</Link>, new businesses should consider several strategies.</p>
-            <p><strong>Compare Multiple Lenders:</strong> Don&apos;t settle for the first offer. Compare rates and terms from multiple lenders—including banks, credit unions, and online lenders—to find the best fit for your needs.</p>
+            <p><strong>Compare Multiple Lenders:</strong> Don&apos;t settle for the first offer. Compare rates and terms from multiple lenders, including banks, credit unions, and online lenders, to find the best fit for your needs.</p>
             <p><strong>Negotiate Terms:</strong> Always negotiate the financing terms. Even small changes to interest rates or payment schedules can significantly impact your business&apos;s bottom line.</p>
             <p><strong>Stay Informed:</strong> Keep abreast of the latest rates and offers in equipment financing to take advantage of new opportunities. Market conditions change, and rates that weren&apos;t available six months ago might be available now.</p>
           </>
@@ -504,7 +504,7 @@ export const articleData: Record<string, ArticleData> = {
     keywords: ['improve credit score', 'credit repair', 'boost credit fast', 'credit utilization', 'credit score tips'],
     heroSubtitle: 'Actionable Steps to Boost Your Credit Score',
     keyTakeaways: [
-      'Check credit reports for errors—disputes can boost scores within 30 days',
+      'Check credit reports for errors: disputes can boost scores within 30 days',
       'Pay down credit utilization below 30% for fastest improvement',
       'Avoid opening new accounts before loan applications',
       'Becoming an authorized user can import positive history',
@@ -512,7 +512,7 @@ export const articleData: Record<string, ArticleData> = {
     intro: (
       <>
         <p>Your credit score affects nearly every financial decision a lender makes about you. Whether you need a business loan, a mortgage, or a new line of credit, a higher score means better terms and lower interest rates. Even a 50-point improvement can save thousands of dollars.</p>
-        <p>The good news? Certain actions can move your score upward relatively quickly—sometimes within a single billing cycle. Here is what actually works.</p>
+        <p>The good news? Certain actions can move your score upward relatively quickly, sometimes within a single billing cycle. Here is what actually works.</p>
       </>
     ),
     sections: [
@@ -539,7 +539,7 @@ export const articleData: Record<string, ArticleData> = {
       {
         type: 'two-column',
         title: 'Lower Your Credit Utilization',
-        subtitle: 'This factor responds quickly to changes—your best tool for fast improvement',
+        subtitle: 'This factor responds quickly to changes: your best tool for fast improvement',
         columns: [
           {
             title: 'Quick Strategies',
@@ -617,7 +617,7 @@ export const articleData: Record<string, ArticleData> = {
     faqs: [
       {
         question: 'How fast can I realistically improve my credit score?',
-        answer: <>The fastest improvements come from disputing errors and reducing credit utilization—both can show results within 30-45 days. Building positive payment history takes longer, typically 3-6 months for meaningful improvement. Recovery from major negative items like bankruptcy takes 2-4 years.</>,
+        answer: <>The fastest improvements come from disputing errors and reducing credit utilization, both can show results within 30-45 days. Building positive payment history takes longer, typically 3-6 months for meaningful improvement. Recovery from major negative items like bankruptcy takes 2-4 years.</>,
         schemaAnswer: 'The fastest improvements come from disputing errors and reducing credit utilization, both of which can show results within 30-45 days. Building positive payment history takes longer, typically 3-6 months for meaningful improvement. Recovery from major negative items like bankruptcy takes 2-4 years.'
       },
       {
@@ -675,7 +675,7 @@ export const articleData: Record<string, ArticleData> = {
         title: 'How Invoice Financing Works',
         content: (
           <>
-            <p>Invoice financing allows you to borrow against the value of your outstanding invoices from creditworthy customers. Instead of waiting weeks or months for payment, you receive most of the invoice value upfront—typically 80-90%.</p>
+            <p>Invoice financing allows you to borrow against the value of your outstanding invoices from creditworthy customers. Instead of waiting weeks or months for payment, you receive most of the invoice value upfront, typically 80-90%.</p>
             <p>The financing company evaluates your customers creditworthiness rather than focusing primarily on your business credit. This makes invoice financing accessible to newer businesses or those with imperfect credit histories who might struggle to qualify for traditional loans.</p>
           </>
         ),
@@ -780,7 +780,7 @@ export const articleData: Record<string, ArticleData> = {
       },
       {
         question: 'Will my customers know I am using invoice financing?',
-        answer: <>With invoice factoring, yes—your customers will be notified to pay the factoring company directly. With invoice loans or confidential factoring arrangements, you can often keep the financing private and continue collecting payments yourself.</>,
+        answer: <>With invoice factoring, yes: your customers will be notified to pay the factoring company directly. With invoice loans or confidential factoring arrangements, you can often keep the financing private and continue collecting payments yourself.</>,
         schemaAnswer: 'With invoice factoring, yes, your customers will be notified to pay the factoring company directly. With invoice loans or confidential factoring arrangements, you can often keep the financing private and continue collecting payments yourself.'
       },
       {
@@ -824,7 +824,7 @@ export const articleData: Record<string, ArticleData> = {
     intro: (
       <>
         <p>Pre-seed funding is the earliest stage of startup financing, coming before even the traditional seed round. It is the capital that helps you go from idea to minimum viable product (MVP), validating your concept before seeking larger investments.</p>
-        <p>For many founders, pre-seed is the most challenging round to raise—you are selling potential rather than proven results. This guide covers what you need to know to successfully navigate this critical early stage.</p>
+        <p>For many founders, pre-seed is the most challenging round to raise: you are selling potential rather than proven results. This guide covers what you need to know to successfully navigate this critical early stage.</p>
       </>
     ),
     sections: [
@@ -910,7 +910,7 @@ export const articleData: Record<string, ArticleData> = {
         subtitle: 'Follow these steps to position yourself for success',
         steps: [
           { number: 1, title: 'Validate Your Idea', description: 'Talk to potential customers, understand their pain points, and confirm there is real demand for your solution.' },
-          { number: 2, title: 'Build Your Founding Team', description: 'Assemble complementary co-founders who bring different skills—technical, business, industry expertise.' },
+          { number: 2, title: 'Build Your Founding Team', description: 'Assemble complementary co-founders who bring different skills: technical, business, industry expertise.' },
           { number: 3, title: 'Create Your Pitch Deck', description: 'Develop a compelling 10-15 slide deck covering problem, solution, market, team, and ask.' },
           { number: 4, title: 'Set Your Valuation', description: 'Research comparable deals. Pre-seed valuations typically range from $1M to $5M depending on market and traction.' },
           { number: 5, title: 'Start Building Relationships', description: 'Connect with potential investors before you need money. Warm introductions dramatically improve your odds.' },
@@ -943,7 +943,7 @@ export const articleData: Record<string, ArticleData> = {
     faqs: [
       {
         question: 'How much money should I raise in a pre-seed round?',
-        answer: <>Raise enough to reach your next significant milestone—typically 12-18 months of runway. Most pre-seed rounds range from $50,000 to $500,000, though some reach $1 million in competitive markets. The key is having a clear plan for how the capital gets you to a point where you can raise a larger seed round.</>,
+        answer: <>Raise enough to reach your next significant milestone, typically 12-18 months of runway. Most pre-seed rounds range from $50,000 to $500,000, though some reach $1 million in competitive markets. The key is having a clear plan for how the capital gets you to a point where you can raise a larger seed round.</>,
         schemaAnswer: 'Raise enough to reach your next significant milestone, typically 12-18 months of runway. Most pre-seed rounds range from $50,000 to $500,000, though some reach $1 million in competitive markets. The key is having a clear plan for how the capital gets you to a point where you can raise a larger seed round.'
       },
       {
@@ -953,7 +953,7 @@ export const articleData: Record<string, ArticleData> = {
       },
       {
         question: 'Do I need revenue to raise pre-seed funding?',
-        answer: <>No, revenue is not required for pre-seed. Investors at this stage invest in your team, vision, and market opportunity. However, any early traction—waitlists, letters of intent, pilot customers, or even strong customer interview insights—strengthens your position significantly.</>,
+        answer: <>No, revenue is not required for pre-seed. Investors at this stage invest in your team, vision, and market opportunity. However, any early traction, waitlists, letters of intent, pilot customers, or even strong customer interview insights, strengthens your position significantly.</>,
         schemaAnswer: 'No, revenue is not required for pre-seed. Investors at this stage invest in your team, vision, and market opportunity. However, any early traction such as waitlists, letters of intent, pilot customers, or strong customer interview insights strengthens your position significantly.'
       },
       {
@@ -963,7 +963,7 @@ export const articleData: Record<string, ArticleData> = {
       },
       {
         question: 'Should I use a SAFE or convertible note?',
-        answer: <>SAFEs are simpler and more founder-friendly—no interest accrual or maturity date. Convertible notes are debt instruments with interest and a maturity date, which some investors prefer for downside protection. In most cases, SAFEs are the better choice for early-stage fundraising.</>,
+        answer: <>SAFEs are simpler and more founder-friendly: no interest accrual or maturity date. Convertible notes are debt instruments with interest and a maturity date, which some investors prefer for downside protection. In most cases, SAFEs are the better choice for early-stage fundraising.</>,
         schemaAnswer: 'SAFEs are simpler and more founder-friendly with no interest accrual or maturity date. Convertible notes are debt instruments with interest and a maturity date, which some investors prefer for downside protection. In most cases, SAFEs are the better choice for early-stage fundraising.'
       },
     ],
@@ -1089,7 +1089,7 @@ export const articleData: Record<string, ArticleData> = {
         title: 'Understanding Personal Guarantees',
         content: (
           <>
-            <p>Even with unsecured business loans, lenders often require a personal guarantee. This makes you personally liable for the debt if your business cannot pay. Your personal assets—home, savings, investments—could be at risk.</p>
+            <p>Even with unsecured business loans, lenders often require a personal guarantee. This makes you personally liable for the debt if your business cannot pay. Your personal assets, home, savings, investments, could be at risk.</p>
             <p>Some lenders offer loans without personal guarantees, but these typically require stronger business financials, longer operating history, and higher credit scores. Expect to pay higher rates for the reduced personal risk.</p>
           </>
         ),
@@ -1131,7 +1131,7 @@ export const articleData: Record<string, ArticleData> = {
       },
       {
         question: 'Is a personal guarantee the same as collateral?',
-        answer: <>No. Collateral is a specific asset the lender can claim. A personal guarantee is your promise to repay using any personal assets if needed. You can have both on the same loan—specific collateral plus a personal guarantee for additional security.</>,
+        answer: <>No. Collateral is a specific asset the lender can claim. A personal guarantee is your promise to repay using any personal assets if needed. You can have both on the same loan: specific collateral plus a personal guarantee for additional security.</>,
         schemaAnswer: 'No. Collateral is a specific asset the lender can claim. A personal guarantee is your promise to repay using any personal assets if needed. You can have both on the same loan, with specific collateral plus a personal guarantee for additional security.'
       },
     ],
@@ -1159,7 +1159,7 @@ export const articleData: Record<string, ArticleData> = {
     ],
     intro: (
       <>
-        <p>Sometimes your business needs capital now, not in 60 days. Short-term financing provides quick access to funds for immediate needs—whether you are covering a cash flow gap, seizing a growth opportunity, or handling an unexpected expense.</p>
+        <p>Sometimes your business needs capital now, not in 60 days. Short-term financing provides quick access to funds for immediate needs, whether you are covering a cash flow gap, seizing a growth opportunity, or handling an unexpected expense.</p>
         <p>This guide covers the main short-term financing options, their costs, and how to determine which approach fits your situation.</p>
       </>
     ),
@@ -1275,7 +1275,7 @@ export const articleData: Record<string, ArticleData> = {
         title: 'Avoid the Debt Cycle',
         content: (
           <>
-            <p>The biggest risk with short-term financing is stacking—taking a new loan to pay off an existing one. This creates a dangerous cycle where you are perpetually paying high fees without ever reducing your debt.</p>
+            <p>The biggest risk with short-term financing is stacking: taking a new loan to pay off an existing one. This creates a dangerous cycle where you are perpetually paying high fees without ever reducing your debt.</p>
             <p>Only borrow what you can repay from business operations, not from future borrowing. If you find yourself needing to refinance short-term debt repeatedly, it may be time to restructure with a <Link href="/business-loans/term-loans" className="text-quicklend-600 font-medium hover:underline">longer-term loan</Link>.</p>
           </>
         )
@@ -1343,7 +1343,7 @@ export const articleData: Record<string, ArticleData> = {
         content: (
           <>
             <p>Traditional business lending often creates barriers for veterans transitioning from military service. They may lack a civilian credit history, have limited time in business, or need guidance navigating the commercial lending landscape.</p>
-            <p>Veteran-specific programs address these gaps by offering reduced fees, relaxed requirements, mentorship, and terms designed for the unique circumstances of military service members and their families. These programs recognize that skills developed in service—leadership, discipline, risk management, team building—translate directly into successful business ownership.</p>
+            <p>Veteran-specific programs address these gaps by offering reduced fees, relaxed requirements, mentorship, and terms designed for the unique circumstances of military service members and their families. These programs recognize that skills developed in service, leadership, discipline, risk management, team building, translate directly into successful business ownership.</p>
           </>
         ),
       },
@@ -1426,7 +1426,7 @@ export const articleData: Record<string, ArticleData> = {
           { number: 2, title: 'Build Your Business Plan', description: 'Include market analysis, financial projections, clear use of funds, and a realistic repayment strategy.' },
           { number: 3, title: 'Start Building Credit Early', description: 'Open a secured credit card, pay bills on time, and monitor your credit reports during transition.' },
           { number: 4, title: 'Connect with a VBOC', description: 'Take advantage of free counseling at one of 22 Veterans Business Outreach Centers nationwide.' },
-          { number: 5, title: 'Explore Multiple Options', description: 'Combine resources—an SBA loan for capital, a grant for projects, and VBOC mentorship for guidance.' },
+          { number: 5, title: 'Explore Multiple Options', description: 'Combine resources: an SBA loan for capital, a grant for projects, and VBOC mentorship for guidance.' },
         ]
       },
       {
@@ -1473,7 +1473,7 @@ export const articleData: Record<string, ArticleData> = {
       },
       {
         question: 'Do I need to be a combat veteran to qualify?',
-        answer: <>No. Most veteran business loan programs are available to all honorably discharged veterans, regardless of combat experience. Programs vary in specific eligibility—some include active-duty members, Reserve and Guard members, and military spouses. Check each program individual requirements.</>,
+        answer: <>No. Most veteran business loan programs are available to all honorably discharged veterans, regardless of combat experience. Programs vary in specific eligibility, some include active-duty members, Reserve and Guard members, and military spouses. Check each program individual requirements.</>,
         schemaAnswer: 'No. Most veteran business loan programs are available to all honorably discharged veterans, regardless of combat experience. Programs vary in specific eligibility, with some including active-duty members, Reserve and Guard members, and military spouses. Check each program\'s individual requirements.'
       },
       {

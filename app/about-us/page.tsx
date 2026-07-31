@@ -267,7 +267,7 @@ export default function AboutPage() {
               <MdHandshake className="text-4xl text-theme-primary-light mb-4" />
               <h3 className="text-xl font-bold text-theme-primary-dark mb-3">Relationship-Based Lending</h3>
               <p className="text-gray-600">
-                We don&apos;t just process applications—we build relationships. Your dedicated account manager takes time to understand your business, goals, and challenges to find the best financing fit.
+                We don&apos;t just process applications, we build relationships. Your dedicated account manager takes time to understand your business, goals, and challenges to find the best financing fit.
               </p>
             </div>
 

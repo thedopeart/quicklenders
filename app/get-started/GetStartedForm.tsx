@@ -285,7 +285,7 @@ export default function GetStartedForm() {
             <a href="/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline hover:text-blue-700">
               Privacy Policy
             </a>
-            , and I provide my express written consent for Quick Lenders and its lending partners to contact me at the phone number and email address I provided &mdash; including via automated telephone dialing system, artificial or prerecorded voice, and SMS/text message &mdash; regarding my business financing request, even if my number is on a federal or state Do Not Call list. I understand that consent is not a condition of any purchase, that message and data rates may apply, and that I can reply STOP to opt out of text messages at any time. I also confirm that I am the subscriber to, or the customary user of, the phone number provided and that I am at least 18 years old.
+            , and I provide my express written consent for Quick Lenders and its lending partners to contact me at the phone number and email address I provided, including via automated telephone dialing system, artificial or prerecorded voice, and SMS/text message, regarding my business financing request, even if my number is on a federal or state Do Not Call list. I understand that consent is not a condition of any purchase, that message and data rates may apply, and that I can reply STOP to opt out of text messages at any time. I also confirm that I am the subscriber to, or the customary user of, the phone number provided and that I am at least 18 years old.
           </span>
         </label>
         {errors.consent && <p className={`${errorClasses} ml-8`}>{errors.consent.message}</p>}

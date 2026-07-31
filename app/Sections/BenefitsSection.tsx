@@ -15,7 +15,7 @@ const benefits = [
   'Competitive interest rates designed for growing businesses of all sizes.',
   'Flexible repayment terms that adapt to your cash flow and revenue cycles.',
   'Dedicated account managers providing personalized guidance throughout your journey.',
-  'No hidden fees or surprise charges — complete transparency from start to finish.',
+  'No hidden fees or surprise charges. Complete transparency from start to finish.',
   'Fast pre-qualification process that won\'t impact your credit score initially.',
   'Access to a network of lending partners for the best possible terms.',
 ];

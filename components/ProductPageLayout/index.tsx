@@ -266,7 +266,7 @@ const ProductPageLayout = ({ product, relatedProducts }: ProductPageLayoutProps)
             {/* FAQ Section */}
             <section className="py-16 lg:py-20 bg-gray-50">
                 <div className="container">
-                    <h2 className="text-3xl font-bold text-theme-primary-dark mb-10"><span className="text-theme-primary-light">{product.name}</span> — Frequently Asked Questions</h2>
+                    <h2 className="text-3xl font-bold text-theme-primary-dark mb-10"><span className="text-theme-primary-light">{product.name}</span>: Frequently Asked Questions</h2>
                     <div className="max-w-3xl mx-auto">
                         <Accordion type="single" collapsible>
                             {product.faqs.map((faq, index) => (
