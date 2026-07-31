@@ -44,9 +44,20 @@ const AccordionContent = React.forwardRef<
     React.ElementRef<typeof AccordionPrimitive.Content>,
     React.ComponentPropsWithoutRef<typeof AccordionPrimitive.Content>
 >(({ className, children, ...props }, ref) => (
+    // forceMount keeps collapsed answers in the DOM. Without it Radix unmounts
+    // them, so FAQ bodies never reach the server-rendered HTML at all. This
+    // primitive backs FAQSection, ProductPageLayout, ArticlePageLayout and the
+    // contact page, so that was most of the site's long-form content invisible
+    // to crawlers on a domain already averaging position 71.
+    //
+    // data-[state=closed]:hidden collapses instead of unmounting. Google indexes
+    // accordion-hidden content normally under mobile-first indexing.
+    // Trade-off: the close animation snaps rather than sliding. Opening still
+    // animates. Same fix as date-ideas-lab.
     <AccordionPrimitive.Content
         ref={ref}
-        className="overflow-hidden text-base transition-all data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down"
+        forceMount
+        className="overflow-hidden text-base transition-all data-[state=closed]:hidden data-[state=open]:animate-accordion-down"
         {...props}
     >
         <div className={cn("pb-4 pt-0", className)}>{children}</div>
