@@ -4,7 +4,7 @@ import { breadcrumbSchema } from '@/lib/schema'
 export const metadata = generatePageMetadata({
   title: 'Editorial Policy | Quick Lenders Content Standards',
   description:
-    'How Quick Lenders creates, reviews, and maintains accurate financial content. Our standards for business lending education, fact-checking, and editorial independence.',
+    'How Quick Lenders creates, reviews, and maintains accurate financial content, including our standards for fact-checking and editorial independence.',
   path: '/editorial-policy',
 })
 

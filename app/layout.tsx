@@ -13,7 +13,7 @@ const dmSans = DM_Sans({ subsets: ['latin'] })
 import type { Metadata } from 'next'
 
 // ** Schema
-import { organizationSchema } from '@/lib/schema'
+import { organizationSchema, websiteSchema } from '@/lib/schema'
 
 // ** MetaData
 export const metadata: Metadata = {
@@ -54,6 +54,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema()) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema()) }}
         />
       </head>
       <body className={dmSans.className}>

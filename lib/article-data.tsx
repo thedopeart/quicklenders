@@ -139,7 +139,7 @@ export const articleData: Record<string, ArticleData> = {
   'small-business-equipment-financing': {
     slug: 'small-business-equipment-financing',
     title: 'Small Business Equipment Financing',
-    description: 'Everything you need to know about financing equipment for your small business—from qualification requirements to maximizing tax benefits.',
+    description: 'Everything you need to know about financing equipment for your small business, from qualification requirements to maximizing tax benefits.',
     date: '2024-05-15',
     image: '/assets/images/site/equipment-loans-hero.jpg',
     keywords: ['equipment financing', 'business equipment loans', 'equipment leasing', 'small business financing'],
@@ -810,7 +810,7 @@ export const articleData: Record<string, ArticleData> = {
   'pre-seed-funding': {
     slug: 'pre-seed-funding',
     title: 'Pre-Seed Funding: The Complete Guide for Early-Stage Startups',
-    description: 'Everything founders need to know about pre-seed funding—from typical amounts and sources to building a pitch deck that gets investors interested.',
+    description: 'Everything founders need to know about pre-seed funding, from typical amounts and sources to building a pitch deck that gets investors interested.',
     date: '2024-03-20',
     image: '/assets/images/site/startup-funding-3.jpg',
     keywords: ['pre-seed funding', 'startup funding', 'seed round', 'angel investors', 'startup capital'],

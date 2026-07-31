@@ -10,7 +10,7 @@ import FAQSection from '@/components/FAQSection'
 
 export const metadata = generatePageMetadata({
   title: 'Quick Lenders | Business Loans & Financing Solutions',
-  description: 'Business financing from $50K to $100M. Term loans, lines of credit, equipment financing, asset-based lending, and more. Funding as fast as the same business day on select products.',
+  description: 'Business financing from $50K to $100M. Term loans, lines of credit, equipment financing, asset-based lending, and more. Fast funding on select products.',
   path: '/',
 })
 

@@ -9,7 +9,7 @@ import { MdShield, MdSpeed, MdSupportAgent, MdCheckCircle } from 'react-icons/md
 export const metadata = generatePageMetadata({
   title: 'Get Pre-Qualified for Business Financing | Quick Lenders',
   description:
-    'Apply for business financing in minutes. Pre-qualify with no hard credit pull. A Quick Lenders specialist reviews your details and responds within 1 business day.',
+    'Apply for business financing. Pre-qualify with no hard credit pull. A Quick Lenders specialist reviews your details and responds within 1 business day.',
   path: '/get-started',
 })
 

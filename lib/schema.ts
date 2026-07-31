@@ -57,6 +57,15 @@ export function financialProductSchema(product: {
   }
 }
 
+export function websiteSchema() {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Quick Lenders',
+    url: 'https://quicklenders.com',
+  }
+}
+
 export function breadcrumbSchema(items: { name: string; url: string }[]) {
   return {
     '@context': 'https://schema.org',

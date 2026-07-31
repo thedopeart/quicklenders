@@ -4,7 +4,7 @@ import { breadcrumbSchema } from '@/lib/schema'
 export const metadata = generatePageMetadata({
   title: 'Advertiser Disclosure | Quick Lenders',
   description:
-    'How Quick Lenders earns revenue, how lending partners are selected, and how our editorial content remains independent. Full transparency about our business model.',
+    'How Quick Lenders earns revenue, how lending partners are selected, and how our editorial content stays independent from advertiser influence.',
   path: '/advertiser-disclosure',
 })
 
