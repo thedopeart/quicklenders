@@ -134,9 +134,13 @@ const Header = () => {
                             Get Started
                         </Link>
 
+                        {/* Measured 24x24 live, well under the 44px tap-target guideline, and
+                            this is the only navigation control on mobile. The icon stays 24px;
+                            the padding just grows the hit area to 44px, with a matching negative
+                            margin so the header layout does not shift. */}
                         <button
                             onClick={() => setMobileOpen(!mobileOpen)}
-                            className="lg:hidden text-gray-700"
+                            className="lg:hidden text-gray-700 p-2.5 -m-2.5"
                             aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
                         >
                             {mobileOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}

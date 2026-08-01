@@ -31,6 +31,18 @@ html, body {
   transform: translateY(0);
 }
 
+/* The scroll-in animations start translated 20px sideways while still occupying layout,
+   which pushed the page 4px wider than a 375px viewport and produced a horizontal scroll on
+   mobile. Measured live 2026-08-01: document scrollWidth 379 vs viewport 375, with the fixed
+   header stretching to 379 as a knock-on effect.
+
+   overflow-x: clip rather than hidden on purpose. hidden would make body a scroll container
+   and break the three position:sticky elements in the tools and article pages; clip does the
+   same visual clipping without establishing one. */
+body {
+  overflow-x: clip;
+}
+
 .scroll-animate-left {
   opacity: 0;
   transform: translateX(-20px);
