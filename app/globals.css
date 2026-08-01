@@ -38,7 +38,12 @@ html, body {
 
    overflow-x: clip rather than hidden on purpose. hidden would make body a scroll container
    and break the three position:sticky elements in the tools and article pages; clip does the
-   same visual clipping without establishing one. */
+   same visual clipping without establishing one.
+
+   html as well as body: the header is position:fixed, so it sits outside body's flow and
+   escaped a body-only clip. Verified in the live page that clipping body alone left
+   documentElement.scrollWidth at 379, and adding html brought it to exactly 375. */
+html,
 body {
   overflow-x: clip;
 }
